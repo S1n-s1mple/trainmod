@@ -19,6 +19,12 @@ public class ModItems {
             new Item.Settings()
     );
 
+    public static final Item SAPPHIRE = registerItem(
+            "sapphire",
+            Item::new,
+            new Item.Settings()
+    );
+
     private static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Создание ключа для предмета
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Train.MOD_ID, name));
@@ -31,6 +37,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(intries -> {
             intries.add(RUBY);
+            intries.add(SAPPHIRE);
         });
     }
 }
