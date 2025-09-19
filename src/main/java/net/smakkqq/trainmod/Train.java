@@ -1,6 +1,7 @@
 package net.smakkqq.trainmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.item.ModItems;
 
 import org.slf4j.Logger;
@@ -15,5 +16,6 @@ public class Train implements ModInitializer {
     @Override
     public void onInitialize() {
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
     }
 }
