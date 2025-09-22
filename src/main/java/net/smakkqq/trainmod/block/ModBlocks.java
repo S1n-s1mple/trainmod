@@ -24,6 +24,13 @@ public class ModBlocks {
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.AMETHYST_BLOCK),
             true
     );
+    
+    public static final Block SAPPHIRE_BLOCK = registerBlockItem(
+            "sapphire_block",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.AMETHYST_BLOCK),
+            true
+    );
 
     private static Block registerBlockItem(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
         RegistryKey<Block> blockKey = keyOfBlock(name);
@@ -52,6 +59,11 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.RUBY_BLOCK);
+            
+        });
+        
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+            entries.add(ModBlocks.SAPPHIRE_BLOCK);
             
         });
     }
