@@ -1,6 +1,7 @@
 {
     "item.train.ruby" : "Ruby",
     "item.train.sapphire" : "Sapphire",
-    "item.train.ruby_block" : "Ruby Block",
-    "item.train.ruby_block" : "Sapphire Block"
+    
+    "block.train.ruby_block" : "Ruby Block",
+    "block.train.sapphire_block" : "Sapphire Block"
 }

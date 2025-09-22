@@ -1,7 +1,8 @@
 {
     "item.train.ruby" : "Рубин",
     "item.train.sapphire" : "Сапфир",
-    "item.train.ruby_block" : "Рубиновый блок",
-    "item.train.ruby_block" : "Сапфировый блок"
+    
+    "block.train.ruby_block" : "Рубиновый блок",
+    "block.train.sapphire_block" : "Сапфировый блок"
 }
 

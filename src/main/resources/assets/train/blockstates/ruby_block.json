@@ -1,7 +1,7 @@
 {
     "variants":{
         "":{
-            "model": "lesson:block/ruby_block"
+            "model": "train:block/ruby_block"
         }
     }
 }
