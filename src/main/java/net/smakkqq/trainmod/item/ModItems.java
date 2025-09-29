@@ -36,8 +36,8 @@ public class ModItems {
         Train.LOGGER.info("Registering my Mod Items for:" + Train.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(RUBY);
-            entries.add(SAPPHIRE);
+//            entries.add(RUBY);
+//            entries.add(SAPPHIRE);
         });
     }
 }
