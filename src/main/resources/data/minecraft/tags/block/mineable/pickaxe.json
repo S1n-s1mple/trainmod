@@ -1,4 +1,4 @@
 {
     "replace": false,
-    "values": ["train:ruby_block"]
+    "values": ["train:ruby_block", "train:sapphire_block"]
 }
