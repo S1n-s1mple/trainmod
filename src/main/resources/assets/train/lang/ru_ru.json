@@ -3,6 +3,8 @@
     "item.train.sapphire" : "Сапфир",
     
     "block.train.ruby_block" : "Рубиновый блок",
-    "block.train.sapphire_block" : "Сапфировый блок"
+    "block.train.sapphire_block" : "Сапфировый блок",
+    
+    "block.train.sapphire_ore" : "Сапфировая руда"
 }
 

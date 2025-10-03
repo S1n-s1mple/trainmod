@@ -3,5 +3,7 @@
     "item.train.sapphire" : "Sapphire",
     
     "block.train.ruby_block" : "Ruby Block",
-    "block.train.sapphire_block" : "Sapphire Block"
+    "block.train.sapphire_block" : "Sapphire Block",
+    
+    "block.train.sapphire_ore" : "Sapphire Ore"
 }
