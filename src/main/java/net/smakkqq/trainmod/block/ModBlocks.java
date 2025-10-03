@@ -77,19 +77,14 @@ public class ModBlocks {
     public static void registerModBlocks() {
         Train.LOGGER.info("Registering my Mod Blocks for:" + Train.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.RUBY_BLOCK);
-            
-        });
-        
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.SAPPHIRE_BLOCK);
-            
-        });
-        
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.SAPPHIRE_ORE);
-            
-        });
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+//            entries.add(ModBlocks.RUBY_BLOCK);
+//            
+//        });
+//        
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+//            entries.add(ModBlocks.SAPPHIRE_BLOCK);
+//            
+//        });
     }
 }

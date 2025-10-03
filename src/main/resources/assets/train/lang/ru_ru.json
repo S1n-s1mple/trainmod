@@ -5,6 +5,6 @@
     "block.train.ruby_block" : "Рубиновый блок",
     "block.train.sapphire_block" : "Сапфировый блок",
     
-    "block.train.sapphire_ore" : "Сапфировая руда"
+    "itemGroup.train.ores_items": "Руды & Предметы"
 }
 

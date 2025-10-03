@@ -5,5 +5,9 @@
     "block.train.ruby_block" : "Ruby Block",
     "block.train.sapphire_block" : "Sapphire Block",
     
-    "block.train.sapphire_ore" : "Sapphire Ore"
+
+    "block.train.sapphire_ore" : "Sapphire Ore",
+
+    "itemGroup.train.ores_items": "Ores & Items"
+
 }
