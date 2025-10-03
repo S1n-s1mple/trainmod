@@ -10,6 +10,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
+import net.smakkqq.trainmod.item.custom.LightningRod;
 
 public class ModItems {
 
@@ -20,8 +21,14 @@ public class ModItems {
     );
 
     public static final Item SAPPHIRE = registerItem(
-            "sapphire",
-            Item::new,
+            "lightning_rod", // поменять на сапфир
+            LightningRod::new,
+            new Item.Settings()
+    );
+
+    public static final Item LIGHTNING_ROD = registerItem(
+            "lightning_rod",
+            LightningRod::new,
             new Item.Settings()
     );
 
@@ -36,8 +43,8 @@ public class ModItems {
         Train.LOGGER.info("Registering my Mod Items for:" + Train.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(RUBY);
-            entries.add(SAPPHIRE);
+//            entries.add(RUBY);
+//            entries.add(SAPPHIRE);
         });
     }
 }
