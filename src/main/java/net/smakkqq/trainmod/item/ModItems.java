@@ -10,27 +10,34 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
+import net.smakkqq.trainmod.item.custom.FireRod;
 import net.smakkqq.trainmod.item.custom.LightningRod;
 
 public class ModItems {
 
     public static final Item RUBY = registerItem(
             "ruby",
-            Item::new,
+            FireRod::new,
             new Item.Settings()
     );
 
     public static final Item SAPPHIRE = registerItem(
-            "lightning_rod", // поменять на сапфир
+            "sapphire",
             LightningRod::new,
             new Item.Settings()
     );
 
-    public static final Item LIGHTNING_ROD = registerItem(
-            "lightning_rod",
-            LightningRod::new,
-            new Item.Settings()
-    );
+//    public static final Item LIGHTNING_ROD = registerItem(
+//            "lightning_rod",
+//            LightningRod::new,
+//            new Item.Settings()
+//    );
+//    
+//     public static final Item FIRE_ROD = registerItem(
+//            "fire_rod",
+//            FireRod::new,
+//            new Item.Settings()
+//    );
 
     private static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Создание ключа для предмета
