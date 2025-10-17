@@ -20,7 +20,7 @@ public class ModItems {
             FireRod::new,
             new Item.Settings()
     );
-
+ 
     public static final Item SAPPHIRE = registerItem(
             "sapphire",
             LightningRod::new,

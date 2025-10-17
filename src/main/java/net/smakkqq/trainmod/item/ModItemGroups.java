@@ -27,4 +27,4 @@ public class ModItemGroups {
     public static void registerItemsGroups() {
         Train.LOGGER.info("Registering Items Groups for " + Train.MOD_ID);
     }
-}
+} 

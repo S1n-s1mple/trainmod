@@ -35,7 +35,7 @@ public class LightningRod extends Item {
         return ActionResult.SUCCESS;
     }
 }
-
+ 
 //        BlockPos frontOfPlayer = user.getBlockPos().offset(user.getHorizontalFacing(), 10);
 //
 //        LightningEntity lightningBolt = new LightningEntity(EntityType.LIGHTNING_BOLT, world);

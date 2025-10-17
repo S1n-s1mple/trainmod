@@ -16,6 +16,7 @@ public class FireRod extends Item {
 
     }
 
+    
     @Override
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
         if (world.isClient) {
