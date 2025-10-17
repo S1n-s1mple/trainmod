@@ -28,8 +28,20 @@ public class ModBlocks {
             true
     );
     
+//    public static final Block SAPPHIRE_BLOCK = registerBlockItem(
+//            "sapphire_block",
+//            Block::new,
+//            AbstractBlock.Settings.create()
+//                .requiresTool()
+//                .strength(5.0F, 6.0F)
+//                .burnable()
+//                .luminance(state -> 10)
+//                .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+//            true
+//    );
+    
     public static final Block SAPPHIRE_BLOCK = registerBlockItem(
-            "sapphire_block",
+            "magic_block",
             Block::new,
             AbstractBlock.Settings.create()
                 .requiresTool()
