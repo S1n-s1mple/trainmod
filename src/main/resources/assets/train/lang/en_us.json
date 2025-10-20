@@ -5,7 +5,10 @@
     "block.train.ruby_block" : "Ruby Block",
     "block.train.sapphire_block" : "Sapphire Block",
     
-
+    "item.train.lightning_rod" : "Lightning rod",
+    "item.train.fire_rod" : "Fire rod",
+    "item.train.arrow_rod" : "Arrow rod",
+    
     "block.train.sapphire_ore" : "Sapphire Ore",
 
     "itemGroup.train.ores_items": "Ores & Items"

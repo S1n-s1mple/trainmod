@@ -5,6 +5,10 @@
     "block.train.ruby_block" : "Рубиновый блок",
     "block.train.sapphire_block" : "Сапфировый блок",
     
+    "item.train.lightning_rod" : "Молненный посох",
+    "item.train.fire_rod" : "Огненный посох",
+    "item.train.arrow_rod" : "Посох стрел",
+    
     "itemGroup.train.ores_items": "Руды & Предметы"
 }
 

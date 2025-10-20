@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "#":  "train:ruby",
+        "?": "train:sapphire"
+    },
+    "pattern": [
+        "?#?",
+        "###",
+        "?#?"
+    ],
+    "result": {
+        "count": 1,
+        "id": "train:magic_block"
+    }
+}

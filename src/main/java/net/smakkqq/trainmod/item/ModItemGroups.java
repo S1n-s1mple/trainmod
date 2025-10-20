@@ -21,10 +21,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RUBY_BLOCK);
                         entries.add(ModItems.SAPPHIRE);
                         entries.add(ModBlocks.SAPPHIRE_BLOCK);
-                        entries.add(ModBlocks.SAPPHIRE_ORE);
+                        entries.add(ModItems.LIGHTNING_ROD);
+                        entries.add(ModItems.FIRE_ROD);
+                        entries.add(ModItems.ARROW_ROD);
                     }).build());
 
     public static void registerItemsGroups() {
         Train.LOGGER.info("Registering Items Groups for " + Train.MOD_ID);
     }
-} 
+}
