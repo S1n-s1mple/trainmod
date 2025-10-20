@@ -18,13 +18,13 @@ public class ModItems {
 
     public static final Item RUBY = registerItem(
             "ruby",
-            FireRod::new,
+            Item::new,
             new Item.Settings()
     );
- 
+
     public static final Item SAPPHIRE = registerItem(
             "sapphire",
-            LightningRod::new,
+            Item::new,
             new Item.Settings()
     );
 
@@ -33,16 +33,28 @@ public class ModItems {
             LightningRod::new,
             new Item.Settings()
     );
-    
-     public static final Item FIRE_ROD = registerItem(
+
+    public static final Item FIRE_ROD = registerItem(
             "fire_rod",
             FireRod::new,
             new Item.Settings()
     );
-     
-     public static final Item ARROW_ROD = registerItem(
+
+    public static final Item ARROW_ROD = registerItem(
             "arrow_rod",
             ArrowRod::new,
+            new Item.Settings()
+    );
+
+    public static final Item FUNNY_POTATO = registerItem(
+            "funny_potato",
+            Item::new,
+            new Item.Settings().food(ModFoodComponents.FUNNY_POTATO)
+    );
+
+    public static final Item FUEL = registerItem(
+            "fuel",
+            Item::new,
             new Item.Settings()
     );
 

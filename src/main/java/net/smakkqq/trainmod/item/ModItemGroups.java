@@ -24,6 +24,8 @@ public class ModItemGroups {
                         entries.add(ModItems.LIGHTNING_ROD);
                         entries.add(ModItems.FIRE_ROD);
                         entries.add(ModItems.ARROW_ROD);
+                        entries.add(ModItems.FUNNY_POTATO);
+                        entries.add(ModItems.FUEL);
                     }).build());
 
     public static void registerItemsGroups() {

@@ -9,6 +9,9 @@
     "item.train.fire_rod" : "Огненный посох",
     "item.train.arrow_rod" : "Посох стрел",
     
+    "item.train.fuel" : "Топливо",
+    "item.train.funny_potato" : "Еда",
+    
     "itemGroup.train.ores_items": "Руды & Предметы"
 }
 

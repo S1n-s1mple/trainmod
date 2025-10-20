@@ -1,6 +1,8 @@
 package net.smakkqq.trainmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.minecraft.item.FuelRegistry;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.item.ModItems;
@@ -21,5 +23,9 @@ public class Train implements ModInitializer {
         
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        
+        FuelRegistryEvents.BUILD.register((builder, context) -> {
+            builder.add(ModItems.FUEL, 60 * 20);
+        });
     }
 }
