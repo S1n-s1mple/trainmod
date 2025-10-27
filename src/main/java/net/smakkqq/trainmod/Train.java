@@ -1,14 +1,9 @@
 package net.smakkqq.trainmod;
 
-import static java.util.Collections.list;
-import java.util.List;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
-import net.minecraft.client.gui.tooltip.TooltipPositioner;
-import net.minecraft.item.Item.TooltipContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.text.Text;
+import net.minecraft.text.Text; 
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.item.ModItems;
@@ -35,6 +30,12 @@ public class Train implements ModInitializer {
         ItemTooltipCallback.EVENT.register((itemStack, context, type, lines) -> {
             if (itemStack.isOf(ModBlocks.RUBY_BLOCK.asItem())) {
                 lines.add(Text.translatable("block.train.ruby_block.tooltip"));
+                lines.add(Text.translatable("item.train.ruby.tooltip"));
+                lines.add(Text.translatable("block.train.sapphire_block.tooltip"));
+                lines.add(Text.translatable("item.train.sapphire.tooltip"));
+                lines.add(Text.translatable("item.train.lightning_rod.tooltip"));
+                lines.add(Text.translatable("item.train.fire_rod.tooltip"));
+                lines.add(Text.translatable("item.train.arrow_rod.tooltip"));
             }
         });
     }
