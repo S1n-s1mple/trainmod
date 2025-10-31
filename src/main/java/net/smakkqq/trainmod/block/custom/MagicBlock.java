@@ -13,6 +13,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
+import net.smakkqq.trainmod.utill.ModTags;
 
 public class MagicBlock extends Block {
 
@@ -30,10 +31,15 @@ public class MagicBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof ItemEntity item) {
-            if (item.getStack().getItem() == Items.DIRT) {
+            if (isValidItem(item.getStack())) {
                 item.setStack(new ItemStack(Items.DIAMOND, item.getStack().getCount()));
             }
         }
         super.onSteppedOn(world, pos, state, entity);
     }
+    
+    
+private boolean isValidItem(ItemStack stack){
+    return stack.isIn(ModTags.Items.TRANSFORMABL_ITEMS);
+}
 }

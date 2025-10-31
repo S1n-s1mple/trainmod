@@ -1,13 +1,10 @@
 package net.smakkqq.trainmod.block;
 
 import java.util.function.Function;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import static net.minecraft.advancement.criterion.ConsumeItemCriterion.Conditions.item;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -15,6 +12,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
+import net.smakkqq.trainmod.block.custom.MagicBlock;
 
 public class ModBlocks {
 
@@ -42,7 +40,7 @@ public class ModBlocks {
     
     public static final Block SAPPHIRE_BLOCK = registerBlockItem(
             "magic_block",
-            Block::new,
+            MagicBlock::new,
             AbstractBlock.Settings.create()
                 .requiresTool()
                 .strength(5.0F, 6.0F)

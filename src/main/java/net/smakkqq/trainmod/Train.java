@@ -27,16 +27,5 @@ public class Train implements ModInitializer {
             builder.add(ModItems.FUEL, 60 * 20);
         });
 
-        ItemTooltipCallback.EVENT.register((itemStack, context, type, lines) -> {
-            if (itemStack.isOf(ModBlocks.RUBY_BLOCK.asItem())) {
-                lines.add(Text.translatable("block.train.ruby_block.tooltip"));
-                lines.add(Text.translatable("item.train.ruby.tooltip"));
-                lines.add(Text.translatable("block.train.sapphire_block.tooltip"));
-                lines.add(Text.translatable("item.train.sapphire.tooltip"));
-                lines.add(Text.translatable("item.train.lightning_rod.tooltip"));
-                lines.add(Text.translatable("item.train.fire_rod.tooltip"));
-                lines.add(Text.translatable("item.train.arrow_rod.tooltip"));
-            }
-        });
     }
 }
