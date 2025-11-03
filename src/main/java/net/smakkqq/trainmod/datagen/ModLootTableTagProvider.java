@@ -21,21 +21,23 @@ import net.smakkqq.trainmod.item.ModItems;
 public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
 
     public ModLootTableTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
-        super(output, registriesFuture);
+	super(output, registriesFuture);
     }
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.RUBY_BLOCK);
-        addDrop(ModBlocks.SAPPHIRE_BLOCK);
+	addDrop(ModBlocks.RUBY_BLOCK);
+	addDrop(ModBlocks.SAPPHIRE_BLOCK);
 
-        addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));
+	addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));
+	
+	addDrop(ModBlocks.SAPPHIRE_ORE, multipleOreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE, 3, 7));
 
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
-        RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.dropsWithSilkTouch(drops(this.applyExplosionDecay(drop, (LeafEntry.Builder<?>) ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
-                .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+	RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
+	return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>) ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
+		.apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
     }
 }
