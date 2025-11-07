@@ -13,22 +13,32 @@ import net.smakkqq.trainmod.block.ModBlocks;
 public class ModItemGroups {
 
     public static final ItemGroup MOD_TAB = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Train.MOD_ID, "ores_items"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE))
-                    .displayName(Text.translatable("itemGroup.train.ores_items"))
-                    .entries((displayContext, entries) -> {
-                        entries.add(ModItems.RUBY);
-                        entries.add(ModBlocks.RUBY_BLOCK);
-                        entries.add(ModItems.SAPPHIRE);
-                        entries.add(ModBlocks.SAPPHIRE_BLOCK);
-                        entries.add(ModItems.LIGHTNING_ROD);
-                        entries.add(ModItems.FIRE_ROD);
-                        entries.add(ModItems.ARROW_ROD);
-                        entries.add(ModItems.FUNNY_POTATO);
-                        entries.add(ModItems.FUEL);
-                    }).build());
+	    Identifier.of(Train.MOD_ID, "ores_items"),
+	    FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE))
+		    .displayName(Text.translatable("itemGroup.train.ores_items"))
+		    .entries((displayContext, entries) -> {
+			entries.add(ModItems.RUBY);
+			entries.add(ModBlocks.RUBY_BLOCK);
+			entries.add(ModItems.SAPPHIRE);
+			entries.add(ModBlocks.SAPPHIRE_BLOCK);
+			entries.add(ModItems.LIGHTNING_ROD);
+			entries.add(ModItems.FIRE_ROD);
+			entries.add(ModItems.ARROW_ROD);
+			entries.add(ModItems.FUNNY_POTATO);
+			entries.add(ModItems.FUEL);
+
+			entries.add(ModBlocks.RUBY_BLOCK_STAIRS);
+			entries.add(ModBlocks.RUBY_BLOCK_SLAB);
+			entries.add(ModBlocks.RUBY_BLOCK_BUTTON);
+			entries.add(ModBlocks.RUBY_BLOCK_PRESSURE_PLATE);
+			entries.add(ModBlocks.RUBY_BLOCK_FENCE_GATE);
+			entries.add(ModBlocks.RUBY_BLOCK_FENCE);
+			entries.add(ModBlocks.RUBY_BLOCK_TRAPDOOR);
+			entries.add(ModBlocks.RUBY_BLOCK_DOOR);
+			entries.add(ModBlocks.RUBY_BLOCK_WALL);
+		    }).build());
 
     public static void registerItemsGroups() {
-        Train.LOGGER.info("Registering Items Groups for " + Train.MOD_ID);
+	Train.LOGGER.info("Registering Items Groups for " + Train.MOD_ID);
     }
 }

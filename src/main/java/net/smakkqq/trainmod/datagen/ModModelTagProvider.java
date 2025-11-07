@@ -16,7 +16,18 @@ public class ModModelTagProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BLOCK);
+	blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RUBY_BLOCK)
+		.stairs(ModBlocks.RUBY_BLOCK_STAIRS)
+		.slab(ModBlocks.RUBY_BLOCK_SLAB)
+		.fence(ModBlocks.RUBY_BLOCK_FENCE)
+		.fenceGate(ModBlocks.RUBY_BLOCK_FENCE_GATE)
+		.pressurePlate(ModBlocks.RUBY_BLOCK_PRESSURE_PLATE)
+		.button(ModBlocks.RUBY_BLOCK_BUTTON)
+		.wall(ModBlocks.RUBY_BLOCK_WALL);
+		
+	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BLOCK_TRAPDOOR);
+	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BLOCK_DOOR);
+	
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_BLOCK);
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_ORE);
     }

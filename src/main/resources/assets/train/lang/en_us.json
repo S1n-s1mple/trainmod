@@ -8,6 +8,17 @@
     
     
     "block.train.ruby_block" : "Ruby Block",
+    "block.train.ruby_block_stairs" : "Ruby Stairs",
+    "block.train.ruby_block_slab" : "Slab Ruby Block",
+    "block.train.ruby_block_button" : "Ruby Button",
+    "block.train.ruby_block_pressure_plate" : "Ruby Pressure Plate",
+    "block.train.ruby_block_fence_gate" : "Ruby Fence Gate",
+    "block.train.ruby_block_fence" : "Ruby Face",
+    "block.train.ruby_block_trapdoor" : "Ruby Trapdoor",
+    "block.train.ruby_block_door" : "Ruby Door",
+    "block.train.ruby_block_wall" : "Ruby Wall",
+    
+    
     "block.train.sapphire_block" : "Sapphire Block",
     
     "block.train.ruby_block.tooltip" : "An incredible sample of §4ruby block",
