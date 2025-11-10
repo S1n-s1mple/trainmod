@@ -1,0 +1,39 @@
+{
+    "item.train.ruby": "Рубин",
+    "item.train.sapphire": "Сапфир",
+
+    "block.train.ruby.tooltip": "Потрясающий образец §4рубина",
+    "block.train.sapphire.tooltip": "Поистине великолепный §9сапфир",
+
+    "block.train.ruby_block": "Рубиновый блок",
+    "block.train.ruby_block_stairs": "Рубиновая лестница",
+    "block.train.ruby_block_slab": "Рубиновый плита",
+    "block.train.ruby_block_button": "Рубиновая кнопка",
+    "block.train.ruby_block_pressure_plate": "Рубиновая нажимная плита",
+    "block.train.ruby_block_fence_gate": "Рубиновая калитка",
+    "block.train.ruby_block_fence": "Рубиновый забор",
+    "block.train.ruby_block_trapdoor": "Рубиновый люк",
+    "block.train.ruby_block_door": "Рубиновая дверь",
+    "block.train.ruby_block_wall": "Рубиновая стена",
+
+    "block.train.sapphire_block": "Сапфировый блок",
+
+    "block.train.ruby_block.tooltip": "Невероятный образец блока §4рубина",
+    "block.train.sapphire_block.tooltip": "Исключительный образец блока §9сапфира",
+
+    "item.train.lightning_rod": "Молненный посох",
+    "item.train.fire_rod": "Огненный посох",
+    "item.train.arrow_rod": "Посох стрел",
+
+    "item.train.lightning_rod.tooltip": "Древний §eмолниеносный скипетр архимага",
+    "item.train.fire_rod.tooltip": "Легендарный §cогненный посох, которым когда-то владел могущественный маг.",
+    "item.train.arrow_rod.tooltip": "Гениально спроектированный §7лук",
+
+    "block.train.sapphire_ore": "Сапфировая руда",
+
+    "item.train.fuel": "Топливо",
+    "item.train.funny_potato": "Еда",
+
+    "itemGroup.train.ores_items": "Руды & Предметы"
+}
+

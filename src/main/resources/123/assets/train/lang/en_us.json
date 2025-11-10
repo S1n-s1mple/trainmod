@@ -1,0 +1,50 @@
+{
+    "item.train.ruby" : "Ruby",
+    "item.train.sapphire" : "Sapphire",
+    
+    "block.train.ruby.tooltip" : "A stunning §4ruby specimen",
+    "block.train.sapphire.tooltip" : "A truly magnificent §9sapphire",
+    
+    
+    
+    "block.train.ruby_block" : "Ruby Block",
+    "block.train.ruby_block_stairs" : "Ruby Stairs",
+    "block.train.ruby_block_slab" : "Slab Ruby Block",
+    "block.train.ruby_block_button" : "Ruby Button",
+    "block.train.ruby_block_pressure_plate" : "Ruby Pressure Plate",
+    "block.train.ruby_block_fence_gate" : "Ruby Fence Gate",
+    "block.train.ruby_block_fence" : "Ruby Face",
+    "block.train.ruby_block_trapdoor" : "Ruby Trapdoor",
+    "block.train.ruby_block_door" : "Ruby Door",
+    "block.train.ruby_block_wall" : "Ruby Wall",
+    
+    
+    "block.train.sapphire_block" : "Sapphire Block",
+    
+    "block.train.ruby_block.tooltip" : "An incredible sample of §4ruby block",
+    "block.train.sapphire_block.tooltip" : "An exceptional specimen of §9sapphire block",
+    
+    
+    
+    "item.train.lightning_rod" : "Lightning rod",
+    "item.train.fire_rod" : "Fire rod",
+    "item.train.arrow_rod" : "Arrow rod",
+    
+    "item.train.lightning_rod.tooltip" : "An archmage's ancient §elightning scepter",
+    "item.train.fire_rod.tooltip" : "A legendary §cfire staff once wielded by a mighty magician",
+    "item.train.arrow_rod.tooltip" : "An ingeniously engineered §7bow",
+    
+    
+    
+    "block.train.sapphire_ore" : "Sapphire Ore",
+
+
+    
+    "item.train.fuel" : "Fuel",
+    "item.train.funny_potato" : "Food",
+    
+    
+    
+    "itemGroup.train.ores_items": "Ores & Items"
+
+}
