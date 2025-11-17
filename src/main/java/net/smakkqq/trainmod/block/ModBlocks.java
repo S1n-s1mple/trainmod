@@ -24,6 +24,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.custom.MagicBlock;
+import net.smakkqq.trainmod.block.custom.RubyLampBlock;
 
 public class ModBlocks {
 
@@ -76,7 +77,7 @@ public class ModBlocks {
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 	    true
     );
-    
+
     public static final Block RUBY_BLOCK_FENCE_GATE = registerBlockItem(
 	    "ruby_block_fence_gate",
 	    (settings) -> new FenceGateBlock(WoodType.BAMBOO, settings),
@@ -127,6 +128,17 @@ public class ModBlocks {
 	    true
     );
 
+    public static final Block RUBY_LAMP = registerBlockItem(
+	    "ruby_lamp",
+	    RubyLampBlock::new,
+	    AbstractBlock.Settings.create()
+		    .requiresTool()
+		    .strength(1f)
+		    .luminance(state -> state.get(RubyLampBlock.CLICKED) ? 15 : 0)
+		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+	    true
+    );
+    
 //    public static final Block SAPPHIRE_BLOCK = registerBlockItem(
 //            "sapphire_block",
 //            Block::new,

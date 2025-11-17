@@ -15,6 +15,9 @@
     "block.train.ruby_block_trapdoor": "Рубиновый люк",
     "block.train.ruby_block_door": "Рубиновая дверь",
     "block.train.ruby_block_wall": "Рубиновая стена",
+    
+    "block.train.ruby_lamp" : "Рубиновая лампа",
+
 
     "block.train.sapphire_block": "Сапфировый блок",
 

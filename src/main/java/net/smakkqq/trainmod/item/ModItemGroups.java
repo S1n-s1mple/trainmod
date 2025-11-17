@@ -36,6 +36,8 @@ public class ModItemGroups {
 			entries.add(ModBlocks.RUBY_BLOCK_TRAPDOOR);
 			entries.add(ModBlocks.RUBY_BLOCK_DOOR);
 			entries.add(ModBlocks.RUBY_BLOCK_WALL);
+			
+			entries.add(ModBlocks.RUBY_LAMP);
 		    }).build());
 
     public static void registerItemsGroups() {
