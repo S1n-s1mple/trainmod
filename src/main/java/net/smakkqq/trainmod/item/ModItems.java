@@ -4,6 +4,7 @@ import java.util.function.Function;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -56,6 +57,32 @@ public class ModItems {
             "fuel",
             Item::new,
             new Item.Settings()
+    );
+    
+    public static final Item RUBY_PICKAXE = registerItem(
+            "ruby_pickaxe",
+            Item::new,
+            new Item.Settings().pickaxe(ToolMaterial.NETHERITE, 1.0F, -2.8F)
+    );
+    public static final Item RUBY_AXE = registerItem(
+            "ruby_axe",
+            Item::new,
+            new Item.Settings().axe(ToolMaterial.NETHERITE, 1.0F, -2.8F)
+    );
+    public static final Item RUBY_SWORD = registerItem(
+            "ruby_sword",
+            Item::new,
+            new Item.Settings().sword(ToolMaterial.NETHERITE, 9, 1.6F)
+    );
+    public static final Item RUBY_HOE = registerItem(
+            "ruby_hoe",
+            Item::new,
+            new Item.Settings().hoe(ToolMaterial.NETHERITE, 1.0F, -2.8F)
+    );
+    public static final Item RUBY_SHOVEL = registerItem(
+            "ruby_shovel",
+            Item::new,
+            new Item.Settings().shovel(ToolMaterial.NETHERITE, 1.0F, -2.8F)
     );
 
     private static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
