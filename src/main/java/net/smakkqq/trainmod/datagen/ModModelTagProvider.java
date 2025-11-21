@@ -5,7 +5,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
+import net.minecraft.client.data.TextureMap;
+import net.minecraft.client.data.TexturedModel;
+import net.minecraft.client.data.VariantsBlockModelDefinitionCreator;
+import net.minecraft.client.render.model.json.WeightedVariant;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.block.custom.RubyLampBlock;
+import static net.smakkqq.trainmod.block.custom.RubyLampBlock.CLICKED;
 import net.smakkqq.trainmod.item.ModItems;
 
 public class ModModelTagProvider extends FabricModelProvider {
@@ -24,12 +30,25 @@ public class ModModelTagProvider extends FabricModelProvider {
 		.pressurePlate(ModBlocks.RUBY_BLOCK_PRESSURE_PLATE)
 		.button(ModBlocks.RUBY_BLOCK_BUTTON)
 		.wall(ModBlocks.RUBY_BLOCK_WALL);
-		
+
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BLOCK_TRAPDOOR);
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BLOCK_DOOR);
-	
+
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_BLOCK);
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_ORE);
+
+	WeightedVariant offVariant = BlockStateModelGenerator.createWeightedVariant(
+		TexturedModel.CUBE_ALL.upload(ModBlocks.RUBY_LAMP, blockStateModelGenerator.modelCollector)
+	);
+	WeightedVariant onVariant = BlockStateModelGenerator.createWeightedVariant(
+		blockStateModelGenerator.createSubModel(ModBlocks.RUBY_LAMP,
+			"_on", Models.CUBE_ALL, TextureMap::all)
+	);
+	blockStateModelGenerator.blockStateCollector.accept(
+		VariantsBlockModelDefinitionCreator
+		.of(ModBlocks.RUBY_LAMP)
+		.with(BlockStateModelGenerator.createBooleanModelMap(RubyLampBlock.CLICKED, onVariant, offVariant))
+	);
     }
 
     @Override
