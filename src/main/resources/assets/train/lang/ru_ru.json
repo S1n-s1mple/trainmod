@@ -2,6 +2,12 @@
     "item.train.ruby": "Рубин",
     "item.train.sapphire": "Сапфир",
 
+    "item.train.ruby_axe": "Рубиновый топор",
+    "item.train.ruby_shovel": "Рубиновая лопата",
+    "item.train.ruby_hoe": "Рубиновая мотыга",
+    "item.train.ruby_pickaxe": "Рубиновый кирка",
+    "item.train.ruby_sword": "Рубиновый меч",
+
     "block.train.ruby.tooltip": "Потрясающий образец §4рубина",
     "block.train.sapphire.tooltip": "Поистине великолепный §9сапфир",
 
@@ -15,9 +21,8 @@
     "block.train.ruby_block_trapdoor": "Рубиновый люк",
     "block.train.ruby_block_door": "Рубиновая дверь",
     "block.train.ruby_block_wall": "Рубиновая стена",
-    
-    "block.train.ruby_lamp" : "Рубиновая лампа",
 
+    "block.train.ruby_lamp": "Рубиновая лампа",
 
     "block.train.sapphire_block": "Сапфировый блок",
 

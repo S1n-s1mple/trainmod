@@ -1,4 +1,4 @@
-package net.smakkqq.trainmod.datagen;
+package net.racc0on.lessonmod.datagen;
 
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -15,8 +15,7 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.smakkqq.trainmod.block.ModBlocks;
-import net.smakkqq.trainmod.item.ModItems;
+import net.racc0on.lessonmod.block.ModBlocks;
 
 public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
 
@@ -35,23 +34,21 @@ public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
 	addDrop(ModBlocks.RUBY_BLOCK_PRESSURE_PLATE);
 	
 	addDrop(ModBlocks.RUBY_BLOCK_WALL);
-	addDrop(ModBlocks.RUBY_BLOCK_FENCE_GATE);
 	addDrop(ModBlocks.RUBY_BLOCK_FENCE);
+	addDrop(ModBlocks.RUBY_BLOCK_FENCE_GATE);
 	
 	addDrop(ModBlocks.RUBY_BLOCK_DOOR, doorDrops(ModBlocks.RUBY_BLOCK_DOOR));
 	addDrop(ModBlocks.RUBY_BLOCK_TRAPDOOR);
 	
-	
-	addDrop(ModBlocks.SAPPHIRE_BLOCK);
-
-	addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));
-	addDrop(ModBlocks.SAPPHIRE_ORE, multipleOreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE, 3, 7));
-
+//	addDrop(ModBlocks.RUBY_ORE, oreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY));
+//	addDrop(ModBlocks.RUBY_ORE, multipleOreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY, 3, 7));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
-	RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
-	return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>) ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
-		.apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+	RegistryWrapper.Impl<Enchantment>impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
+	return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
+		ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
+	.apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
     }
+
 }

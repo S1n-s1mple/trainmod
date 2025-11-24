@@ -67,22 +67,22 @@ public class ModItems {
     public static final Item RUBY_AXE = registerItem(
             "ruby_axe",
             Item::new,
-            new Item.Settings().axe(ToolMaterial.NETHERITE, 1.0F, -2.8F)
+            new Item.Settings().axe(ToolMaterial.NETHERITE, 1.0F, -3.2F)
     );
     public static final Item RUBY_SWORD = registerItem(
             "ruby_sword",
             Item::new,
-            new Item.Settings().sword(ToolMaterial.NETHERITE, 9, 1.6F)
+            new Item.Settings().sword(ToolMaterial.NETHERITE, 5.0F, -2.8F)
     );
     public static final Item RUBY_HOE = registerItem(
             "ruby_hoe",
             Item::new,
-            new Item.Settings().hoe(ToolMaterial.NETHERITE, 1.0F, -2.8F)
+            new Item.Settings().hoe(ToolMaterial.NETHERITE, 0F, -3F)
     );
     public static final Item RUBY_SHOVEL = registerItem(
             "ruby_shovel",
             Item::new,
-            new Item.Settings().shovel(ToolMaterial.NETHERITE, 1.0F, -2.8F)
+            new Item.Settings().shovel(ToolMaterial.NETHERITE, 1.5F, -2.8F)
     );
 
     private static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
