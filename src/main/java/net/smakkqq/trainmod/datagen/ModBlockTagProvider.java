@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package net.racc0on.lessonmod.datagen;
+package net.smakkqq.trainmod.datagen;
 
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
-import net.racc0on.lessonmod.block.ModBlocks;
-import net.racc0on.lessonmod.utill.ModTags;
+import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.utill.ModTags;
 
 /**
  *

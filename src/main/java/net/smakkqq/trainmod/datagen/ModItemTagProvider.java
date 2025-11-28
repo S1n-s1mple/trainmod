@@ -1,4 +1,4 @@
-package net.racc0on.lessonmod.datagen;
+package net.smakkqq.trainmod.datagen;
 
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -6,8 +6,8 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.ItemTagProv
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
-import net.racc0on.lessonmod.item.ModItems;
-import net.racc0on.lessonmod.utill.ModTags;
+import net.smakkqq.trainmod.item.ModItems;
+import net.smakkqq.trainmod.utill.ModTags;
 
 public class ModItemTagProvider extends ItemTagProvider {
 
@@ -23,17 +23,22 @@ public class ModItemTagProvider extends ItemTagProvider {
 		.add(Items.DIRT)
 		.add(Items.APPLE)
 		.add(Items.STICK);
-	
+
 	valueLookupBuilder(ItemTags.SWORDS)
 		.add(ModItems.RUBY_SWORD);
+//		.add(ModItems.SAPPHIRE_SWORD);
 	valueLookupBuilder(ItemTags.SHOVELS)
 		.add(ModItems.RUBY_SHOVEL);
+//		.add(ModItems.SAPPHIRE_SHOVEL);
 	valueLookupBuilder(ItemTags.HOES)
 		.add(ModItems.RUBY_HOE);
+//		.add(ModItems.SAPPHIRE_HOE);
 	valueLookupBuilder(ItemTags.PICKAXES)
 		.add(ModItems.RUBY_PICKAXE);
+//		.add(ModItems.SAPPHIRE_PICKAXE);
 	valueLookupBuilder(ItemTags.AXES)
 		.add(ModItems.RUBY_AXE);
-	
+//		.add(ModItems.SAPPHIRE_AXE);
+
     }
 }

@@ -32,6 +32,11 @@ public class ModItemGroups {
 			entries.add(ModItems.RUBY_SWORD);
 			entries.add(ModItems.RUBY_HOE);
 			entries.add(ModItems.RUBY_AXE);
+//			entries.add(ModItems.SAPPHIRE_PICKAXE);
+//			entries.add(ModItems.SAPPHIRE_SHOVEL);
+//			entries.add(ModItems.SAPPHIRE_SWORD);
+//			entries.add(ModItems.SAPPHIRE_HOE);
+//			entries.add(ModItems.SAPPHIRE_AXE);
 
 			entries.add(ModBlocks.RUBY_BLOCK_STAIRS);
 			entries.add(ModBlocks.RUBY_BLOCK_SLAB);

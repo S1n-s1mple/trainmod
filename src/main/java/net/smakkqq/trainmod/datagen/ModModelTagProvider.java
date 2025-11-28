@@ -1,4 +1,4 @@
-package net.racc0on.lessonmod.datagen;
+package net.smakkqq.trainmod.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -9,9 +9,9 @@ import net.minecraft.client.data.TextureMap;
 import net.minecraft.client.data.TexturedModel;
 import net.minecraft.client.data.VariantsBlockModelDefinitionCreator;
 import net.minecraft.client.render.model.json.WeightedVariant;
-import net.racc0on.lessonmod.block.ModBlocks;
-import net.racc0on.lessonmod.block.custom.RubyLampBlock;
-import net.racc0on.lessonmod.item.ModItems;
+import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.block.custom.RubyLampBlock;
+import net.smakkqq.trainmod.item.ModItems;
 
 public class ModModelTagProvider extends FabricModelProvider {
 
@@ -51,13 +51,18 @@ public class ModModelTagProvider extends FabricModelProvider {
 	itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FIRE_ROD, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FUEL, Models.GENERATED);
-	itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
+	itemModelGenerator.register(ModItems.FUNNY_POTATO, Models.GENERATED);
 	
 	itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
+//	itemModelGenerator.register(ModItems.SAPPHIRE_AXE, Models.HANDHELD);
+//	itemModelGenerator.register(ModItems.SAPPHIRE_SWORD, Models.HANDHELD);
+//	itemModelGenerator.register(ModItems.SAPPHIRE_HOE, Models.HANDHELD);
+//	itemModelGenerator.register(ModItems.SAPPHIRE_PICKAXE, Models.HANDHELD);
+//	itemModelGenerator.register(ModItems.SAPPHIRE_SHOVEL, Models.HANDHELD);
     }
 
 }

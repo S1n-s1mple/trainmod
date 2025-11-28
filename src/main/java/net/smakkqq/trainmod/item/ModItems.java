@@ -84,6 +84,32 @@ public class ModItems {
             Item::new,
             new Item.Settings().shovel(ToolMaterial.NETHERITE, 1.5F, -2.8F)
     );
+ 
+//    public static final Item SAPPHIRE_PICKAXE = registerItem(
+//            "sapphire_pickaxe",
+//            Item::new,
+//            new Item.Settings().pickaxe(ToolMaterial.NETHERITE, 1.0F, -2.8F)
+//    );
+//    public static final Item SAPPHIRE_AXE = registerItem(
+//            "sapphire_axe",
+//            Item::new,
+//            new Item.Settings().axe(ToolMaterial.NETHERITE, 1.0F, -3.2F)
+//    );
+//    public static final Item SAPPHIRE_SWORD = registerItem(
+//            "sapphire_sword",
+//            Item::new,
+//            new Item.Settings().sword(ToolMaterial.NETHERITE, 5.0F, -2.8F)
+//    );
+//    public static final Item SAPPHIRE_HOE = registerItem(
+//            "sapphire_hoe",
+//            Item::new,
+//            new Item.Settings().hoe(ToolMaterial.NETHERITE, 0F, -3F)
+//    );
+//    public static final Item SAPPHIRE_SHOVEL = registerItem(
+//            "sapphire_shovel",
+//            Item::new,
+//            new Item.Settings().shovel(ToolMaterial.NETHERITE, 1.5F, -2.8F)
+//    );
 
     private static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Создание ключа для предмета

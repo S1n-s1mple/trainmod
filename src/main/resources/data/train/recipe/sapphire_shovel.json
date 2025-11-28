@@ -3,7 +3,7 @@
     "category": "misc",
     "key": {
         "&": "minecraft:stick",
-        "#":  "train:ruby"
+        "#":  "train:sapphire"
     },
     "pattern": [
         " # ",
@@ -12,6 +12,6 @@
     ],
     "result": {
         "count": 1,
-        "id": "train:ruby_shovel"
+        "id": "train:sapphire_shovel"
     }
 }

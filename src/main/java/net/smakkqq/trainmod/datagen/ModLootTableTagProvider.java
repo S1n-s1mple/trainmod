@@ -1,4 +1,4 @@
-package net.racc0on.lessonmod.datagen;
+package net.smakkqq.trainmod.datagen;
 
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -15,7 +15,7 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.racc0on.lessonmod.block.ModBlocks;
+import net.smakkqq.trainmod.block.ModBlocks;
 
 public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
 
