@@ -1,9 +1,7 @@
 package net.smakkqq.trainmod;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
-import net.minecraft.text.Text; 
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.item.ModItems;
@@ -18,14 +16,14 @@ public class Train implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ModItemGroups.registerItemsGroups();
+	ModItemGroups.registerItemsGroups();
 
-        ModItems.registerModItems();
-        ModBlocks.registerModBlocks();
+	ModItems.registerModItems();
+	ModBlocks.registerModBlocks();
 
-        FuelRegistryEvents.BUILD.register((builder, context) -> {
-            builder.add(ModItems.FUEL, 60 * 20);
-        });
+	FuelRegistryEvents.BUILD.register((builder, context) -> {
+	    builder.add(ModItems.FUEL, 60 * 20);
+	});
 
     }
 }

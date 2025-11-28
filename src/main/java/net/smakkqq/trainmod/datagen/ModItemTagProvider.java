@@ -25,20 +25,20 @@ public class ModItemTagProvider extends ItemTagProvider {
 		.add(Items.STICK);
 
 	valueLookupBuilder(ItemTags.SWORDS)
-		.add(ModItems.RUBY_SWORD);
-//		.add(ModItems.SAPPHIRE_SWORD);
+		.add(ModItems.RUBY_SWORD)
+		.add(ModItems.SAPPHIRE_SWORD);
 	valueLookupBuilder(ItemTags.SHOVELS)
-		.add(ModItems.RUBY_SHOVEL);
-//		.add(ModItems.SAPPHIRE_SHOVEL);
+		.add(ModItems.RUBY_SHOVEL)
+		.add(ModItems.SAPPHIRE_SHOVEL);
 	valueLookupBuilder(ItemTags.HOES)
-		.add(ModItems.RUBY_HOE);
-//		.add(ModItems.SAPPHIRE_HOE);
+		.add(ModItems.RUBY_HOE)
+		.add(ModItems.SAPPHIRE_HOE);
 	valueLookupBuilder(ItemTags.PICKAXES)
-		.add(ModItems.RUBY_PICKAXE);
-//		.add(ModItems.SAPPHIRE_PICKAXE);
+		.add(ModItems.RUBY_PICKAXE)
+		.add(ModItems.SAPPHIRE_PICKAXE);
 	valueLookupBuilder(ItemTags.AXES)
-		.add(ModItems.RUBY_AXE);
-//		.add(ModItems.SAPPHIRE_AXE);
+		.add(ModItems.RUBY_AXE)
+		.add(ModItems.SAPPHIRE_AXE);
 
     }
 }

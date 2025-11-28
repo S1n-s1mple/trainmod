@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "train:block/ruby_lamp"
+    },
+    "clicked=true": {
+      "model": "train:block/ruby_lamp_on"
+    }
+  }
+}

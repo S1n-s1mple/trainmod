@@ -37,6 +37,15 @@ public class ModBlocks {
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 	    true
     );
+    public static final Block SAPPHIRE_BLOCK = registerBlockItem(
+	    "sapphire_block",
+	    Block::new,
+	    AbstractBlock.Settings.create()
+		    .requiresTool()
+		    .strength(5.0F, 6.0F)
+		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+	    true
+    );
 
     public static final Block RUBY_BLOCK_STAIRS = registerBlockItem(
 	    "ruby_block_stairs",
@@ -138,7 +147,7 @@ public class ModBlocks {
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 	    true
     );
-    
+
 //    public static final Block SAPPHIRE_BLOCK = registerBlockItem(
 //            "sapphire_block",
 //            Block::new,

@@ -49,20 +49,22 @@ public class ModModelTagProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 	itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
+	itemModelGenerator.register(ModItems.SAPPHIRE, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FIRE_ROD, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FUEL, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FUNNY_POTATO, Models.GENERATED);
-	
+
 	itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
-//	itemModelGenerator.register(ModItems.SAPPHIRE_AXE, Models.HANDHELD);
-//	itemModelGenerator.register(ModItems.SAPPHIRE_SWORD, Models.HANDHELD);
-//	itemModelGenerator.register(ModItems.SAPPHIRE_HOE, Models.HANDHELD);
-//	itemModelGenerator.register(ModItems.SAPPHIRE_PICKAXE, Models.HANDHELD);
-//	itemModelGenerator.register(ModItems.SAPPHIRE_SHOVEL, Models.HANDHELD);
+	
+	itemModelGenerator.register(ModItems.SAPPHIRE_AXE, Models.HANDHELD);
+	itemModelGenerator.register(ModItems.SAPPHIRE_SWORD, Models.HANDHELD);
+	itemModelGenerator.register(ModItems.SAPPHIRE_HOE, Models.HANDHELD);
+	itemModelGenerator.register(ModItems.SAPPHIRE_PICKAXE, Models.HANDHELD);
+	itemModelGenerator.register(ModItems.SAPPHIRE_SHOVEL, Models.HANDHELD);
     }
 
 }

@@ -1,5 +1,4 @@
 // 1.21.6	-999999999-01-01T00:00:00	Lukas' mod/Block Loot Tables
-67bbd74ad838c5952f687fe014695ceb14f8bbee data/train/loot_table/blocks/magic_block.json
 29e6b6b521ed68c60663d434fd743aef0e68719d data/train/loot_table/blocks/ruby_block.json
 9559072017dcfc6b76ee25a73d6bcf74e2c5e074 data/train/loot_table/blocks/ruby_block_button.json
 3a272ded50ea8ffdb601734844336eeb4b0b4c7b data/train/loot_table/blocks/ruby_block_door.json
@@ -10,4 +9,3 @@ d93aacc2ea6f63c19789bb34b8d1b9f781a42e38 data/train/loot_table/blocks/ruby_block
 9d9ba55e3097e89056576bcd63503b6da9f23467 data/train/loot_table/blocks/ruby_block_stairs.json
 e9c2991a6f0f909249fad23e86f3ee179417e56c data/train/loot_table/blocks/ruby_block_trapdoor.json
 2caef0fa180a4490d09c3061c772bfda39259e34 data/train/loot_table/blocks/ruby_block_wall.json
-330918bf0643dec9180332f8bc4c97210deddb16 data/train/loot_table/blocks/sapphire_ore.json
