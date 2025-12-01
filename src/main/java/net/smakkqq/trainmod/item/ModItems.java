@@ -16,6 +16,7 @@ import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.item.custom.ArrowRod;
 import net.smakkqq.trainmod.item.custom.FireRod;
+import net.smakkqq.trainmod.item.custom.HammerItem;
 import net.smakkqq.trainmod.item.custom.LightningRod;
 
 public class ModItems {
@@ -63,13 +64,13 @@ public class ModItems {
     );
 
     public static final Item RUBY_HOE = registerItem(
-	   "ruby_hoe",
+	    "ruby_hoe",
 	    settings -> new HoeItem(ToolMaterial.NETHERITE, 0F, -3.0F, settings),
 	    new Item.Settings()
     );
-    
+
     public static final Item RUBY_SHOVEL = registerItem(
-	   "ruby_shovel",
+	    "ruby_shovel",
 	    settings -> new ShovelItem(ToolMaterial.NETHERITE, 1.5F, -2.8F, settings),
 	    new Item.Settings()
     );
@@ -91,19 +92,15 @@ public class ModItems {
 	    Item::new,
 	    new Item.Settings().sword(ToolMaterial.NETHERITE, 5.0F, -2.8F)
     );
-    
-    
-    
-    
-    
-        public static final Item SAPPHIRE_HOE = registerItem(
-	   "sapphire_hoe",
+
+    public static final Item SAPPHIRE_HOE = registerItem(
+	    "sapphire_hoe",
 	    settings -> new HoeItem(ToolMaterial.NETHERITE, 0F, -3.0F, settings),
 	    new Item.Settings()
     );
-    
+
     public static final Item SAPPHIRE_SHOVEL = registerItem(
-	   "sapphire_shovel",
+	    "sapphire_shovel",
 	    settings -> new ShovelItem(ToolMaterial.NETHERITE, 1.5F, -2.8F, settings),
 	    new Item.Settings()
     );
@@ -119,11 +116,17 @@ public class ModItems {
 	    Item::new,
 	    new Item.Settings().pickaxe(ToolMaterial.NETHERITE, 1.0F, -2.8F)
     );
-    
+
     public static final Item SAPPHIRE_SWORD = registerItem(
 	    "sapphire_sword",
 	    Item::new,
 	    new Item.Settings().sword(ToolMaterial.NETHERITE, 5.0F, -2.8F)
+    );
+
+    public static final Item RUBY_HAMMER = registerItem(
+	    "ruby_hammer",
+	    settings -> new HammerItem(ToolMaterial.NETHERITE, 7.0F, -3.4F, settings),
+	    new Item.Settings()
     );
 
     private static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {

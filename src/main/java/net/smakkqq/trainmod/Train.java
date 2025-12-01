@@ -1,10 +1,12 @@
 package net.smakkqq.trainmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.item.ModItems;
+import net.smakkqq.trainmod.utill.HammerUsageEvent;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +26,8 @@ public class Train implements ModInitializer {
 	FuelRegistryEvents.BUILD.register((builder, context) -> {
 	    builder.add(ModItems.FUEL, 60 * 20);
 	});
+	
+	PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
     }
 }

@@ -25,11 +25,13 @@ faed4e15e5779e2133957753b4b18d189c5e9b95 assets/train/items/ruby_block_slab.json
 28f778d3b5471140d258a11219c3515b79fd6994 assets/train/items/ruby_block_stairs.json
 f2f0f7728892e8c2d28e9dd80763209f17c00125 assets/train/items/ruby_block_trapdoor.json
 190b34d6fc39f08ab29b14b94c374ced2dc43966 assets/train/items/ruby_block_wall.json
+06b8d36f2a81ff007ad6a55f5a27638793b093b2 assets/train/items/ruby_hammer.json
 fc0cd9a5e030bfd6525d47a26602042f1d0ceded assets/train/items/ruby_hoe.json
 c96592ffd28aaf21cced1180ae6853b10e212de9 assets/train/items/ruby_lamp.json
 600722d67acba959c8b941f5ad38993598cf4947 assets/train/items/ruby_pickaxe.json
 c911a207d029a2245b59ecc6274b0825dc4a6f3f assets/train/items/ruby_shovel.json
 6b8d53696fa9993cc75a89de80b6610d2302b8b3 assets/train/items/ruby_sword.json
+6b2ef17228e7d9667b68edf14196da78da86fe84 assets/train/items/sapphire.json
 d4488397e7355c19a981aa1ac8ffe47ec04f76c9 assets/train/items/sapphire_axe.json
 cf0cd05c963df0f885b23391f6ad3a48610c0133 assets/train/items/sapphire_hoe.json
 89f2b7ef2e125418fbbce6cd342d7e6b4798bb1c assets/train/items/sapphire_pickaxe.json
@@ -76,10 +78,12 @@ b43f9d9aa2fdfaf65eaf6fc76e7ddccd71002f07 assets/train/models/block/ruby_lamp.jso
 2f9be9575ef4321fef9da280e6bf6803805f7496 assets/train/models/item/ruby.json
 7435359541d208da4978b20ce45b534e0291636b assets/train/models/item/ruby_axe.json
 59bb9321428d6ac36f6916c9c0c33db3ac84f314 assets/train/models/item/ruby_block_door.json
+c9a1b88ae7ed9deaaab2b45dd0bf74d525e8f5af assets/train/models/item/ruby_hammer.json
 7db7804ceebaf559ddb3044c068384528ba873f5 assets/train/models/item/ruby_hoe.json
 06e651c1a2d70a37cecee3cb7321948e963ebef5 assets/train/models/item/ruby_pickaxe.json
 ff3bf32c3c8f0c82665f92becb733ed1b64a104d assets/train/models/item/ruby_shovel.json
 2d1195524b7e914d3b887426f42903601e86e564 assets/train/models/item/ruby_sword.json
+89a97e36fa53e5314cf85ea623ce5cf0f6fc736f assets/train/models/item/sapphire.json
 d8f2603fa5a8ae9472cece63cbb95ac9547e02d9 assets/train/models/item/sapphire_axe.json
 eafc7b209990f93a96d265410d42ae83bb5c6949 assets/train/models/item/sapphire_hoe.json
 3e3270a3ed9f96b52bd2a14782944af71d8e6e93 assets/train/models/item/sapphire_pickaxe.json

@@ -159,17 +159,17 @@ public class ModBlocks {
 //                .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 //            true
 //    );
-    public static final Block SAPPHIRE_BLOCK = registerBlockItem(
-	    "magic_block",
-	    MagicBlock::new,
-	    AbstractBlock.Settings.create()
-		    .requiresTool()
-		    .strength(5.0F, 6.0F)
-		    .burnable()
-		    .luminance(state -> 10)
-		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
-	    true
-    );
+//    public static final Block SAPPHIRE_BLOCK = registerBlockItem(
+//	    "magic_block",
+//	    MagicBlock::new,
+//	    AbstractBlock.Settings.create()
+//		    .requiresTool()
+//		    .strength(5.0F, 6.0F)
+//		    .burnable()
+//		    .luminance(state -> 10)
+//		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+//	    true
+//    );
 
     public static final Block SAPPHIRE_ORE = registerBlockItem(
 	    "sapphire_ore",

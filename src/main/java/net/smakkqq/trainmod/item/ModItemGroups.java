@@ -28,6 +28,7 @@ public class ModItemGroups {
 			entries.add(ModItems.FUEL);
 			
 			entries.add(ModItems.RUBY_PICKAXE);
+			entries.add(ModItems.RUBY_HAMMER);
 			entries.add(ModItems.RUBY_SHOVEL);
 			entries.add(ModItems.RUBY_SWORD);
 			entries.add(ModItems.RUBY_HOE);

@@ -58,6 +58,7 @@ public class ModModelTagProvider extends FabricModelProvider {
 	itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
+	itemModelGenerator.register(ModItems.RUBY_HAMMER, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
 	
 	itemModelGenerator.register(ModItems.SAPPHIRE_AXE, Models.HANDHELD);
