@@ -42,7 +42,7 @@ public class HammerItem extends Item {
 	    if (blockHit.getSide() == Direction.EAST || blockHit.getSide() == Direction.WEST) {
 		for (int x = -range; x <= range; x++) {
 		    for (int y = -range; y <= range; y++) {
-			positions.add(new BlockPos(initialBlockPos.getX() + x, initialBlockPos.getY() + y, initialBlockPos.getZ()));
+			positions.add(new BlockPos(initialBlockPos.getX(), initialBlockPos.getY() + y, initialBlockPos.getZ() + x));
 		    }
 		}
 	    }

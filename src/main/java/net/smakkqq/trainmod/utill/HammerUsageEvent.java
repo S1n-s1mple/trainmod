@@ -27,12 +27,12 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before {
 	    }
 	    
 	    for(BlockPos position : HammerItem.getBlocksToBeDestroyed(1, pos, serverPlayer)){
-		if (pos == position || !hammer.isCorrectForDrops(mainHandItem, world.getBlockState(position))) {
+		if (pos.equals(position) || !hammer.isCorrectForDrops(mainHandItem, world.getBlockState(position))) {
 		    continue;
 		}
 		
 		HARVESTED_BLOCKS.add(position);
-		serverPlayer.interactionManager.tryBreakBlock(position);
+		serverPlayer.interactionManager.tryBreakBlock(position); // рекурсия, но не могу понять как это исправить
 		HARVESTED_BLOCKS.remove(position);
 	    }
 	}
