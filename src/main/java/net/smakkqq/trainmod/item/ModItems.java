@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -127,6 +128,44 @@ public class ModItems {
 	    "ruby_hammer",
 	    settings -> new HammerItem(ToolMaterial.NETHERITE, 7.0F, -3.4F, settings),
 	    new Item.Settings()
+    );
+    
+//@@@@@@@@@@@@@@@@@     БРОНЯ     @@@@@@@@@@@@@@@@@@@@@@@@
+    
+    public static final Item SAPPHIRE_HELMET = registerItem(
+	    "sapphire_helmet",
+	    Item::new,
+	    new Item.Settings().armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.HELMET)
+	    .maxDamage(
+		    EquipmentType.HELMET.getMaxDamage(
+			    ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL.durability()))
+    );
+    
+    public static final Item SAPPHIRE_CHESTPLATE = registerItem(
+	    "sapphire_chestplate",
+	    Item::new,
+	    new Item.Settings().armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)
+	    .maxDamage(
+		    EquipmentType.CHESTPLATE.getMaxDamage(
+			    ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL.durability()))
+    );
+    
+    public static final Item SAPPHIRE_LEGGINS = registerItem(
+	    "sapphire_leggins",
+	    Item::new,
+	    new Item.Settings().armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)
+	    .maxDamage(
+		    EquipmentType.LEGGINGS.getMaxDamage(
+			    ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL.durability()))
+    );
+    
+    public static final Item SAPPHIRE_BOOTS = registerItem(
+	    "sapphire_leggins",
+	    Item::new,
+	    new Item.Settings().armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.BOOTS)
+	    .maxDamage(
+		    EquipmentType.BOOTS.getMaxDamage(
+			    ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL.durability()))
     );
 
     private static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "train:sapphire"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "train:sapphire"
+      }
+    ]
+  }
+}

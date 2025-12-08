@@ -9,6 +9,9 @@ import net.minecraft.client.data.TextureMap;
 import net.minecraft.client.data.TexturedModel;
 import net.minecraft.client.data.VariantsBlockModelDefinitionCreator;
 import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.util.Identifier;
+import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.block.custom.RubyLampBlock;
 import net.smakkqq.trainmod.item.ModItems;
@@ -48,24 +51,39 @@ public class ModModelTagProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+	//Предметы
 	itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
 	itemModelGenerator.register(ModItems.SAPPHIRE, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FIRE_ROD, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FUEL, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FUNNY_POTATO, Models.GENERATED);
 
+	//Инструменты
 	itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_HAMMER, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
-	
 	itemModelGenerator.register(ModItems.SAPPHIRE_AXE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.SAPPHIRE_SWORD, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.SAPPHIRE_HOE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.SAPPHIRE_PICKAXE, Models.HANDHELD);
 	itemModelGenerator.register(ModItems.SAPPHIRE_SHOVEL, Models.HANDHELD);
+
+	//Броня
+	itemModelGenerator.registerArmor(ModItems.SAPPHIRE_HELMET, RegistryKey.of(
+		RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")),
+		Identifier.of(Train.MOD_ID, "sapphire")), ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+	itemModelGenerator.registerArmor(ModItems.SAPPHIRE_CHESTPLATE, RegistryKey.of(
+		RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")),
+		Identifier.of(Train.MOD_ID, "sapphire")), ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+	itemModelGenerator.registerArmor(ModItems.SAPPHIRE_LEGGINS, RegistryKey.of(
+		RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")),
+		Identifier.of(Train.MOD_ID, "sapphire")), ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+	itemModelGenerator.registerArmor(ModItems.SAPPHIRE_LEGGINS, RegistryKey.of(
+		RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")),
+		Identifier.of(Train.MOD_ID, "sapphire")), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
     }
 
 }

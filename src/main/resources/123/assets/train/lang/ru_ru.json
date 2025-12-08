@@ -16,6 +16,11 @@
     "block.train.ruby_block_door": "Рубиновая дверь",
     "block.train.ruby_block_wall": "Рубиновая стена",
 
+    "block.train.sapphire_chestplate": "Сапфировый нагрудник",
+    "block.train.sapphire_leggins": "Сапфировые поножи",
+    "block.train.sapphire_boots": "Сапфировые ботинки",
+    "block.train.sapphire_helmet": "Сапфировый шлем",
+
     "block.train.sapphire_block": "Сапфировый блок",
 
     "block.train.ruby_block.tooltip": "Невероятный образец блока §4рубина",

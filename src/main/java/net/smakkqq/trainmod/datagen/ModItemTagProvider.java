@@ -39,6 +39,13 @@ public class ModItemTagProvider extends ItemTagProvider {
 	valueLookupBuilder(ItemTags.AXES)
 		.add(ModItems.RUBY_AXE)
 		.add(ModItems.SAPPHIRE_AXE);
+	
+	
+	valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
+		.add(ModItems.SAPPHIRE_HELMET)
+		.add(ModItems.SAPPHIRE_CHESTPLATE)
+		.add(ModItems.SAPPHIRE_LEGGINS)
+		.add(ModItems.SAPPHIRE_BOOTS);
 
     }
 }

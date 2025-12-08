@@ -19,6 +19,12 @@
     "block.train.ruby_block_wall" : "Ruby Wall",
     
     
+    "block.train.sapphire_chestplate" : "Sapphire chestplate",
+    "block.train.sapphire_leggins" : "Sapphire leggins",
+    "block.train.sapphire_helmet" : "Sapphire helmet",
+    "block.train.sapphire_boots" : "Sapphire boots",
+    
+    
     "block.train.sapphire_block" : "Sapphire Block",
     
     "block.train.ruby_block.tooltip" : "An incredible sample of §4ruby block",
