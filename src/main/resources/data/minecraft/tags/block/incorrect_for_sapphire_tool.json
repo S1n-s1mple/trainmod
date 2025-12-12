@@ -1,0 +1,9 @@
+{
+    "values":[
+       "#minecraft:incorrect_for_iron_tool"
+    ],
+    "remove":[
+        "#train:need_sapphire_tool"
+    ]
+}
+

@@ -96,37 +96,37 @@ public class ModItems {
 
     public static final Item SAPPHIRE_HOE = registerItem(
 	    "sapphire_hoe",
-	    settings -> new HoeItem(ToolMaterial.NETHERITE, 0F, -3.0F, settings),
+	    settings -> new HoeItem(ModToolMaterials.SAPPHIRE_MATERIAL, 0F, -3.0F, settings),
 	    new Item.Settings()
     );
 
     public static final Item SAPPHIRE_SHOVEL = registerItem(
 	    "sapphire_shovel",
-	    settings -> new ShovelItem(ToolMaterial.NETHERITE, 1.5F, -2.8F, settings),
+	    settings -> new ShovelItem(ModToolMaterials.SAPPHIRE_MATERIAL, 1.5F, -2.8F, settings),
 	    new Item.Settings()
     );
 
     public static final Item SAPPHIRE_AXE = registerItem(
 	    "sapphire_axe",
-	    settings -> new AxeItem(ToolMaterial.NETHERITE, 6.0F, -3.2F, settings),
+	    settings -> new AxeItem(ModToolMaterials.SAPPHIRE_MATERIAL, 6.0F, -3.2F, settings),
 	    new Item.Settings()
     );
 
     public static final Item SAPPHIRE_PICKAXE = registerItem(
 	    "sapphire_pickaxe",
 	    Item::new,
-	    new Item.Settings().pickaxe(ToolMaterial.NETHERITE, 1.0F, -2.8F)
+	    new Item.Settings().pickaxe(ModToolMaterials.SAPPHIRE_MATERIAL, 1.0F, -2.8F)
     );
 
     public static final Item SAPPHIRE_SWORD = registerItem(
 	    "sapphire_sword",
 	    Item::new,
-	    new Item.Settings().sword(ToolMaterial.NETHERITE, 5.0F, -2.8F)
+	    new Item.Settings().sword(ModToolMaterials.SAPPHIRE_MATERIAL, 5.0F, -2.8F)
     );
 
     public static final Item RUBY_HAMMER = registerItem(
 	    "ruby_hammer",
-	    settings -> new HammerItem(ToolMaterial.NETHERITE, 7.0F, -3.4F, settings),
+	    settings -> new HammerItem(ModToolMaterials.SAPPHIRE_MATERIAL, 7.0F, -3.4F, settings),
 	    new Item.Settings()
     );
     

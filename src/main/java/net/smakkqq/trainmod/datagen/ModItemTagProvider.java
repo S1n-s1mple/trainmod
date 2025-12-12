@@ -23,6 +23,9 @@ public class ModItemTagProvider extends ItemTagProvider {
 		.add(Items.DIRT)
 		.add(Items.APPLE)
 		.add(Items.STICK);
+	
+	valueLookupBuilder(ModTags.Items.SAPPHIRE_REPAIR)
+		.add(ModItems.SAPPHIRE);
 
 	valueLookupBuilder(ItemTags.SWORDS)
 		.add(ModItems.RUBY_SWORD)
