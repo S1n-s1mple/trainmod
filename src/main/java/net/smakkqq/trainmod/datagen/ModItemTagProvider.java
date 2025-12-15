@@ -49,6 +49,12 @@ public class ModItemTagProvider extends ItemTagProvider {
 		.add(ModItems.SAPPHIRE_CHESTPLATE)
 		.add(ModItems.SAPPHIRE_LEGGINS)
 		.add(ModItems.SAPPHIRE_BOOTS);
+	
+	valueLookupBuilder(ModTags.Items.SAPPHIRE_ARMOR)
+		.add(ModItems.SAPPHIRE_HELMET)
+		.add(ModItems.SAPPHIRE_CHESTPLATE)
+		.add(ModItems.SAPPHIRE_LEGGINS)
+		.add(ModItems.SAPPHIRE_BOOTS);
 
     }
 }

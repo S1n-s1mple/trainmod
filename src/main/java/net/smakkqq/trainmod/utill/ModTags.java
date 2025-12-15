@@ -25,6 +25,7 @@ public class ModTags {
 
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
         public static final TagKey<Item> SAPPHIRE_REPAIR = createTag("sapphire_repair");
+        public static final TagKey<Item> SAPPHIRE_ARMOR = createTag("sapphire_armor");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(Train.MOD_ID, name));

@@ -1,9 +1,11 @@
 package net.smakkqq.trainmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.effect.ArmourEffectHendler;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.item.ModItems;
 import net.smakkqq.trainmod.utill.HammerUsageEvent;
@@ -29,5 +31,6 @@ public class Train implements ModInitializer {
 	
 	PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
+	ServerTickEvents.END_SERVER_TICK.register(new ArmourEffectHendler());
     }
 }
