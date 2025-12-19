@@ -1,19 +1,4 @@
-//package net.racc0on.lessonmod.datagen;
-////
-////import java.util.List;
-////import java.util.concurrent.CompletableFuture;
-////import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-////import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-////import static net.minecraft.data.recipe.RecipeGenerator.hasItem;
-////import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
-////import net.minecraft.item.ItemConvertible;
-////import net.racc0on.lessonmod.block.ModBlocks;
-////import net.racc0on.lessonmod.item.ModItems;
-////import net.minecraft.data.recipe.RecipeExporter;
-////import net.minecraft.data.recipe.RecipeGenerator;
-////import net.minecraft.item.Items;
-////import net.minecraft.recipe.book.RecipeCategory;
-////import net.minecraft.registry.RegistryWrapper;
+//package net.smakkqq.trainmod.datagen;
 //
 //import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 //import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -31,10 +16,11 @@
 //import net.minecraft.registry.RegistryWrapper;
 //import java.util.List;
 //import java.util.concurrent.CompletableFuture;
-//import net.racc0on.lessonmod.item.ModItems;
-//import net.racc0on.lessonmod.block.ModBlocks;
+//import net.smakkqq.trainmod.item.ModItems;
+//import net.smakkqq.trainmod.block.ModBlocks;
+//import net.smakkqq.trainmod.block.ModBlocks;
+//import net.smakkqq.trainmod.item.ModItems;
 //
-////extends FabricRecipeProvider
 //public class ModRecipeTagProvider extends FabricRecipeProvider {
 //
 //    public ModRecipeTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -48,13 +34,13 @@
 //	    public void generate() {
 //		RegistryWrapper.Impl<Item> itemLookup = registries.getOrThrow(RegistryKeys.ITEM);
 //
-//		offerSmelting(List.of(ModItems.RUBY), RecipeCategory.MISC, ModItems.RUBY, .25f, 200, "ruby");
-//		offerBlasting(List.of(ModItems.RUBY), RecipeCategory.MISC, ModItems.RUBY, .25f, 100, "ruby");
-//		offerSmelting(List.of(ModBlocks.RUBY_BLOCK), RecipeCategory.MISC, ModBlocks.RUBY_BLOCK, 2.5f, 600, "ruby_block");
-//		offerBlasting(List.of(ModBlocks.RUBY_BLOCK), RecipeCategory.MISC, ModBlocks.RUBY_BLOCK, 2.5f, 300, "ruby_block");
+//		offerSmelting(List.of(ModItems.RUBY), RecipeCategory.MISC, ModItems.RUBY, .25f, 200, "sapphire");
+//		offerBlasting(List.of(ModItems.RUBY), RecipeCategory.MISC, ModItems.RUBY, .25f, 100, "sapphire");
+//		offerSmelting(List.of(ModBlocks.RUBY_BLOCK), RecipeCategory.MISC, ModBlocks.RUBY_BLOCK, 2.5f, 600, "sapphire_block");
+//		offerBlasting(List.of(ModBlocks.RUBY_BLOCK), RecipeCategory.MISC, ModBlocks.RUBY_BLOCK, 2.5f, 300, "sapphire_block");
 //
-//		offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.RUBY, RecipeCategory.DECORATIONS, ModBlocks.RUBY_BLOCK);
-//		offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.RUBY, RecipeCategory.DECORATIONS, ModBlocks.RUBY_BLOCK);
+//		offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.SAPPHIRE, RecipeCategory.DECORATIONS, ModBlocks.SAPPHIRE_BLOCK);
+//		offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.SAPPHIRE, RecipeCategory.DECORATIONS, ModBlocks.SAPPHIRE_BLOCK);
 //
 //		offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_BLOCK_SLAB, ModBlocks.RUBY_BLOCK);
 //		offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_BLOCK_WALL, ModBlocks.RUBY_BLOCK);

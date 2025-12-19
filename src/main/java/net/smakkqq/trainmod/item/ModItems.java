@@ -159,7 +159,7 @@ public class ModItems {
     );
 
     public static final Item SAPPHIRE_BOOTS = registerItem(
-	    "sapphire_leggins",
+	    "sapphire_boots",
 	    Item::new,
 	    new Item.Settings().armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.BOOTS)
 		    .maxDamage(

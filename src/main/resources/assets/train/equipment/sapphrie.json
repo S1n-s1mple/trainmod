@@ -1,0 +1,14 @@
+{
+    "layers": {
+        "humanoid": [
+            {
+                "texture": "train:ruby"
+            }
+        ],
+        "humanoid_leggins": [
+            {
+                "texture": "train:ruby"
+            }
+        ]
+    }
+}

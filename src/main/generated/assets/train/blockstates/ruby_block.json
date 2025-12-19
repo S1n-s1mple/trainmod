@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "train:block/ruby_block"
+    }
+  }
+}
