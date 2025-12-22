@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "train:ruby_block",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "PPP",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "train:ruby_hammer"
+  }
+}

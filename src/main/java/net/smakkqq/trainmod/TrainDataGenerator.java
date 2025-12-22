@@ -6,6 +6,7 @@ import net.smakkqq.trainmod.datagen.ModBlockTagProvider;
 import net.smakkqq.trainmod.datagen.ModItemTagProvider;
 import net.smakkqq.trainmod.datagen.ModLootTableTagProvider;
 import net.smakkqq.trainmod.datagen.ModModelTagProvider;
+import net.smakkqq.trainmod.datagen.ModRecipeTagProvider;
 
 public class TrainDataGenerator implements DataGeneratorEntrypoint {
 
@@ -17,5 +18,6 @@ public class TrainDataGenerator implements DataGeneratorEntrypoint {
 	pack.addProvider(ModItemTagProvider::new);
 	pack.addProvider(ModLootTableTagProvider::new);
 	pack.addProvider(ModModelTagProvider::new);
+	pack.addProvider(ModRecipeTagProvider::new);
     }
 }

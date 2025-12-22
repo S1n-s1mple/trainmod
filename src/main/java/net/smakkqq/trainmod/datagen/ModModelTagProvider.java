@@ -84,6 +84,8 @@ public class ModModelTagProvider extends FabricModelProvider {
 	itemModelGenerator.registerArmor(ModItems.SAPPHIRE_BOOTS, RegistryKey.of(
 		RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")),
 		Identifier.of(Train.MOD_ID, "sapphire")), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+	
+	itemModelGenerator.register(ModItems.SAPPHIRE_HORSE_ARMOR, Models.GENERATED);
     }
 
 }

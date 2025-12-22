@@ -14,6 +14,14 @@
     "item.train.sapphire_hoe": "Сапфировый мотыга",
     "item.train.sapphire_pickaxe": "Сапфировый кирка",
     "item.train.sapphire_sword": "Сапфировый меч",
+    
+        
+    "item.train.sapphire_helmet" : "Сапафировый  шлем",
+    "item.train.sapphire_chestplate" : "Сапафировый нагрудник",
+    "item.train.sapphire_leggings" : "Сапафировые поножи",
+    "item.train.sapphire_boots" : "Сапафировые ботинки",
+    
+    "item.train.sapphire_horse_armor" : "Сапафировая Конская Броня",
 
     "block.train.ruby.tooltip": "Потрясающий образец §4рубина",
     "block.train.sapphire.tooltip": "Поистине великолепный §9сапфир",

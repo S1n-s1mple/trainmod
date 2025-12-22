@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:diamond_block",
+    "P": "train:ruby_block"
+  },
+  "pattern": [
+    "DPD",
+    "PDP",
+    "DPD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "train:ruby_block"
+  }
+}

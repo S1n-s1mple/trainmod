@@ -166,6 +166,12 @@ public class ModItems {
 			    EquipmentType.BOOTS.getMaxDamage(
 				    ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL.durability()))
     );
+    
+     public static final Item SAPPHIRE_HORSE_ARMOR = registerItem(
+	    "sapphire_horse_armor",
+	    settings -> new Item(settings.horseArmor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL)),
+	    new Item.Settings()
+    );
 
     private static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
 	// Создание ключа для предмета

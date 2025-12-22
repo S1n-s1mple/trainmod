@@ -1,0 +1,10 @@
+// 1.21.6	-999999999-01-01T00:00:00	Lukas' mod/Tags for minecraft:item
+7b1b6bfe775c96f4d616c1466e80c1b951899384 data/minecraft/tags/item/axes.json
+c4424c23c9a602b1ada475460443558635b9611f data/minecraft/tags/item/hoes.json
+91af4cc23db5b1003c1b2e9ed6fac526a80b5db1 data/minecraft/tags/item/pickaxes.json
+58b84c15d6891a11c58a524fd45bd75d06eaf63f data/minecraft/tags/item/shovels.json
+82892fe8ed7f38446b0f3f74bef12413e35ea4df data/minecraft/tags/item/swords.json
+6d2e506d20a01eda38f411af1a12d107cd79fbe1 data/minecraft/tags/item/trimmable_armor.json
+6d2e506d20a01eda38f411af1a12d107cd79fbe1 data/train/tags/item/sapphire_armor.json
+c56e7843309cc29723931692f0349cc65ce0d601 data/train/tags/item/sapphire_repair.json
+41725a668b2cf635cb557334158e80b04106f827 data/train/tags/item/transformable_items.json

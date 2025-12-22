@@ -59,6 +59,8 @@ public class ModItemGroups {
 			entries.add(ModItems.SAPPHIRE_LEGGINS);
 			entries.add(ModItems.SAPPHIRE_BOOTS);
 			
+			entries.add(ModItems.SAPPHIRE_HORSE_ARMOR);
+			
 			
 		    }).build());
 

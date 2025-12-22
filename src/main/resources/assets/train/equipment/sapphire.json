@@ -1,0 +1,19 @@
+{
+  "layers": {
+        "horse_body": [
+      {
+        "texture": "train:sapphire"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "train:sapphire"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "train:sapphire"
+      }
+    ]
+  }
+}

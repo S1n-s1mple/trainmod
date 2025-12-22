@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "train:sapphire_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "train:sapphire"
+  }
+}

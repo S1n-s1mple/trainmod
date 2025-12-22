@@ -37,7 +37,7 @@ public class ModRecipeTagProvider extends FabricRecipeProvider {
 //		offerBlasting(List.of(ModBlocks.RUBY_BLOCK), RecipeCategory.MISC, ModBlocks.RUBY_BLOCK, 2.5f, 300, "sapphire_block");
 
 		offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.SAPPHIRE, RecipeCategory.DECORATIONS, ModBlocks.SAPPHIRE_BLOCK);
-		offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.RUBY, RecipeCategory.DECORATIONS, ModBlocks.RUBY_BLOCK);
+//		offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.RUBY, RecipeCategory.DECORATIONS, ModBlocks.RUBY_BLOCK);
 
 		offerSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_BLOCK_SLAB, ModBlocks.RUBY_BLOCK);
 		offerWallRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUBY_BLOCK_WALL, ModBlocks.RUBY_BLOCK);

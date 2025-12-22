@@ -16,6 +16,14 @@
     "item.train.sapphire_sword" : "Sapphire Sword",
     
     
+    "item.train.sapphire_helmet" : "Sapphire Helmet",
+    "item.train.sapphire_chestplate" : "Sapphire Chestplate",
+    "item.train.sapphire_leggings" : "Sapphire Leggings",
+    "item.train.sapphire_boots" : "Sapphire Boots",
+    
+    "item.train.sapphire_horse_armor" : "Sapphire Horse Armor",
+    
+    
     "block.train.ruby.tooltip" : "A stunning §4ruby specimen",
     "block.train.sapphire.tooltip" : "A truly magnificent §9sapphire",
     

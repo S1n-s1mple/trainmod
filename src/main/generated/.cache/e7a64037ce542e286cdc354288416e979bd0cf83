@@ -1,0 +1,8 @@
+// 1.21.6	-999999999-01-01T00:00:00	Lukas' mod/Tags for minecraft:block
+e2b467b34ad3d2127e94042a3e044a2b69bce6bc data/minecraft/tags/block/fence_gates.json
+6ff7b3e17b4b1ce9be186ad1b1033abb88866dbf data/minecraft/tags/block/fences.json
+d56065dade03bc47faf9ef29797585a3084f6aae data/minecraft/tags/block/mineable/pickaxe.json
+2652c0e46b93da630634223984d650ec5d2583cf data/minecraft/tags/block/needs_diamond_tool.json
+d56065dade03bc47faf9ef29797585a3084f6aae data/minecraft/tags/block/needs_iron_tool.json
+1d9dfc2de1cc323211743010f96153b08854481d data/minecraft/tags/block/walls.json
+6f3c244bc9c927e98d00589ebb4bf93ec29b3879 data/train/tags/block/needs_ruby_tool.json
