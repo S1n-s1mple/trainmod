@@ -37,6 +37,7 @@ public class ModItemGroups {
 			entries.add(ModItems.SAPPHIRE_SWORD);
 			entries.add(ModItems.SAPPHIRE_HOE);
 			entries.add(ModItems.SAPPHIRE_AXE);
+			entries.add(ModItems.SAPPHIRE_CHISEL);
 			entries.add(ModItems.RUBY_HAMMER);
 			entries.add(ModItems.RUBY_PICKAXE);
 			entries.add(ModItems.RUBY_SHOVEL);

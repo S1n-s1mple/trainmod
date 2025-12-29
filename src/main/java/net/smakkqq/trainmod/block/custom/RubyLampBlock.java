@@ -1,6 +1,5 @@
 package net.smakkqq.trainmod.block.custom;
 
-import static net.fabricmc.fabric.api.networking.v1.PlayerLookup.world;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;

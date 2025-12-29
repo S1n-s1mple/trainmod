@@ -19,7 +19,7 @@ class ModArmorMaterials {
 		map.put(EquipmentType.CHESTPLATE, 8);
 		map.put(EquipmentType.HELMET, 3);
 	    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0, 0, ModTags.Items.SAPPHIRE_REPAIR,
-	    RegistryKey.of(RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")), Identifier.of(Train.MOD_ID, "ruby")));
+	    RegistryKey.of(RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")), Identifier.of(Train.MOD_ID, "sapphire")));
 
 //    public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {
 //	return Registry.registerReference(Registries., Identifier.of(Lesson.MOD_ID, name), material.get());

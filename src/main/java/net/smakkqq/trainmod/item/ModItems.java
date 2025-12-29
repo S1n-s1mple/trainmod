@@ -16,6 +16,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.item.custom.ArrowRod;
+import net.smakkqq.trainmod.item.custom.ChiselItem;
 import net.smakkqq.trainmod.item.custom.FireRod;
 import net.smakkqq.trainmod.item.custom.HammerItem;
 import net.smakkqq.trainmod.item.custom.LightningRod;
@@ -128,6 +129,13 @@ public class ModItems {
     public static final Item RUBY_HAMMER = registerItem(
 	    "ruby_hammer",
 	    settings -> new HammerItem(ModToolMaterials.SAPPHIRE_MATERIAL, 7.0F, -3.4F, settings),
+	    new Item.Settings()
+    );
+    
+    
+    public static final Item SAPPHIRE_CHISEL = registerItem(
+	    "sapphire_chisel",
+	    settings -> new ChiselItem(settings.maxDamage(64)),
 	    new Item.Settings()
     );
 
