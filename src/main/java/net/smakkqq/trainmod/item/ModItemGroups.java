@@ -56,7 +56,7 @@ public class ModItemGroups {
 			
 			entries.add(ModItems.SAPPHIRE_HELMET);
 			entries.add(ModItems.SAPPHIRE_CHESTPLATE);
-			entries.add(ModItems.SAPPHIRE_LEGGINS);
+			entries.add(ModItems.SAPPHIRE_LEGGINGS);
 			entries.add(ModItems.SAPPHIRE_BOOTS);
 			
 			entries.add(ModItems.SAPPHIRE_HORSE_ARMOR);

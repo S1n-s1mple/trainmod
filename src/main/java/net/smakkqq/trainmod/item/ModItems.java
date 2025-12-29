@@ -20,6 +20,7 @@ import net.smakkqq.trainmod.item.custom.FireRod;
 import net.smakkqq.trainmod.item.custom.HammerItem;
 import net.smakkqq.trainmod.item.custom.LightningRod;
 
+
 public class ModItems {
 
     public static final Item RUBY = registerItem(
@@ -149,8 +150,8 @@ public class ModItems {
 				    ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL.durability()))
     );
 
-    public static final Item SAPPHIRE_LEGGINS = registerItem(
-	    "sapphire_leggins",
+    public static final Item SAPPHIRE_LEGGINGS = registerItem(
+	    "sapphire_leggings",
 	    Item::new,
 	    new Item.Settings().armor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)
 		    .maxDamage(
