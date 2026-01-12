@@ -16,6 +16,8 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
+import net.smakkqq.trainmod.component.ModDataComponentTypes;
+import net.smakkqq.trainmod.sound.ModSound;
 
 public class ChiselItem extends Item {
 
@@ -45,10 +47,9 @@ public class ChiselItem extends Item {
 			    assert context.getPlayer() != null;
 			    context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND);
 			});
-		//		context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
-		//		context.getStack().set(ModDataComponentTypes.BLOCK, clickedBlock);
-
-//		world.playSound(null, context.getBlockPos(), ModSounds.CHISEL, SoundCategory.BLOCKS);
+		context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
+		context.getStack().set(ModDataComponentTypes.BLOCK, clickedBlock);
+		world.playSound(null, context.getBlockPos(), ModSound.CHISEL_USE, SoundCategory.BLOCKS);
 	    }
 	}
 
