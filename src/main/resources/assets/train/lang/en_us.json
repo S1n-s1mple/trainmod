@@ -15,6 +15,8 @@
     "item.train.sapphire_pickaxe" : "Sapphire Pickaxe",
     "item.train.sapphire_sword" : "Sapphire Sword",
     
+    "item.train.sapphire_chisel" : "Sapphire Chisel",
+    
     
     "item.train.sapphire_helmet" : "Sapphire Helmet",
     "item.train.sapphire_chestplate" : "Sapphire Chestplate",
@@ -47,7 +49,6 @@
     
     "block.train.ruby_block.tooltip" : "An incredible sample of §4ruby block",
     "block.train.sapphire_block.tooltip" : "An exceptional specimen of §9sapphire block",
-    
     
     
     "item.train.lightning_rod" : "Lightning rod",

@@ -5,9 +5,11 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.component.ModDataComponentTypes;
 import net.smakkqq.trainmod.effect.ArmourEffectHendler;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.item.ModItems;
+import net.smakkqq.trainmod.sound.ModSound;
 import net.smakkqq.trainmod.utill.HammerUsageEvent;
 
 import org.slf4j.Logger;
@@ -20,6 +22,8 @@ public class Train implements ModInitializer {
 
     @Override
     public void onInitialize() {
+	ModDataComponentTypes.registerModItems();
+	ModSound.registerSounds();
 	ModItemGroups.registerItemsGroups();
 
 	ModItems.registerModItems();

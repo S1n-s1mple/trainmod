@@ -28,7 +28,7 @@ public class ModSound {
 	return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 
-    public static void registerModItems() {
+    public static void registerSounds() {
 	Train.LOGGER.info("Registering my Mod Items for:" + Train.MOD_ID);
     }
 }
