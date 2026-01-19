@@ -1,5 +1,6 @@
 package net.smakkqq.trainmod.datagen;
 
+import java.util.List;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
@@ -15,6 +16,9 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import java.util.concurrent.CompletableFuture;
+import net.minecraft.recipe.CampfireCookingRecipe;
+import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.recipe.SmokingRecipe;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.item.ModItems;
 
@@ -31,8 +35,12 @@ public class ModRecipeTagProvider extends FabricRecipeProvider {
 	    public void generate() {
 		RegistryWrapper.Impl<Item> itemLookup = registries.getOrThrow(RegistryKeys.ITEM);
 
-//		offerSmelting(List.of(ModItems.RUBY), RecipeCategory.MISC, ModItems.RUBY, .25f, 200, "sapphire");
-//		offerBlasting(List.of(ModItems.RUBY), RecipeCategory.MISC, ModItems.RUBY, .25f, 100, "sapphire");
+//		offerSmelting(List.of(ModItems.FUNNY_POTATO), RecipeCategory.MISC, ModItems.ROASTED_FUNNY_POTATO, .25f, 200, "funny_potato");
+//		offerFoodCookingRecipe(List.of(ModItems.FUNNY_POTATO), RecipeCategory.MISC, ModItems.FUNNY_POTATO, .25f, 100, "funny_potato");
+//		offerFoodCookingRecipe(exporter, "smoking", RecipeSerializer.SMOKING, SmokingRecipe::new, 100, ModItems.FUNNY_POTATO, ModItems.FUNNY_POTATO, 0.2f);
+//		offerFoodCookingRecipe(exporter, "campfire_cooking", RecipeSerializer.CAMPFIRE_COOKING, CampfireCookingRecipe::new, 100, ModItems.FUNNY_POTATO, ModItems.FUNNY_POTATO, 0.2f);
+		
+		
 //		offerSmelting(List.of(ModBlocks.RUBY_BLOCK), RecipeCategory.MISC, ModBlocks.RUBY_BLOCK, 2.5f, 600, "sapphire_block");
 //		offerBlasting(List.of(ModBlocks.RUBY_BLOCK), RecipeCategory.MISC, ModBlocks.RUBY_BLOCK, 2.5f, 300, "sapphire_block");
 

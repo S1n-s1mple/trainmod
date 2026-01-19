@@ -1,0 +1,8 @@
+{
+    "chisel_use":{
+        "subtitles": "sounds.train.chisel_use",
+        "sounds": [
+            "train:chisel_use"
+        ]
+    }
+}

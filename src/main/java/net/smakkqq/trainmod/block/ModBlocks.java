@@ -39,7 +39,7 @@ public class ModBlocks {
     );
     public static final Block SAPPHIRE_BLOCK = registerBlockItem(
 	    "sapphire_block",
-	    Block::new,
+	    MagicBlock::new,
 	    AbstractBlock.Settings.create()
 		    .requiresTool()
 		    .strength(5.0F, 6.0F)

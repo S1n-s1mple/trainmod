@@ -42,24 +42,24 @@ public class ModToolTips {
 	    }
 
 	    if (itemStack.isOf(ModItems.SAPPHIRE.asItem())) {
-		list.add(Text.translatable("item.train.sapphrie"));
+		list.add(Text.translatable("item.train.sapphire.tooltip"));
 		return;
 	    }
 	    if (itemStack.isOf(ModItems.RUBY.asItem())) {
-		list.add(Text.translatable("item.train.ruby"));
+		list.add(Text.translatable("item.train.ruby.tooltip"));
 		return;
 	    }
 
 	    if (itemStack.isOf(ModItems.LIGHTNING_ROD.asItem())) {
-		list.add(Text.translatable("item.train.lightning_rod"));
+		list.add(Text.translatable("item.train.lightning_rod.tooltip"));
 		return;
 	    }
 	    if (itemStack.isOf(ModItems.FIRE_ROD.asItem())) {
-		list.add(Text.translatable("item.train.fire_rod"));
+		list.add(Text.translatable("item.train.fire_rod.tooltip"));
 		return;
 	    }
 	    if (itemStack.isOf(ModItems.ARROW_ROD.asItem())) {
-		list.add(Text.translatable("item.train.arrow_rod"));
+		list.add(Text.translatable("item.train.arrow_rod.tooltip"));
 		return;
 	    }
 
