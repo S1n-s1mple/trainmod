@@ -2,6 +2,9 @@
     "item.train.ruby": "Рубин",
     "item.train.sapphire": "Сапфир",
 
+    "item.train.ruby.tooltip": "Потрясающий образец §4рубина",
+    "item.train.sapphire.tooltip": "Поистине великолепный §9сапфир",
+    
     "item.train.ruby_axe": "Рубиновый топор",
     "item.train.ruby_shovel": "Рубиновая лопата",
     "item.train.ruby_hoe": "Рубиновая мотыга",
@@ -25,8 +28,6 @@
     
     "item.train.sapphire_horse_armor" : "Сапафировая Конская Броня",
 
-    "block.train.ruby.tooltip": "Потрясающий образец §4рубина",
-    "block.train.sapphire.tooltip": "Поистине великолепный §9сапфир",
 
     "block.train.ruby_block": "Рубиновый блок",
     "block.train.ruby_block_stairs": "Рубиновая лестница",
