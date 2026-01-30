@@ -35,6 +35,7 @@ public class ModItemGroups {
 			entries.add(ModItems.SAPPHIRE_PICKAXE);
 			entries.add(ModItems.SAPPHIRE_SHOVEL);
 			entries.add(ModItems.SAPPHIRE_SWORD);
+			entries.add(ModItems.SAPPHIRE_BOW);
 			entries.add(ModItems.SAPPHIRE_HOE);
 			entries.add(ModItems.SAPPHIRE_AXE);
 			entries.add(ModItems.SAPPHIRE_CHISEL);

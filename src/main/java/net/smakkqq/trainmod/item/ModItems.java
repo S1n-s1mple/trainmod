@@ -3,6 +3,7 @@ package net.smakkqq.trainmod.item;
 import java.util.function.Function;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.AxeItem;
+import net.minecraft.item.BowItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -138,6 +139,8 @@ public class ModItems {
 	    settings -> new ChiselItem(settings.maxDamage(64)),
 	    new Item.Settings()
     );
+    
+    
 
 //@@@@@@@@@@@@@@@@@     БРОНЯ     @@@@@@@@@@@@@@@@@@@@@@@@
     public static final Item SAPPHIRE_HELMET = registerItem(
@@ -179,6 +182,12 @@ public class ModItems {
      public static final Item SAPPHIRE_HORSE_ARMOR = registerItem(
 	    "sapphire_horse_armor",
 	    settings -> new Item(settings.horseArmor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL)),
+	    new Item.Settings()
+    );
+     
+     public static final Item SAPPHIRE_BOW = registerItem(
+	    "sapphire_bow",
+	    settings -> new BowItem(settings.maxDamage(250)),
 	    new Item.Settings()
     );
 

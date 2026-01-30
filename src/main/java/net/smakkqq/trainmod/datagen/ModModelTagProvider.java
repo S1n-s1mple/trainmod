@@ -4,11 +4,15 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
+import net.minecraft.client.data.ItemModels;
 import net.minecraft.client.data.Models;
 import net.minecraft.client.data.TextureMap;
 import net.minecraft.client.data.TexturedModel;
 import net.minecraft.client.data.VariantsBlockModelDefinitionCreator;
+import net.minecraft.client.render.item.model.ItemModel;
+import net.minecraft.client.render.item.property.numeric.UseDurationProperty;
 import net.minecraft.client.render.model.json.WeightedVariant;
+import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
@@ -85,8 +89,25 @@ public class ModModelTagProvider extends FabricModelProvider {
 	itemModelGenerator.registerArmor(ModItems.SAPPHIRE_BOOTS, RegistryKey.of(
 		RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")),
 		Identifier.of(Train.MOD_ID, "sapphire")), ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
-	
+
 	itemModelGenerator.register(ModItems.SAPPHIRE_HORSE_ARMOR, Models.GENERATED);
+
+	Item bow = ModItems.SAPPHIRE_BOW;
+	ItemModel.Unbaked unbakedBow = ItemModels.basic(itemModelGenerator.upload(bow, Models.BOW));
+	ItemModel.Unbaked unbakedBow2 = ItemModels.basic(itemModelGenerator.registerSubModel(bow, "_pulling_0", Models.BOW));
+	ItemModel.Unbaked unbakedBow3 = ItemModels.basic(itemModelGenerator.registerSubModel(bow, "_pulling_1", Models.BOW));
+	ItemModel.Unbaked unbakedBow4 = ItemModels.basic(itemModelGenerator.registerSubModel(bow, "_pulling_2", Models.BOW));
+
+	itemModelGenerator.registerCondition(
+		bow,
+		ItemModels.usingItemProperty(),
+		ItemModels.rangeDispatch(
+			new UseDurationProperty(false),
+			0.05f,
+			unbakedBow2,
+			ItemModels.rangeDispatchEntry(unbakedBow3, 0.65f),
+			ItemModels.rangeDispatchEntry(unbakedBow4, 0.9f)),
+		unbakedBow);
     }
 
 }
