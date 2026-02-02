@@ -15,6 +15,7 @@ import net.minecraft.util.ActionResult;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.component.ModDataComponentTypes;
 import net.smakkqq.trainmod.effect.ArmourEffectHendler;
+import net.smakkqq.trainmod.effect.ModEffects;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.item.ModItems;
 import net.smakkqq.trainmod.sound.ModSound;
@@ -33,6 +34,7 @@ public class Train implements ModInitializer {
 	ModDataComponentTypes.registerModItems();
 	ModSound.registerSounds();
 	ModItemGroups.registerItemsGroups();
+	ModEffects.registerEffect();
 
 	ModItems.registerModItems();
 	ModBlocks.registerModBlocks();
@@ -46,15 +48,12 @@ public class Train implements ModInitializer {
 	ServerTickEvents.END_SERVER_TICK.register(new ArmourEffectHendler());
 
 	AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
-	    if (entity instanceof SkeletonEntity skeletonEntity) {
-		if (player.getMainHandStack().getItem() == Items.BONE) {
-		    player.sendMessage(Text.literal("Friendly fire"), false);
+	    if (entity instanceof SkeletonEntity skeletonEntity && player.getMainHandStack().getItem() == Items.BONE) {
+		    player.sendMessage(Text.literal("Friendly fire"), true);
 		    player.getMainHandStack().decrement(1);
-		    skeletonEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 500, 6));
-		}
+		    skeletonEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 500, 6));
 	    }
-	    return ActionResult.SUCCESS;
-
+	    return ActionResult.PASS;
 	});
     }
 }

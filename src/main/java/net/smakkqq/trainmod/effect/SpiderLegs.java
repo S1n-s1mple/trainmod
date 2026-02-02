@@ -1,0 +1,32 @@
+package net.smakkqq.trainmod.effect;
+
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.Vec3d;
+
+public class SpiderLegs extends StatusEffect {
+
+    public SpiderLegs(StatusEffectCategory category, int color) {
+	super(category, color);
+    }
+
+    @Override
+    public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
+	entity.velocityModified = true;
+	if (entity.horizontalCollision) {
+	    Vec3d initialVec = entity.getVelocity();
+	    Vec3d climbVec = new Vec3d(initialVec.x, 0.2D, initialVec.z);
+	    entity.setVelocity(climbVec.multiply(0.96D));
+	    return true;
+	}
+	return super.applyUpdateEffect(world, entity, amplifier);
+    }
+
+    @Override
+    public boolean canApplyUpdateEffect(int dutration, int amplifier) {
+	return true;
+    }
+
+}
