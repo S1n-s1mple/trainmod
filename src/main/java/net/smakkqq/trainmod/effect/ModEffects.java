@@ -12,7 +12,7 @@ import net.smakkqq.trainmod.Train;
 
 public class ModEffects {
 
-    public static final RegistryEntry<StatusEffect> SPIDER_LEGS = registerStatusEffect("spder_legs",
+    public static final RegistryEntry<StatusEffect> SPIDER_LEGS = registerStatusEffect("spider_legs",
 	    new SpiderLegs(StatusEffectCategory.NEUTRAL, 0x443169)
 		    .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED, Identifier.of(Train.MOD_ID, "effect.spider_legs"),
 			    -0.25,

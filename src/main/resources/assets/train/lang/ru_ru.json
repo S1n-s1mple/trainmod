@@ -4,7 +4,7 @@
 
     "item.train.ruby.tooltip": "Потрясающий образец §4рубина",
     "item.train.sapphire.tooltip": "Поистине великолепный §9сапфир",
-    
+
     "item.train.ruby_axe": "Рубиновый топор",
     "item.train.ruby_shovel": "Рубиновая лопата",
     "item.train.ruby_hoe": "Рубиновая мотыга",
@@ -18,17 +18,15 @@
     "item.train.sapphire_pickaxe": "Сапфировый кирка",
     "item.train.sapphire_sword": "Сапфировый меч",
     "item.train.sapphire_bow": "Сапфировый лук",
-    
-    "item.train.sapphire_chisel" : "Сапфировое Долото",
-        
-        
-    "item.train.sapphire_helmet" : "Сапафировый  шлем",
-    "item.train.sapphire_chestplate" : "Сапафировый нагрудник",
-    "item.train.sapphire_leggings" : "Сапафировые поножи",
-    "item.train.sapphire_boots" : "Сапафировые ботинки",
-    
-    "item.train.sapphire_horse_armor" : "Сапафировая Конская Броня",
 
+    "item.train.sapphire_chisel": "Сапфировое Долото",
+
+    "item.train.sapphire_helmet": "Сапафировый  шлем",
+    "item.train.sapphire_chestplate": "Сапафировый нагрудник",
+    "item.train.sapphire_leggings": "Сапафировые поножи",
+    "item.train.sapphire_boots": "Сапафировые ботинки",
+
+    "item.train.sapphire_horse_armor": "Сапафировая Конская Броня",
 
     "block.train.ruby_block": "Рубиновый блок",
     "block.train.ruby_block_stairs": "Рубиновая лестница",
@@ -60,6 +58,11 @@
 
     "item.train.fuel": "Топливо",
     "item.train.funny_potato": "Еда",
+
+    "effect.train.spider_legs": "Паучьи Лапки",
+    "item.minecraft.lingering_potion.effect.spider_legs": "Туманное зелье паучих лапок",
+    "item.minecraft.potion.effect.spider_legs": "Зелье паучих лапок",
+    "item.minecraft.splash_potion.effect.spider_legs": "Взрывное зелье паучих лапок",
 
     "itemGroup.train.ores_items": "Руды & Предметы"
 }
