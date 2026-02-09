@@ -13,6 +13,10 @@ public class ModPotions {
     public static final RegistryEntry<Potion> SPIDER_LEGS_POTION = registerPotion("spider_legs",
 	    new Potion("spider_legs", new StatusEffectInstance(ModEffects.SPIDER_LEGS, 600, 0)));
     
+    public static final RegistryEntry<Potion> BLESSIN_POTION = registerPotion("blessing",
+	    new Potion("blessing", new StatusEffectInstance(ModEffects.BLESSING, 1200, 0)));
+
+    
     public static  RegistryEntry<Potion> registerPotion(String name, Potion potion){
 	
 	return Registry.registerReference(Registries.POTION, Identifier.of(Train.MOD_ID, name), potion);

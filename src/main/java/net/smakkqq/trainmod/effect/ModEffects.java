@@ -13,16 +13,19 @@ import net.smakkqq.trainmod.Train;
 public class ModEffects {
 
     public static final RegistryEntry<StatusEffect> SPIDER_LEGS = registerStatusEffect("spider_legs",
-	    new SpiderLegs(StatusEffectCategory.NEUTRAL, 0x443169)
-		    .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED, Identifier.of(Train.MOD_ID, "effect.spider_legs"),
-			    -0.25,
-			    EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        new SpiderLegs(StatusEffectCategory.NEUTRAL, 0x443169)
+            .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED, Identifier.of(Train.MOD_ID, "effect.spider_legs"),
+                -0.25,
+                EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+
+    public static final RegistryEntry<StatusEffect> BLESSING = registerStatusEffect("blessing",
+        new Blessing(StatusEffectCategory.BENEFICIAL, 0xFFD700));
 
     public static final RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect statusEffect) {
-	return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(Train.MOD_ID, name), statusEffect);
+        return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(Train.MOD_ID, name), statusEffect);
     }
 
     public static void registerEffect() {
-	Train.LOGGER.info("Registering my effects for:" + Train.MOD_ID);
+        Train.LOGGER.info("Registering my effects for:" + Train.MOD_ID);
     }
 }

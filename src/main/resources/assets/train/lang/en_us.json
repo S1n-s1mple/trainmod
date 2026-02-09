@@ -68,10 +68,17 @@
     
     "item.train.fuel" : "Fuel",
     "item.train.funny_potato" : "Food",
+    
+    
     "effect.train.spider_legs" : "Spider Legs",
     "item.minecraft.lingering_potion.effect.spider_legs" : "Spider Legs Lingering Potion",
     "item.minecraft.potion.effect.spider_legs" : "Spider Legs Potion",
     "item.minecraft.splash_potion.effect.spider_legs" : "Spider Legs Splash Potion",
+    
+    "effect.train.blessing" : "Blessing",
+    "item.minecraft.lingering_potion.effect.blessing" : "Blessing Lingering Potion",
+    "item.minecraft.potion.effect.blessing" : "Blessing Potion",
+    "item.minecraft.splash_potion.effect.blessing" : "Blessing Splash Potion",
     
     
     
