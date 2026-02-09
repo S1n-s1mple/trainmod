@@ -65,9 +65,9 @@
     "item.minecraft.splash_potion.effect.spider_legs": "Взрывное зелье паучих лапок",
 
     "effect.train.blessing": "Blessing",
-    "item.minecraft.lingering_potion.effect.blessing": "Blessing Lingering Potion",
-    "item.minecraft.potion.effect.blessing": "Blessing Potion",
-    "item.minecraft.splash_potion.effect.blessing": "Blessing Splash Potion",
+    "item.minecraft.lingering_potion.effect.blessing": "Туманное зелье благославения",
+    "item.minecraft.potion.effect.blessing": "Зелье  благославения",
+    "item.minecraft.splash_potion.effect.blessing": "Взрывное зелье благославения",
 
     "itemGroup.train.ores_items": "Руды & Предметы"
 }

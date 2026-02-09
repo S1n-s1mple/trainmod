@@ -26,6 +26,6 @@ public class ModEffects {
     }
 
     public static void registerEffect() {
-        Train.LOGGER.info("Registering my effects for:" + Train.MOD_ID);
+        Train.LOGGER.info("Registering mod effects for:" + Train.MOD_ID);
     }
 }
