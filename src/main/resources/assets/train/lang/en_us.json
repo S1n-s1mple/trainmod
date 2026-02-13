@@ -80,6 +80,8 @@
     "item.minecraft.potion.effect.blessing" : "Blessing Potion",
     "item.minecraft.splash_potion.effect.blessing" : "Blessing Splash Potion",
     
+    "enchantment.train.lightning_striker" : "Lightning Striker",
+    
     
     
     "itemGroup.train.ores_items": "Ores & Items"

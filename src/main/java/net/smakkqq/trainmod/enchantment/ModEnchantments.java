@@ -10,7 +10,6 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
-import static net.minecraft.util.NameGenerator.name;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.enchantment.custom.LightningStrikerEnchantmentEffect;
 import net.smakkqq.trainmod.utill.ModTags;
@@ -24,8 +23,8 @@ public class ModEnchantments {
 	var items = registerable.getRegistryLookup(RegistryKeys.ITEM);
 
 	register(registerable, LIGHTNING_STRIKER,
-		Enchantment.Builder(Enchantment.definition(
-			items.getOrThrow(ModTags.Items.),
+		Enchantment.builder(Enchantment.definition(
+			items.getOrThrow(ModTags.Items.LIGHTNING_STRIKER_ENCHANTABLE),
 			items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
 			5,
 			3,

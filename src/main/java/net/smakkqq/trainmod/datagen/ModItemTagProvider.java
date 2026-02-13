@@ -23,7 +23,7 @@ public class ModItemTagProvider extends ItemTagProvider {
 		.add(Items.DIRT)
 		.add(Items.APPLE)
 		.add(Items.STICK);
-	
+
 	valueLookupBuilder(ModTags.Items.SAPPHIRE_REPAIR)
 		.add(ModItems.SAPPHIRE);
 
@@ -42,19 +42,29 @@ public class ModItemTagProvider extends ItemTagProvider {
 	valueLookupBuilder(ItemTags.AXES)
 		.add(ModItems.RUBY_AXE)
 		.add(ModItems.SAPPHIRE_AXE);
-	
-	
+
 	valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
 		.add(ModItems.SAPPHIRE_HELMET)
 		.add(ModItems.SAPPHIRE_CHESTPLATE)
 		.add(ModItems.SAPPHIRE_LEGGINGS)
 		.add(ModItems.SAPPHIRE_BOOTS);
-	
+
 	valueLookupBuilder(ModTags.Items.SAPPHIRE_ARMOR)
 		.add(ModItems.SAPPHIRE_HELMET)
 		.add(ModItems.SAPPHIRE_CHESTPLATE)
 		.add(ModItems.SAPPHIRE_LEGGINGS)
 		.add(ModItems.SAPPHIRE_BOOTS);
+
+	valueLookupBuilder(ModTags.Items.LIGHTNING_STRIKER_ENCHANTABLE)
+		.add(Items.WOODEN_SWORD)
+		.add(Items.STONE_SWORD)
+		.add(Items.GOLDEN_SWORD)
+		.add(Items.IRON_SWORD)
+		.add(Items.DIAMOND_SWORD)
+		.add(Items.NETHERITE_SWORD)
+		.add(Items.BOW)
+		.add(ModItems.SAPPHIRE_SWORD)
+		.add(ModItems.RUBY_SWORD);
 
     }
 }

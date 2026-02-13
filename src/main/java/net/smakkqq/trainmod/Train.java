@@ -19,6 +19,8 @@ import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.component.ModDataComponentTypes;
 import net.smakkqq.trainmod.effect.ArmourEffectHendler;
 import net.smakkqq.trainmod.effect.ModEffects;
+import net.smakkqq.trainmod.enchantment.ModEnchantmentEffects;
+import net.smakkqq.trainmod.enchantment.ModEnchantments;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.item.ModItems;
 import net.smakkqq.trainmod.potion.ModPotions;
@@ -42,6 +44,8 @@ public class Train implements ModInitializer {
 	ModItems.registerModItems();
 	ModBlocks.registerModBlocks();
 	ModPotions.registerPotions();
+	ModEnchantmentEffects.registerEffect();
+	ModEnchantments.registerEnchantments();
 
 	FuelRegistryEvents.BUILD.register((builder, context) -> {
 	    builder.add(ModItems.FUEL, 60 * 20);
@@ -55,12 +59,12 @@ public class Train implements ModInitializer {
 	    if (entity instanceof SkeletonEntity skeletonEntity && player.getMainHandStack().getItem() == Items.BONE) {
 		player.sendMessage(Text.literal("Friendly fire"), true);
 		player.getMainHandStack().decrement(1);
-		skeletonEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 500, 6));
+		skeletonEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 500, 6));
 	    }
 	    return ActionResult.PASS;
 	});
-	
-	FabricBrewingRecipeRegistryBuilder.BUILD.register(builder ->builder.registerPotionRecipe(Potions.AWKWARD, Items.STRING, ModPotions.SPIDER_LEGS_POTION));
-	
+
+	FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> builder.registerPotionRecipe(Potions.AWKWARD, Items.STRING, ModPotions.SPIDER_LEGS_POTION));
+
     }
 }
