@@ -3,6 +3,7 @@ package net.smakkqq.trainmod.item;
 import java.util.function.Function;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.AxeItem;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
@@ -16,12 +17,12 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
+import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.item.custom.ArrowRod;
 import net.smakkqq.trainmod.item.custom.ChiselItem;
 import net.smakkqq.trainmod.item.custom.FireRod;
 import net.smakkqq.trainmod.item.custom.HammerItem;
 import net.smakkqq.trainmod.item.custom.LightningRod;
-
 
 public class ModItems {
 
@@ -132,15 +133,12 @@ public class ModItems {
 	    settings -> new HammerItem(ModToolMaterials.SAPPHIRE_MATERIAL, 7.0F, -3.4F, settings),
 	    new Item.Settings()
     );
-    
-    
+
     public static final Item SAPPHIRE_CHISEL = registerItem(
 	    "sapphire_chisel",
 	    settings -> new ChiselItem(settings.maxDamage(64)),
 	    new Item.Settings()
     );
-    
-    
 
 //@@@@@@@@@@@@@@@@@     БРОНЯ     @@@@@@@@@@@@@@@@@@@@@@@@
     public static final Item SAPPHIRE_HELMET = registerItem(
@@ -178,16 +176,22 @@ public class ModItems {
 			    EquipmentType.BOOTS.getMaxDamage(
 				    ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL.durability()))
     );
-    
-     public static final Item SAPPHIRE_HORSE_ARMOR = registerItem(
+
+    public static final Item SAPPHIRE_HORSE_ARMOR = registerItem(
 	    "sapphire_horse_armor",
 	    settings -> new Item(settings.horseArmor(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL)),
 	    new Item.Settings()
     );
-     
-     public static final Item SAPPHIRE_BOW = registerItem(
+
+    public static final Item SAPPHIRE_BOW = registerItem(
 	    "sapphire_bow",
 	    settings -> new BowItem(settings.maxDamage(250)),
+	    new Item.Settings()
+    );
+
+    public static final Item RICE = registerItem(
+	    "rice",
+	    settings -> new BlockItem(ModBlocks.RICE, settings.food(ModFoodComponents.RICE, ModConsumableComponents.RICE)),
 	    new Item.Settings()
     );
 

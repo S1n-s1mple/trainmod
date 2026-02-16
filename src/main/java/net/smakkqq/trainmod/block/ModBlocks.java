@@ -8,12 +8,14 @@ import net.minecraft.block.ButtonBlock;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.block.WallBlock;
 import net.minecraft.block.WoodType;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -24,6 +26,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.custom.MagicBlock;
+import net.smakkqq.trainmod.block.custom.RicesCropBlock;
 import net.smakkqq.trainmod.block.custom.RubyLampBlock;
 
 public class ModBlocks {
@@ -148,6 +151,17 @@ public class ModBlocks {
 	    true
     );
 
+    public static final Block RICE = registerBlockItem(
+	    "rice",
+	    RicesCropBlock::new, AbstractBlock.Settings.create()
+		    .noCollision()
+		    .ticksRandomly()
+		    .breakInstantly()
+		    .pistonBehavior(PistonBehavior.DESTROY)
+		    .sounds(BlockSoundGroup.CROP)
+		    .mapColor(MapColor.DARK_CRIMSON),
+	    true
+    );
 //    public static final Block SAPPHIRE_BLOCK = registerBlockItem(
 //            "sapphire_block",
 //            Block::new,
