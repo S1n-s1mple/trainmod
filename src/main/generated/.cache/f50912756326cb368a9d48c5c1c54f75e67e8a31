@@ -5,6 +5,7 @@ c4424c23c9a602b1ada475460443558635b9611f data/minecraft/tags/item/hoes.json
 58b84c15d6891a11c58a524fd45bd75d06eaf63f data/minecraft/tags/item/shovels.json
 82892fe8ed7f38446b0f3f74bef12413e35ea4df data/minecraft/tags/item/swords.json
 4516f90d2eb199a5a62a866937caf7c12be9d868 data/minecraft/tags/item/trimmable_armor.json
+8a350628d5486947d869587e68cb8c4d260869d0 data/train/tags/item/divine_punishment_enchantable.json
 18738e069c5259e2b51f1ac08b93b2eede3cb28f data/train/tags/item/lightning_striker_enchantable.json
 4516f90d2eb199a5a62a866937caf7c12be9d868 data/train/tags/item/sapphire_armor.json
 c56e7843309cc29723931692f0349cc65ce0d601 data/train/tags/item/sapphire_repair.json

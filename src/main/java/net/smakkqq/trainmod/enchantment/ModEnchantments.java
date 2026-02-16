@@ -11,23 +11,25 @@ import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
+import net.smakkqq.trainmod.enchantment.custom.DivinePunishmentEntityEffect;
 import net.smakkqq.trainmod.enchantment.custom.LightningStrikerEnchantmentEffect;
 import net.smakkqq.trainmod.utill.ModTags;
 
 public class ModEnchantments {
 
     public static final RegistryKey<Enchantment> LIGHTNING_STRIKER = of("lightning_striker");
+    public static final RegistryKey<Enchantment> DIVINE_PUNISHMENT = of("divine_punishment");
 
     public static void bootstrap(Registerable<Enchantment> registerable) {
 	var enchantments = registerable.getRegistryLookup(RegistryKeys.ENCHANTMENT);
 	var items = registerable.getRegistryLookup(RegistryKeys.ITEM);
 
+	// Lightning Striker (unchanged)
 	register(registerable, LIGHTNING_STRIKER,
 		Enchantment.builder(Enchantment.definition(
 			items.getOrThrow(ModTags.Items.LIGHTNING_STRIKER_ENCHANTABLE),
 			items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
-			5,
-			3,
+			5, 3,
 			Enchantment.leveledCost(10, 10),
 			Enchantment.leveledCost(50, 10),
 			5,
@@ -37,6 +39,17 @@ public class ModEnchantments {
 				EnchantmentEffectTarget.ATTACKER,
 				EnchantmentEffectTarget.VICTIM,
 				new LightningStrikerEnchantmentEffect())
+	);
+
+	register(registerable, DIVINE_PUNISHMENT,
+		Enchantment.builder(Enchantment.definition(
+			items.getOrThrow(ModTags.Items.DIVINE_PUNISHMENT_ENCHANTABLE),
+			items.getOrThrow(ItemTags.ARMOR_ENCHANTABLE),
+			5, 3,
+			Enchantment.leveledCost(10, 10),
+			Enchantment.leveledCost(50, 10),
+			5,
+			AttributeModifierSlot.ARMOR))
 	);
     }
 
@@ -49,7 +62,6 @@ public class ModEnchantments {
     }
 
     public static void registerEnchantments() {
-	Train.LOGGER.info("Registering mod enchantments for:" + Train.MOD_ID);
+	Train.LOGGER.info("Registering mod enchantments for: " + Train.MOD_ID);
     }
-
 }

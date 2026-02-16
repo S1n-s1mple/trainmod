@@ -71,7 +71,8 @@
     "item.minecraft.splash_potion.effect.blessing": "Взрывное зелье благославения",
 
 
-    "enchantment.train.lightning_striker" : "Удар Молнии",
+    "enchantment.train.lightning_striker" : "Удар молнии",
+    "enchantment.train.divine_punishment" : "Божественное наказание",
     
     "itemGroup.train.ores_items": "Руды & Предметы"
 }
