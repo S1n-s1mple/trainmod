@@ -40,7 +40,6 @@ public class ModEnchantments {
 				EnchantmentEffectTarget.VICTIM,
 				new LightningStrikerEnchantmentEffect())
 	);
-
 	register(registerable, DIVINE_PUNISHMENT,
 		Enchantment.builder(Enchantment.definition(
 			items.getOrThrow(ModTags.Items.DIVINE_PUNISHMENT_ENCHANTABLE),
@@ -50,6 +49,12 @@ public class ModEnchantments {
 			Enchantment.leveledCost(50, 10),
 			5,
 			AttributeModifierSlot.ARMOR))
+			.addEffect(
+				EnchantmentEffectComponentTypes.POST_ATTACK,
+				EnchantmentEffectTarget.VICTIM,
+				EnchantmentEffectTarget.ATTACKER,
+				new DivinePunishmentEntityEffect()
+			)
 	);
     }
 

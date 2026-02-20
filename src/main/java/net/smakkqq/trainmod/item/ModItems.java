@@ -190,7 +190,7 @@ public class ModItems {
     );
 
     public static final Item RICE = registerItem(
-	    "rice",
+	    "rice_seeds",
 	    settings -> new BlockItem(ModBlocks.RICE, settings.food(ModFoodComponents.RICE, ModConsumableComponents.RICE)),
 	    new Item.Settings()
     );
