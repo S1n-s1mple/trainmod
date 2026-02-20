@@ -1,4 +1,5 @@
 // 1.21.6	-999999999-01-01T00:00:00	Lukas' mod/Model Definitions
+f1521555d74aca52948caab486e314a63319e8db assets/train/blockstates/rice.json
 42bc94c1441a992fd5378f2113ce3a7d2161ec55 assets/train/blockstates/ruby_block.json
 4c5732f5fe98255215387d349f7f25397b2f1e65 assets/train/blockstates/ruby_block_button.json
 7a381b17695d7285f904a2c2130c8d5b0256e2a7 assets/train/blockstates/ruby_block_door.json
@@ -13,6 +14,8 @@ e9e33104dd46fa331705d2fb83f2a7a8a0b0406e assets/train/blockstates/ruby_lamp.json
 ed869ea6e0f7845249d4a8ba88afc765b39955d6 assets/train/items/fire_rod.json
 642e2c10e45f3485ddd9d8745cd25a7963c4da59 assets/train/items/fuel.json
 9b6ca564a910d5a14c7c9747b9ded2919574c247 assets/train/items/funny_potato.json
+5d19cddd547fbd38d09d627b0ef87847b369d18f assets/train/items/rice.json
+7d0f15ccbeadf57cfc8944740565bd0ffeb44ad6 assets/train/items/rice_seeds.json
 b5d518300975d3fc5111731ad064d3850e8aa745 assets/train/items/ruby.json
 882ed79c22ddf9818c151dbf1fdb18aa2df57c70 assets/train/items/ruby_axe.json
 6dc315d817aa6b35cc82ee0c7767985acc9a6681 assets/train/items/ruby_block.json
@@ -44,6 +47,14 @@ d2244c239f04536380487c260ad88192f07ecdb4 assets/train/items/sapphire_leggings.js
 89f2b7ef2e125418fbbce6cd342d7e6b4798bb1c assets/train/items/sapphire_pickaxe.json
 f118f44f64a2eab18ff6e4db74306b1b7c06205c assets/train/items/sapphire_shovel.json
 714569b6d05b2cc92dc224e6319df95543782054 assets/train/items/sapphire_sword.json
+5e2e2848fddb0f48f9d5f8e0579a30dbe0a3790d assets/train/models/block/rice_stage0.json
+2554032e9c806b98610410917fb373284c67a650 assets/train/models/block/rice_stage1.json
+601e1594a012f56f6b69c586ba6c8664744353cb assets/train/models/block/rice_stage2.json
+9256ec5f651d718d0631086d3c913773d13e5ef5 assets/train/models/block/rice_stage3.json
+34ccf14c4f7adad7d74bf3ce32b07d16b56e5bd9 assets/train/models/block/rice_stage4.json
+a6aa16021ae88d23c956b609394ca2b6adbbd52d assets/train/models/block/rice_stage5.json
+fcba210add7151c0f58537fc43011e1d9c445360 assets/train/models/block/rice_stage6.json
+e82566692ea4270bb9a2c1d1f069bb11bc132e06 assets/train/models/block/rice_stage7.json
 2f3cbda31ca260fceebe292d26b366368b31efb5 assets/train/models/block/ruby_block.json
 b5bbe4bb6f1e0f9630223a5871c149a20e2555b1 assets/train/models/block/ruby_block_button.json
 cfb1f7b0bf8fa3bc44fd8659d5cf859f131f4441 assets/train/models/block/ruby_block_button_inventory.json
@@ -82,6 +93,7 @@ b43f9d9aa2fdfaf65eaf6fc76e7ddccd71002f07 assets/train/models/block/ruby_lamp.jso
 361651550d6eae9057b170cd4b7d3a4a323110af assets/train/models/item/fire_rod.json
 3aad21a4499fdc897ccdc86a4a36133f3acbfc2d assets/train/models/item/fuel.json
 8f7a5715cb4f17dd76c8f566e45f0f8c049f6882 assets/train/models/item/funny_potato.json
+d9661c3240c93bff0836468aee4774d9cccf4a2b assets/train/models/item/rice_seeds.json
 2f9be9575ef4321fef9da280e6bf6803805f7496 assets/train/models/item/ruby.json
 7435359541d208da4978b20ce45b534e0291636b assets/train/models/item/ruby_axe.json
 59bb9321428d6ac36f6916c9c0c33db3ac84f314 assets/train/models/item/ruby_block_door.json

@@ -84,6 +84,9 @@
     "enchantment.train.divine_punishment" : "Divine punishment",
     
     
+    "item.train.rice_seeds" : "Rice",
+    
+    
     "itemGroup.train.ores_items": "Ores & Items"
 
 }

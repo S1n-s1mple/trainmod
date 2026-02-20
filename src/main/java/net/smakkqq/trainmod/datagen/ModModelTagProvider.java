@@ -17,6 +17,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.block.custom.RicesCropBlock;
 import net.smakkqq.trainmod.block.custom.RubyLampBlock;
 import net.smakkqq.trainmod.item.ModItems;
 
@@ -51,6 +52,8 @@ public class ModModelTagProvider extends FabricModelProvider {
 			.of(ModBlocks.RUBY_LAMP)
 			.with(BlockStateModelGenerator.createBooleanModelMap(RubyLampBlock.CLICKED, onVariant, offVariant))
 	);
+	
+	blockStateModelGenerator.registerCrop(ModBlocks.RICE, RicesCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
     }
 
     @Override
@@ -109,5 +112,4 @@ public class ModModelTagProvider extends FabricModelProvider {
 			ItemModels.rangeDispatchEntry(unbakedBow4, 0.9f)),
 		unbakedBow);
     }
-
 }

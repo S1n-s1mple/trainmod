@@ -74,6 +74,10 @@
     "enchantment.train.lightning_striker" : "Удар молнии",
     "enchantment.train.divine_punishment" : "Божественное наказание",
     
+    
+   "item.train.rice_seeds" : "Рис",
+    
+    
     "itemGroup.train.ores_items": "Руды & Предметы"
 }
 

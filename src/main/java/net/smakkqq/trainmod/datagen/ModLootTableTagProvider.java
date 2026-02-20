@@ -8,14 +8,18 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.block.custom.RicesCropBlock;
+import net.smakkqq.trainmod.item.ModItems;
 
 public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
 
@@ -42,6 +46,11 @@ public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
 	
 //	addDrop(ModBlocks.RUBY_ORE, oreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY));
 //	addDrop(ModBlocks.RUBY_ORE, multipleOreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY, 3, 7));
+
+	BlockStatePropertyLootCondition.Builder riceCondition = BlockStatePropertyLootCondition.builder(ModBlocks.RICE)
+		.properties(StatePredicate.Builder.create().exactMatch(RicesCropBlock.AGE, RicesCropBlock.MAX_AGE));
+	this.addDrop(ModBlocks.RICE, this.cropDrops(ModBlocks.RICE, ModItems.RICE, ModItems.RICE, riceCondition));
+	
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
