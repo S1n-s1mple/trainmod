@@ -1,6 +1,7 @@
 package net.smakkqq.trainmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
@@ -12,8 +13,11 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.server.command.CommandManager;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.world.GameMode;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.component.ModDataComponentTypes;
 import net.smakkqq.trainmod.effect.ArmourEffectHendler;
@@ -68,5 +72,36 @@ public class Train implements ModInitializer {
 
 	FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> builder.registerPotionRecipe(Potions.AWKWARD, Items.STRING, ModPotions.SPIDER_LEGS_POTION));
 
+	CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+	    dispatcher.register(CommandManager.literal("c")
+		    .requires(source -> source.hasPermissionLevel(2))
+		    .executes(context -> {
+			ServerPlayerEntity player = context.getSource().getPlayer();
+			if (player != null) {
+			    player.changeGameMode(GameMode.CREATIVE);
+			    context.getSource().sendFeedback(() -> Text.literal("Switched to Creative mode"), false);
+			    return 1;
+			} else {
+			    context.getSource().sendError(Text.literal("Only players can use this command"));
+			    return 0;
+			}
+		    })
+	    );
+
+	    dispatcher.register(CommandManager.literal("s")
+		    .requires(source -> source.hasPermissionLevel(2))
+		    .executes(context -> {
+			ServerPlayerEntity player = context.getSource().getPlayer();
+			if (player != null) {
+			    player.changeGameMode(GameMode.SURVIVAL);
+			    context.getSource().sendFeedback(() -> Text.literal("Switched to Survival mode"), false);
+			    return 1;
+			} else {
+			    context.getSource().sendError(Text.literal("Only players can use this command"));
+			    return 0;
+			}
+		    })
+	    );
+	});
     }
 }
