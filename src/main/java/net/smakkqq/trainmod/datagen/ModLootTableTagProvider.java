@@ -51,6 +51,7 @@ public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
 		.properties(StatePredicate.Builder.create().exactMatch(RicesCropBlock.AGE, RicesCropBlock.MAX_AGE));
 	this.addDrop(ModBlocks.RICE, this.cropDrops(ModBlocks.RICE, ModItems.RICE, ModItems.RICE, riceCondition));
 	
+	this.addDrop(ModBlocks.BLUEBERRY_BUSH);
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

@@ -195,6 +195,12 @@ public class ModItems {
 	    new Item.Settings()
     );
 
+    public static final Item BLUEBERRY = registerItem(
+	    "blueberry",
+	    settings -> new BlockItem(ModBlocks.BLUEBERRY_BUSH, settings.food(ModFoodComponents.BLUEBERRY, ModConsumableComponents.BLUEBERRY)),
+	    new Item.Settings()
+    );
+
     private static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
 	// Создание ключа для предмета
 	RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Train.MOD_ID, name));

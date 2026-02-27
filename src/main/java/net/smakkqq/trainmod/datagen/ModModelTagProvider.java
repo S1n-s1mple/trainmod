@@ -17,7 +17,9 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.block.custom.BlueberryBushBlock;
 import net.smakkqq.trainmod.block.custom.RicesCropBlock;
+import static net.smakkqq.trainmod.block.custom.RicesCropBlock.AGE;
 import net.smakkqq.trainmod.block.custom.RubyLampBlock;
 import net.smakkqq.trainmod.item.ModItems;
 
@@ -54,6 +56,9 @@ public class ModModelTagProvider extends FabricModelProvider {
 	);
 	
 	blockStateModelGenerator.registerCrop(ModBlocks.RICE, RicesCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
+	blockStateModelGenerator.registerTintableCrossBlockStateWithStages(
+		ModBlocks.BLUEBERRY_BUSH, 
+		BlockStateModelGenerator.CrossType.NOT_TINTED, BlueberryBushBlock.AGE, 0, 1, 2, 3);
     }
 
     @Override

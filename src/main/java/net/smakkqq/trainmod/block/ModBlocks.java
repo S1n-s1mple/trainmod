@@ -25,6 +25,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
+import net.smakkqq.trainmod.block.custom.BlueberryBushBlock;
 import net.smakkqq.trainmod.block.custom.MagicBlock;
 import net.smakkqq.trainmod.block.custom.RicesCropBlock;
 import net.smakkqq.trainmod.block.custom.RubyLampBlock;
@@ -153,13 +154,27 @@ public class ModBlocks {
 
     public static final Block RICE = registerBlockItem(
 	    "rice",
-	    RicesCropBlock::new, AbstractBlock.Settings.create()
+	    RicesCropBlock::new,
+	    AbstractBlock.Settings.create()
 		    .noCollision()
 		    .ticksRandomly()
 		    .breakInstantly()
 		    .pistonBehavior(PistonBehavior.DESTROY)
 		    .sounds(BlockSoundGroup.CROP)
 		    .mapColor(MapColor.DARK_CRIMSON),
+	    true
+    );
+
+    public static final Block BLUEBERRY_BUSH = registerBlockItem(
+	    "blueberry_bush",
+	    BlueberryBushBlock::new,
+	    AbstractBlock.Settings.create()
+		    .noCollision()
+		    .ticksRandomly()
+		    .breakInstantly()
+		    .pistonBehavior(PistonBehavior.DESTROY)
+		    .sounds(BlockSoundGroup.SWEET_BERRY_BUSH)
+		    .mapColor(MapColor.PALE_GREEN),
 	    true
     );
 //    public static final Block SAPPHIRE_BLOCK = registerBlockItem(

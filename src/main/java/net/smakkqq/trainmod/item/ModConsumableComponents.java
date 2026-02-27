@@ -15,4 +15,10 @@ public class ModConsumableComponents {
 		    new StatusEffectInstance(StatusEffects.GLOWING, 300, 1)
 		    ), 0.25f
 	    )).build();
+    
+    public static final ConsumableComponent BLUEBERRY = food()
+	    .consumeEffect(new ApplyEffectsConsumeEffect(List.of(
+		    new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 50, 1)
+		    ), 0.25f
+	    )).build();
 }

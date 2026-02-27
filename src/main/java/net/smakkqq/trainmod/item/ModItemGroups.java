@@ -9,6 +9,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.potion.ModPotions;
 
 public class ModItemGroups {
 
@@ -17,6 +18,9 @@ public class ModItemGroups {
 	    FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE))
 		    .displayName(Text.translatable("itemGroup.train.ores_items"))
 		    .entries((displayContext, entries) -> {
+			entries.add(ModItems.RICE);
+			entries.add(ModItems.BLUEBERRY);
+			
 
 			entries.add(ModBlocks.RUBY_BLOCK_PRESSURE_PLATE);
 			entries.add(ModBlocks.RUBY_BLOCK_FENCE_GATE);
@@ -60,7 +64,6 @@ public class ModItemGroups {
 			entries.add(ModItems.SAPPHIRE_CHESTPLATE);
 			entries.add(ModItems.SAPPHIRE_LEGGINGS);
 			entries.add(ModItems.SAPPHIRE_BOOTS);
-			
 			entries.add(ModItems.SAPPHIRE_HORSE_ARMOR);
 			
 			

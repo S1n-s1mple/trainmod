@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -48,7 +49,10 @@ public class Train implements ModInitializer {
 	FuelRegistryEvents.BUILD.register((builder, context) -> {
 	    builder.add(ModItems.FUEL, 60 * 20);
 	});
-
+	
+	CompostingChanceRegistry.INSTANCE.add(ModItems.RICE, 0.2f);
+	CompostingChanceRegistry.INSTANCE.add(ModItems.BLUEBERRY, 0.1f);
+	
 	PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 	ServerTickEvents.END_SERVER_TICK.register(new ArmourEffectHendler());

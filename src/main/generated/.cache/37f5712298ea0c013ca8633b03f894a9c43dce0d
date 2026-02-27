@@ -1,4 +1,5 @@
 // 1.21.6	-999999999-01-01T00:00:00	Lukas' mod/Block Loot Tables
+aef4d3133c10f1bdd58ee1e7c047d3994f17911f data/train/loot_table/blocks/blueberry_bush.json
 cee1403f86f22d0d4483121093cb57c0048474ef data/train/loot_table/blocks/rice.json
 29e6b6b521ed68c60663d434fd743aef0e68719d data/train/loot_table/blocks/ruby_block.json
 9559072017dcfc6b76ee25a73d6bcf74e2c5e074 data/train/loot_table/blocks/ruby_block_button.json
