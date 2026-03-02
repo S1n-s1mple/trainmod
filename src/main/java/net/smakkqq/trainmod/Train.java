@@ -29,6 +29,7 @@ import net.smakkqq.trainmod.item.ModItems;
 import net.smakkqq.trainmod.potion.ModPotions;
 import net.smakkqq.trainmod.sound.ModSound;
 import net.smakkqq.trainmod.utill.HammerUsageEvent;
+import net.smakkqq.trainmod.world.gen.ModWorldGeneration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,9 +41,10 @@ public class Train implements ModInitializer {
 
     @Override
     public void onInitialize() {
+	ModItemGroups.registerItemsGroups();
+	ModWorldGeneration.generateModWorldGen();
 	ModDataComponentTypes.registerModItems();
 	ModSound.registerSounds();
-	ModItemGroups.registerItemsGroups();
 	ModEffects.registerEffect();
 	ModItems.registerModItems();
 	ModBlocks.registerModBlocks();

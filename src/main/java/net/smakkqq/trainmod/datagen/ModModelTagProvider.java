@@ -67,6 +67,7 @@ public class ModModelTagProvider extends FabricModelProvider {
 	itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
 	itemModelGenerator.register(ModItems.SAPPHIRE, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FIRE_ROD, Models.GENERATED);
+	itemModelGenerator.register(ModItems.LIGHTNING_ROD, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FUEL, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FUNNY_POTATO, Models.GENERATED);
 

@@ -11,6 +11,8 @@ import net.smakkqq.trainmod.datagen.ModModelTagProvider;
 import net.smakkqq.trainmod.datagen.ModRecipeTagProvider;
 import net.smakkqq.trainmod.datagen.ModRegistryDataGenerator;
 import net.smakkqq.trainmod.enchantment.ModEnchantments;
+import net.smakkqq.trainmod.world.ModConfiguredFeatures;
+import net.smakkqq.trainmod.world.ModPlacedFeatures;
 
 public class TrainDataGenerator implements DataGeneratorEntrypoint {
 
@@ -28,6 +30,9 @@ public class TrainDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder) {
 	registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
+	
+	registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
+	registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 
 	DataGeneratorEntrypoint.super.buildRegistry(registryBuilder);
     }
