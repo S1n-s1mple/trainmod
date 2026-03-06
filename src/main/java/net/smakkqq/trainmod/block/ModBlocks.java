@@ -187,6 +187,37 @@ public class ModBlocks {
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 	    true
     );
+    public static final Block DEEPSLATE_SAPPHIRE_ORE = registerBlockItem(
+	    "deepslate_sapphire_ore",
+	    Block::new,
+	    AbstractBlock.Settings.create()
+		    .requiresTool()
+		    .strength(5.0F, 6.0F)
+		    .luminance(state -> 10)
+		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+	    true
+    );
+    
+    public static final Block NETHER_SAPPHIRE_ORE = registerBlockItem(
+	    "nether_sapphire_ore",
+	    Block::new,
+	    AbstractBlock.Settings.create()
+		    .requiresTool()
+		    .strength(5.0F, 6.0F)
+		    .luminance(state -> 10)
+		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+	    true
+    );
+    public static final Block END_SAPPHIRE_ORE = registerBlockItem(
+	    "end_sapphire_ore",
+	    Block::new,
+	    AbstractBlock.Settings.create()
+		    .requiresTool()
+		    .strength(5.0F, 6.0F)
+		    .luminance(state -> 10)
+		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+	    true
+    );
 
     private static Block registerBlockItem(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
 	RegistryKey<Block> blockKey = keyOfBlock(name);

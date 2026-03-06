@@ -30,6 +30,10 @@ public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
 	addDrop(ModBlocks.RUBY_BLOCK);
+	addDrop(ModBlocks.SAPPHIRE_ORE);
+	addDrop(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+	addDrop(ModBlocks.NETHER_SAPPHIRE_ORE);
+	addDrop(ModBlocks.END_SAPPHIRE_ORE);
 	
 	addDrop(ModBlocks.RUBY_BLOCK_STAIRS);
 	addDrop(ModBlocks.RUBY_BLOCK_SLAB, slabDrops(ModBlocks.RUBY_BLOCK_SLAB));

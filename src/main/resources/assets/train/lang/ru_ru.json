@@ -55,6 +55,9 @@
     "item.train.arrow_rod.tooltip": "Гениально спроектированный §7лук",
 
     "block.train.sapphire_ore": "Сапфировая руда",
+    "block.train.sapphire_ore": "Глубинносланцевая сапфировая руда",
+    "block.train.sapphire_ore": "Незерская сапфировая руда",
+    "block.train.sapphire_ore": "Эндер сапфировая руда",
 
     "item.train.fuel": "Топливо",
     "item.train.funny_potato": "Еда",
@@ -65,7 +68,7 @@
     "item.minecraft.splash_potion.effect.spider_legs": "Взрывное зелье паучих лапок",
 
 
-    "effect.train.blessing": "Blessing",
+    "effect.train.blessing": "Благославение",
     "item.minecraft.lingering_potion.effect.blessing": "Туманное зелье благославения",
     "item.minecraft.potion.effect.blessing": "Зелье  благославения",
     "item.minecraft.splash_potion.effect.blessing": "Взрывное зелье благославения",
