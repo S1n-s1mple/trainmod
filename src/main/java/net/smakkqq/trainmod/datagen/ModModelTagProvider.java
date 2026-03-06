@@ -41,7 +41,13 @@ public class ModModelTagProvider extends FabricModelProvider {
 		.fenceGate(ModBlocks.RUBY_BLOCK_FENCE_GATE);
 	blockStateModelGenerator.registerTrapdoor(ModBlocks.RUBY_BLOCK_TRAPDOOR);
 	blockStateModelGenerator.registerDoor(ModBlocks.RUBY_BLOCK_DOOR);
-
+	
+	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_SAPPHIRE_ORE);
+	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_ORE);
+	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_BLOCK);
+	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_SAPPHIRE_ORE);
+	
 	WeightedVariant offVariant = BlockStateModelGenerator.createWeightedVariant(
 		TexturedModel.CUBE_ALL.upload(ModBlocks.RUBY_LAMP, blockStateModelGenerator.modelCollector)
 	);

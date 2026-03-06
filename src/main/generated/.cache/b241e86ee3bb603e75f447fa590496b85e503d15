@@ -1,5 +1,8 @@
 // 1.21.6	-999999999-01-01T00:00:00	Lukas' mod/Model Definitions
 dd3a50323ed0d5443feecd766fa5844219106934 assets/train/blockstates/blueberry_bush.json
+a6903e2c71d110bf0d075631ff84f78ef8f17559 assets/train/blockstates/deepslate_sapphire_ore.json
+58f81c529caa7a2f4b6f5332d831efe86c486679 assets/train/blockstates/end_sapphire_ore.json
+a62717dd6956f84a6cc23cd150de1dbcc554a931 assets/train/blockstates/nether_sapphire_ore.json
 f1521555d74aca52948caab486e314a63319e8db assets/train/blockstates/rice.json
 42bc94c1441a992fd5378f2113ce3a7d2161ec55 assets/train/blockstates/ruby_block.json
 4c5732f5fe98255215387d349f7f25397b2f1e65 assets/train/blockstates/ruby_block_button.json
@@ -12,12 +15,17 @@ f36c038591362c8ac0aa255cf66610e17607fc51 assets/train/blockstates/ruby_block_sta
 1e24a2b903a070fe33f1184c2eba11a51b6ac2f1 assets/train/blockstates/ruby_block_trapdoor.json
 f685498c700818bfc1f119115a6173f7ede71aec assets/train/blockstates/ruby_block_wall.json
 e9e33104dd46fa331705d2fb83f2a7a8a0b0406e assets/train/blockstates/ruby_lamp.json
+875bddcd8fcdc5dae164a12c62ecb2e6463fa6ce assets/train/blockstates/sapphire_block.json
+9107fa2d1b0f748ce8f17ecbf1420feb3c22e5ca assets/train/blockstates/sapphire_ore.json
 a2fb944d222fb9e0d835eed2c91e6caf1b9fded1 assets/train/items/blueberry.json
 4fe7930876839e0773f35dc7411c8de09abdbfee assets/train/items/blueberry_bush.json
+cadfa233e6ea2abf442d94688c1d638038a737b3 assets/train/items/deepslate_sapphire_ore.json
+ff6d672bec574f2cd91cf85ec8ffad1d28ad7665 assets/train/items/end_sapphire_ore.json
 ed869ea6e0f7845249d4a8ba88afc765b39955d6 assets/train/items/fire_rod.json
 642e2c10e45f3485ddd9d8745cd25a7963c4da59 assets/train/items/fuel.json
 9b6ca564a910d5a14c7c9747b9ded2919574c247 assets/train/items/funny_potato.json
 2ac22bbe0d389eccb1d3179ee69e0bc6a8d7ca0d assets/train/items/lightning_rod.json
+d303cc40f90a3652d6cb0e7215dc8017f4e04418 assets/train/items/nether_sapphire_ore.json
 5d19cddd547fbd38d09d627b0ef87847b369d18f assets/train/items/rice.json
 7d0f15ccbeadf57cfc8944740565bd0ffeb44ad6 assets/train/items/rice_seeds.json
 b5d518300975d3fc5111731ad064d3850e8aa745 assets/train/items/ruby.json
@@ -40,6 +48,7 @@ c911a207d029a2245b59ecc6274b0825dc4a6f3f assets/train/items/ruby_shovel.json
 6b8d53696fa9993cc75a89de80b6610d2302b8b3 assets/train/items/ruby_sword.json
 6b2ef17228e7d9667b68edf14196da78da86fe84 assets/train/items/sapphire.json
 d4488397e7355c19a981aa1ac8ffe47ec04f76c9 assets/train/items/sapphire_axe.json
+5a09e24e91cfe222c2e5b09b3bedffbb6f5c95ca assets/train/items/sapphire_block.json
 93e13e8ff418ca7b7358059f1ead85cb6ce0afc7 assets/train/items/sapphire_boots.json
 f27132efcff75f368df4c843e528b601ec8f6d78 assets/train/items/sapphire_bow.json
 3e6f15623724290c3127d5160ca2d1c553bc8cf2 assets/train/items/sapphire_chestplate.json
@@ -48,6 +57,7 @@ f27132efcff75f368df4c843e528b601ec8f6d78 assets/train/items/sapphire_bow.json
 cf0cd05c963df0f885b23391f6ad3a48610c0133 assets/train/items/sapphire_hoe.json
 8e0f9aefeea807f3c6674ae84f22cdabc27d96d2 assets/train/items/sapphire_horse_armor.json
 d2244c239f04536380487c260ad88192f07ecdb4 assets/train/items/sapphire_leggings.json
+edea12fdeba075238c9c5d2304e03dc4dda3bba8 assets/train/items/sapphire_ore.json
 89f2b7ef2e125418fbbce6cd342d7e6b4798bb1c assets/train/items/sapphire_pickaxe.json
 f118f44f64a2eab18ff6e4db74306b1b7c06205c assets/train/items/sapphire_shovel.json
 714569b6d05b2cc92dc224e6319df95543782054 assets/train/items/sapphire_sword.json
@@ -55,6 +65,9 @@ f118f44f64a2eab18ff6e4db74306b1b7c06205c assets/train/items/sapphire_shovel.json
 d33fa3d8b19b5017d94fa4e66a37c016c572dd60 assets/train/models/block/blueberry_bush_stage1.json
 4877ebed2cee20d3c4447938d24a4390eeff19b3 assets/train/models/block/blueberry_bush_stage2.json
 5527f17c0292fc25d9232827b59f80c3b2d14055 assets/train/models/block/blueberry_bush_stage3.json
+a14a202787945b33f530cf8b8d7ffb1bca3ce2d1 assets/train/models/block/deepslate_sapphire_ore.json
+400dcbfd51d9b4bd5d7a2fbcaf27660f8fccccf8 assets/train/models/block/end_sapphire_ore.json
+8552e3de10841b19f49c6e0abbb8168362b0d8a6 assets/train/models/block/nether_sapphire_ore.json
 5e2e2848fddb0f48f9d5f8e0579a30dbe0a3790d assets/train/models/block/rice_stage0.json
 2554032e9c806b98610410917fb373284c67a650 assets/train/models/block/rice_stage1.json
 601e1594a012f56f6b69c586ba6c8664744353cb assets/train/models/block/rice_stage2.json
@@ -98,6 +111,8 @@ ca1efc1af80b978034c00102055049607e02b3a5 assets/train/models/block/ruby_block_wa
 d0e894e430a58ce50cb6f8d6df25774304eb71ea assets/train/models/block/ruby_block_wall_side_tall.json
 b43f9d9aa2fdfaf65eaf6fc76e7ddccd71002f07 assets/train/models/block/ruby_lamp.json
 0a10386eef20221eae9809fcee0b8af014da5814 assets/train/models/block/ruby_lamp_on.json
+46828470e0c0f9b51bfbc97b0d6bb54225e37dc0 assets/train/models/block/sapphire_block.json
+502bf1c897bae4c937242c73ad2a425a9eebd5af assets/train/models/block/sapphire_ore.json
 e762e988a9a10821fff1e31fd8b6423e4a0d86b3 assets/train/models/item/blueberry.json
 361651550d6eae9057b170cd4b7d3a4a323110af assets/train/models/item/fire_rod.json
 3aad21a4499fdc897ccdc86a4a36133f3acbfc2d assets/train/models/item/fuel.json

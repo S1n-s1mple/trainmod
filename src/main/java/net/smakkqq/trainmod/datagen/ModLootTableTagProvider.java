@@ -29,11 +29,6 @@ public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-	addDrop(ModBlocks.RUBY_BLOCK);
-	addDrop(ModBlocks.SAPPHIRE_ORE);
-	addDrop(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
-	addDrop(ModBlocks.NETHER_SAPPHIRE_ORE);
-	addDrop(ModBlocks.END_SAPPHIRE_ORE);
 	
 	addDrop(ModBlocks.RUBY_BLOCK_STAIRS);
 	addDrop(ModBlocks.RUBY_BLOCK_SLAB, slabDrops(ModBlocks.RUBY_BLOCK_SLAB));
@@ -48,7 +43,10 @@ public class ModLootTableTagProvider extends FabricBlockLootTableProvider {
 	addDrop(ModBlocks.RUBY_BLOCK_DOOR, doorDrops(ModBlocks.RUBY_BLOCK_DOOR));
 	addDrop(ModBlocks.RUBY_BLOCK_TRAPDOOR);
 	
-//	addDrop(ModBlocks.RUBY_ORE, oreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY));
+	addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.SAPPHIRE_ORE, ModItems.SAPPHIRE));
+	addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.DEEPSLATE_SAPPHIRE_ORE, ModItems.SAPPHIRE));
+	addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.NETHER_SAPPHIRE_ORE, ModItems.SAPPHIRE));
+	addDrop(ModBlocks.SAPPHIRE_ORE, oreDrops(ModBlocks.END_SAPPHIRE_ORE, ModItems.SAPPHIRE));
 //	addDrop(ModBlocks.RUBY_ORE, multipleOreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY, 3, 7));
 
 	BlockStatePropertyLootCondition.Builder riceCondition = BlockStatePropertyLootCondition.builder(ModBlocks.RICE)
