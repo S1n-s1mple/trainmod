@@ -17,6 +17,7 @@ a2fb944d222fb9e0d835eed2c91e6caf1b9fded1 assets/train/items/blueberry.json
 ed869ea6e0f7845249d4a8ba88afc765b39955d6 assets/train/items/fire_rod.json
 642e2c10e45f3485ddd9d8745cd25a7963c4da59 assets/train/items/fuel.json
 9b6ca564a910d5a14c7c9747b9ded2919574c247 assets/train/items/funny_potato.json
+2ac22bbe0d389eccb1d3179ee69e0bc6a8d7ca0d assets/train/items/lightning_rod.json
 5d19cddd547fbd38d09d627b0ef87847b369d18f assets/train/items/rice.json
 7d0f15ccbeadf57cfc8944740565bd0ffeb44ad6 assets/train/items/rice_seeds.json
 b5d518300975d3fc5111731ad064d3850e8aa745 assets/train/items/ruby.json
@@ -101,6 +102,7 @@ e762e988a9a10821fff1e31fd8b6423e4a0d86b3 assets/train/models/item/blueberry.json
 361651550d6eae9057b170cd4b7d3a4a323110af assets/train/models/item/fire_rod.json
 3aad21a4499fdc897ccdc86a4a36133f3acbfc2d assets/train/models/item/fuel.json
 8f7a5715cb4f17dd76c8f566e45f0f8c049f6882 assets/train/models/item/funny_potato.json
+1563cfad7e108dc1774277199e36d5c57cdd1191 assets/train/models/item/lightning_rod.json
 d9661c3240c93bff0836468aee4774d9cccf4a2b assets/train/models/item/rice_seeds.json
 2f9be9575ef4321fef9da280e6bf6803805f7496 assets/train/models/item/ruby.json
 7435359541d208da4978b20ce45b534e0291636b assets/train/models/item/ruby_axe.json

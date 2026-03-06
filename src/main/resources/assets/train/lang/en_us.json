@@ -63,9 +63,9 @@
     
     
     "block.train.sapphire_ore" : "Sapphire Ore",
-    "block.train.sapphire_ore" : "Deepslate Sapphire Ore",
-    "block.train.sapphire_ore" : "Nether Sapphire Ore",
-    "block.train.sapphire_ore" : "End Sapphire Ore",
+    "block.train.deepslate_sapphire_ore" : "Deepslate Sapphire Ore",
+    "block.train.nether_sapphire_ore" : "Nether Sapphire Ore",
+    "block.train.end_sapphire_ore" : "End Sapphire Ore",
 
 
     

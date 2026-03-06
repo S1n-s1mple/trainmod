@@ -55,9 +55,9 @@
     "item.train.arrow_rod.tooltip": "Гениально спроектированный §7лук",
 
     "block.train.sapphire_ore": "Сапфировая руда",
-    "block.train.sapphire_ore": "Глубинносланцевая сапфировая руда",
-    "block.train.sapphire_ore": "Незерская сапфировая руда",
-    "block.train.sapphire_ore": "Эндер сапфировая руда",
+    "block.train.deepslate_sapphire_ore": "Глубинносланцевая сапфировая руда",
+    "block.train.nether_sapphire_ore": "Незерская сапфировая руда",
+    "block.train.end_sapphire_ore": "Эндер сапфировая руда",
 
     "item.train.fuel": "Топливо",
     "item.train.funny_potato": "Еда",

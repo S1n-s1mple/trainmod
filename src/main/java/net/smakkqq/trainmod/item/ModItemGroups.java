@@ -33,6 +33,9 @@ public class ModItemGroups {
 			entries.add(ModBlocks.RUBY_BLOCK_SLAB);
 			entries.add(ModBlocks.SAPPHIRE_BLOCK);
 			entries.add(ModBlocks.SAPPHIRE_ORE);
+			entries.add(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
+			entries.add(ModBlocks.NETHER_SAPPHIRE_ORE);
+			entries.add(ModBlocks.END_SAPPHIRE_ORE);
 			entries.add(ModBlocks.RUBY_BLOCK);
 			entries.add(ModBlocks.RUBY_LAMP);
 			
