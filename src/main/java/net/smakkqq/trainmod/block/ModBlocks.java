@@ -183,7 +183,6 @@ public class ModBlocks {
 	    AbstractBlock.Settings.create()
 		    .requiresTool()
 		    .strength(5.0F, 6.0F)
-		    .luminance(state -> 10)
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 	    true
     );
@@ -193,7 +192,6 @@ public class ModBlocks {
 	    AbstractBlock.Settings.create()
 		    .requiresTool()
 		    .strength(5.0F, 6.0F)
-		    .luminance(state -> 10)
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 	    true
     );
@@ -204,7 +202,6 @@ public class ModBlocks {
 	    AbstractBlock.Settings.create()
 		    .requiresTool()
 		    .strength(5.0F, 6.0F)
-		    .luminance(state -> 10)
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 	    true
     );
@@ -214,7 +211,6 @@ public class ModBlocks {
 	    AbstractBlock.Settings.create()
 		    .requiresTool()
 		    .strength(5.0F, 6.0F)
-		    .luminance(state -> 10)
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 	    true
     );

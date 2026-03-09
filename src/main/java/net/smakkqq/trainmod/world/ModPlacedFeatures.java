@@ -14,6 +14,7 @@ public class ModPlacedFeatures {
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable) {
 	var configuredFeature = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+	ModOrePlacedFeatures.bootstrap(featureRegisterable);
     }
 
     public static void register(

@@ -11,7 +11,7 @@ import static net.smakkqq.trainmod.utill.createIdentifier.createIdentifier;
 public class ModConfiguredFeatures {
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featurRegisterable) {
-
+	ModOreConfiguredFeatures.bootstrap(featurRegisterable);
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> of(String name) {
