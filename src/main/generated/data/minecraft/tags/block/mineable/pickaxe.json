@@ -1,5 +1,10 @@
 {
   "values": [
-    "train:ruby_block"
+    "train:ruby_block",
+    "train:deepslate_sapphire_ore",
+    "train:nether_sapphire_ore",
+    "train:end_sapphire_ore",
+    "train:sapphire_block",
+    "train:sapphire_ore"
   ]
 }
