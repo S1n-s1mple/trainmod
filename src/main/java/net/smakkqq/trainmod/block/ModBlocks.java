@@ -4,17 +4,25 @@ import java.util.function.Function;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSetType;
+import net.minecraft.block.Blocks;
+import static net.minecraft.block.Blocks.createLeavesSettings;
+import static net.minecraft.block.Blocks.register;
 import net.minecraft.block.ButtonBlock;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.FenceGateBlock;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.block.PressurePlateBlock;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SaplingGenerator;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.block.StairsBlock;
+import net.minecraft.block.TintedParticleLeavesBlock;
 import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.block.WallBlock;
 import net.minecraft.block.WoodType;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -24,6 +32,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.custom.BlueberryBushBlock;
 import net.smakkqq.trainmod.block.custom.RicesCropBlock;
@@ -195,7 +204,7 @@ public class ModBlocks {
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
 	    true
     );
-    
+
     public static final Block NETHER_SAPPHIRE_ORE = registerBlockItem(
 	    "nether_sapphire_ore",
 	    Block::new,
@@ -212,6 +221,83 @@ public class ModBlocks {
 		    .requiresTool()
 		    .strength(5.0F, 6.0F)
 		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+	    true
+    );
+
+    public static final Block JACARANDA_LOG = registerBlockItem(
+	    "jacaranda_log",
+	    PillarBlock::new,
+	    AbstractBlock.Settings.create()
+		    .mapColor(state -> state.get(PillarBlock.AXIS) == Direction.Axis.Y ? MapColor.OAK_TAN : MapColor.SPRUCE_BROWN)
+		    .instrument(NoteBlockInstrument.BASS)
+		    .strength(2.0F)
+		    .sounds(BlockSoundGroup.WOOD)
+		    .burnable(),
+	    true
+    );
+
+    public static final Block JACARANDA_WOOD = registerBlockItem(
+	    "jacaranda_wood",
+	    PillarBlock::new,
+	    AbstractBlock.Settings.create()
+		    .mapColor(MapColor.OAK_TAN)
+		    .instrument(NoteBlockInstrument.BASS)
+		    .strength(2.0F)
+		    .sounds(BlockSoundGroup.WOOD)
+		    .burnable(),
+	    true
+    );
+    public static final Block STRIPPED_JACARANDA_LOG = registerBlockItem(
+	    "stripped_jacaranda_log",
+	    PillarBlock::new,
+	    AbstractBlock.Settings.create()
+		    .mapColor(MapColor.OAK_TAN)
+		    .instrument(NoteBlockInstrument.BASS)
+		    .strength(2.0F)
+		    .sounds(BlockSoundGroup.WOOD)
+		    .burnable(),
+	    true
+    );
+    public static final Block STRIPPED_JACARANDA_WOOD = registerBlockItem(
+	    "stripped_jacaranda_wood",
+	    PillarBlock::new,
+	    AbstractBlock.Settings.create()
+		    .mapColor(MapColor.OAK_TAN)
+		    .instrument(NoteBlockInstrument.BASS)
+		    .strength(2.0F)
+		    .sounds(BlockSoundGroup.WOOD)
+		    .burnable(),
+	    true
+    );
+
+    public static final Block JACARANDA_PLANKS = registerBlockItem(
+	    "jakaranda_planks",
+	    Block::new,
+	    AbstractBlock.Settings.create()
+		    .mapColor(MapColor.OAK_TAN)
+		    .instrument(NoteBlockInstrument.BASS)
+		    .strength(2.0F, 3.0F)
+		    .sounds(BlockSoundGroup.WOOD)
+		    .burnable(),
+	    true
+    );
+
+    public static final Block JACARANDA_LEAVES = registerBlockItem(
+	    "jakaranda_leaves",
+	    settings -> new TintedParticleLeavesBlock(0.01F, settings), createLeavesSettings(BlockSoundGroup.GRASS),
+	    true
+    );
+
+    public static final Block JACARANDA_SAPLING = registerBlockItem(
+	    "jacaranda_sapling",
+	    settings -> new SaplingBlock(ModSaplingGenerators.JACARANDA, settings),
+	    AbstractBlock.Settings.create()
+		    .mapColor(MapColor.DARK_GREEN)
+		    .noCollision()
+		    .ticksRandomly()
+		    .breakInstantly()
+		    .sounds(BlockSoundGroup.GRASS)
+		    .pistonBehavior(PistonBehavior.DESTROY),
 	    true
     );
 
