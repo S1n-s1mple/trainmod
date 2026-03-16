@@ -81,6 +81,14 @@
    "item.train.rice_seeds" : "Рис",
    "item.train.blueberry" : "Голубика",
     
+    "block.train.jacaranda_wood" : "Джакарандовое бревно",
+    "block.train.jacaranda_log" : "Джакарандовое бревно",
+    "block.train.stripped_jacaranda_wood" : "Обтесанное Джакарандовое бревно",
+    "block.train.stripped_jacaranda_log" : "Обтесанное Джакарандовое бревно",
+    "block.train.jacaranda_leaves" : "Джакарандовые листья",
+    "block.train.jacaranda_planks" : "Джакарандовые доски",
+    "block.train.jacaranda_sapling" : "Джакарандовый саженец",
+    
     
     "itemGroup.train.ores_items": "Руды & Предметы"
 }

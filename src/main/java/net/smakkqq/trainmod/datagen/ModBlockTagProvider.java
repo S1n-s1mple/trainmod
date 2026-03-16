@@ -43,6 +43,13 @@ public class ModBlockTagProvider  extends FabricTagProvider.BlockTagProvider{
 		.add(ModBlocks.RUBY_LAMP)
 		.addTag(BlockTags.NEEDS_IRON_TOOL);
 	valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.RUBY_LAMP);
+	
+	
+	valueLookupBuilder(BlockTags.LOGS_THAT_BURN)
+		.add(ModBlocks.JACARANDA_WOOD)
+		.add(ModBlocks.JACARANDA_LOG)
+		.add(ModBlocks.STRIPPED_JACARANDA_WOOD)
+		.add(ModBlocks.STRIPPED_JACARANDA_LOG);
     }
     
 }

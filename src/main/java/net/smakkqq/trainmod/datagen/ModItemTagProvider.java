@@ -5,7 +5,9 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider.ItemTagProvider;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
+import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.item.ModItems;
 import net.smakkqq.trainmod.utill.ModTags;
 
@@ -75,5 +77,11 @@ public class ModItemTagProvider extends ItemTagProvider {
 		.add(Items.NETHERITE_HELMET, Items.NETHERITE_CHESTPLATE, Items.NETHERITE_LEGGINGS, Items.NETHERITE_BOOTS)
 		.add(ModItems.SAPPHIRE_HELMET, ModItems.SAPPHIRE_CHESTPLATE, ModItems.SAPPHIRE_LEGGINGS, ModItems.SAPPHIRE_BOOTS)
 		.add(Items.TURTLE_HELMET);
+	
+	valueLookupBuilder(ItemTags.LOGS_THAT_BURN)
+		.add(ModBlocks.JACARANDA_WOOD.asItem())
+		.add(ModBlocks.JACARANDA_LOG.asItem())
+		.add(ModBlocks.STRIPPED_JACARANDA_WOOD.asItem())
+		.add(ModBlocks.STRIPPED_JACARANDA_LOG.asItem());
     }
 }

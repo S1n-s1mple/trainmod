@@ -41,13 +41,13 @@ public class ModModelTagProvider extends FabricModelProvider {
 		.fenceGate(ModBlocks.RUBY_BLOCK_FENCE_GATE);
 	blockStateModelGenerator.registerTrapdoor(ModBlocks.RUBY_BLOCK_TRAPDOOR);
 	blockStateModelGenerator.registerDoor(ModBlocks.RUBY_BLOCK_DOOR);
-	
+
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_SAPPHIRE_ORE);
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_ORE);
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SAPPHIRE_BLOCK);
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
 	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_SAPPHIRE_ORE);
-	
+
 	WeightedVariant offVariant = BlockStateModelGenerator.createWeightedVariant(
 		TexturedModel.CUBE_ALL.upload(ModBlocks.RUBY_LAMP, blockStateModelGenerator.modelCollector)
 	);
@@ -60,17 +60,33 @@ public class ModModelTagProvider extends FabricModelProvider {
 			.of(ModBlocks.RUBY_LAMP)
 			.with(BlockStateModelGenerator.createBooleanModelMap(RubyLampBlock.CLICKED, onVariant, offVariant))
 	);
-	
+
+	blockStateModelGenerator.registerCrop(ModBlocks.RICE, RicesCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 	blockStateModelGenerator.registerCrop(ModBlocks.RICE, RicesCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 	blockStateModelGenerator.registerTintableCrossBlockStateWithStages(
-		ModBlocks.BLUEBERRY_BUSH, 
+		ModBlocks.BLUEBERRY_BUSH,
 		BlockStateModelGenerator.CrossType.NOT_TINTED, BlueberryBushBlock.AGE, 0, 1, 2, 3);
+
+	blockStateModelGenerator.createLogTexturePool(ModBlocks.JACARANDA_LOG)
+		.log(ModBlocks.JACARANDA_LOG)
+		.wood(ModBlocks.JACARANDA_WOOD);
+
+	blockStateModelGenerator.createLogTexturePool(ModBlocks.STRIPPED_JACARANDA_LOG)
+		.log(ModBlocks.STRIPPED_JACARANDA_LOG)
+		.wood(ModBlocks.STRIPPED_JACARANDA_WOOD);
+
+	blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JACARANDA_PLANKS);
+
+	blockStateModelGenerator.registerSingleton(ModBlocks.JACARANDA_LEAVES,
+		TexturedModel.LEAVES);
+	blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.JACARANDA_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 	//Предметы
 	itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
+	itemModelGenerator.register(ModBlocks.JACARANDA_SAPLING.asItem(), Models.GENERATED);
 	itemModelGenerator.register(ModItems.SAPPHIRE, Models.GENERATED);
 	itemModelGenerator.register(ModItems.FIRE_ROD, Models.GENERATED);
 	itemModelGenerator.register(ModItems.LIGHTNING_ROD, Models.GENERATED);

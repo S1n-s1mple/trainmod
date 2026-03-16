@@ -40,6 +40,15 @@ public class ModItemGroups {
 			entries.add(ModBlocks.RUBY_LAMP);
 			
 			
+			entries.add(ModBlocks.STRIPPED_JACARANDA_LOG);
+			entries.add(ModBlocks.STRIPPED_JACARANDA_WOOD);
+			entries.add(ModBlocks.JACARANDA_WOOD);
+			entries.add(ModBlocks.JACARANDA_LOG);
+			entries.add(ModBlocks.JACARANDA_PLANKS);
+			entries.add(ModBlocks.JACARANDA_LEAVES);
+			entries.add(ModBlocks.JACARANDA_SAPLING);
+			
+			
 			entries.add(ModItems.SAPPHIRE_PICKAXE);
 			entries.add(ModItems.SAPPHIRE_SHOVEL);
 			entries.add(ModItems.SAPPHIRE_SWORD);

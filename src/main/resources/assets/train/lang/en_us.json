@@ -91,6 +91,15 @@
     "item.train.blueberry" : "Blueberry",
     
     
+    "block.train.jacaranda_wood" : "Jacaranda wood",
+    "block.train.jacaranda_log" : "Jacaranda log",
+    "block.train.stripped_jacaranda_wood" : "Stripped jacaranda wood",
+    "block.train.stripped_jacaranda_log" : "Stripped jacaranda log",
+    "block.train.jacaranda_leaves" : "Jacaranda leave",
+    "block.train.jacaranda_planks" : "Jacaranda planks",
+    "block.train.jacaranda_sapling" : "Jacaranda sapling",
+    
+    
     "itemGroup.train.ores_items": "Ores & Items"
 
 }

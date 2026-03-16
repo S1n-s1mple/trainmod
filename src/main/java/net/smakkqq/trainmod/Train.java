@@ -7,7 +7,9 @@ import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.SkeletonEntity;
@@ -58,6 +60,17 @@ public class Train implements ModInitializer {
 	
 	CompostingChanceRegistry.INSTANCE.add(ModItems.RICE, 0.2f);
 	CompostingChanceRegistry.INSTANCE.add(ModItems.BLUEBERRY, 0.1f);
+	CompostingChanceRegistry.INSTANCE.add(ModBlocks.JACARANDA_SAPLING.asItem(), 0.1f);
+	
+	StrippableBlockRegistry.register(ModBlocks.JACARANDA_LOG, ModBlocks.STRIPPED_JACARANDA_LOG);
+	StrippableBlockRegistry.register(ModBlocks.JACARANDA_WOOD, ModBlocks.STRIPPED_JACARANDA_WOOD);
+	
+	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JACARANDA_LOG, 5, 5);
+	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JACARANDA_WOOD, 5, 5);
+	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JACARANDA_LOG, 5, 5);    
+	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JACARANDA_WOOD, 5, 5);
+	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JACARANDA_LEAVES, 5, 20);
+	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JACARANDA_PLANKS, 60, 30);
 	
 	PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 

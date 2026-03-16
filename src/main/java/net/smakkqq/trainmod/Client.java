@@ -14,6 +14,8 @@ public class Client implements ClientModInitializer {
 	BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, 
 		ModBlocks.RICE,
 		ModBlocks.BLUEBERRY_BUSH);
+	BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, 
+		ModBlocks.JACARANDA_SAPLING);
     }
 
 }

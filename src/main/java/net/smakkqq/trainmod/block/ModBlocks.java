@@ -288,6 +288,19 @@ public class ModBlocks {
 	    true
     );
 
+    public static final Block JACARANDA_SAPLING = registerBlockItem(
+	    "jacaranda_sapling",
+	    settings -> SaplingBlock(ModSaplingGenerators.JACARANDA, settings),
+	    AbstractBlock.Settings.create()
+		    .mapColor(MapColor.DARK_GREEN)
+		    .noCollision()
+		    .ticksRandomly()
+		    .breakInstantly()
+		    .sounds(BlockSoundGroup.GRASS)
+		    .pistonBehavior(PistonBehavior.DESTROY),
+	    true
+    );
+
 //    public static final Block JACARANDA_SAPLING = registerBlockItem(
 //	    "jacaranda_sapling",
 //	    settings -> new SaplingBlock(ModSaplingGenerators.JACARANDA, settings),
@@ -300,7 +313,6 @@ public class ModBlocks {
 //		    .pistonBehavior(PistonBehavior.DESTROY),
 //	    true
 //    );
-
     private static Block registerBlockItem(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
 	RegistryKey<Block> blockKey = keyOfBlock(name);
 
