@@ -37,6 +37,7 @@ import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.custom.BlueberryBushBlock;
 import net.smakkqq.trainmod.block.custom.RicesCropBlock;
 import net.smakkqq.trainmod.block.custom.RubyLampBlock;
+import net.smakkqq.trainmod.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
 
@@ -271,7 +272,7 @@ public class ModBlocks {
     );
 
     public static final Block JACARANDA_PLANKS = registerBlockItem(
-	    "jakaranda_planks",
+	    "jacaranda_planks",
 	    Block::new,
 	    AbstractBlock.Settings.create()
 		    .mapColor(MapColor.OAK_TAN)
@@ -283,14 +284,14 @@ public class ModBlocks {
     );
 
     public static final Block JACARANDA_LEAVES = registerBlockItem(
-	    "jakaranda_leaves",
+	    "jacaranda_leaves",
 	    settings -> new TintedParticleLeavesBlock(0.01F, settings), createLeavesSettings(BlockSoundGroup.GRASS),
 	    true
     );
 
     public static final Block JACARANDA_SAPLING = registerBlockItem(
 	    "jacaranda_sapling",
-	    settings -> SaplingBlock(ModSaplingGenerators.JACARANDA, settings),
+	    settings -> new SaplingBlock(ModSaplingGenerators.JACARANDA, settings),
 	    AbstractBlock.Settings.create()
 		    .mapColor(MapColor.DARK_GREEN)
 		    .noCollision()

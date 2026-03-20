@@ -1,5 +1,10 @@
 // 1.21.6	-999999999-01-01T00:00:00	Lukas' mod/Block Loot Tables
 aef4d3133c10f1bdd58ee1e7c047d3994f17911f data/train/loot_table/blocks/blueberry_bush.json
+4d56c6d80196b496941f489b834ad941eb04abc9 data/train/loot_table/blocks/jacaranda_leaves.json
+1cd8a9479bffbc07146c5c83866d0f92ff671684 data/train/loot_table/blocks/jacaranda_log.json
+f026690de68e57132b98b762132c3fd83f61345b data/train/loot_table/blocks/jacaranda_planks.json
+d6c13962c1909e33947b4196ddf942b1d1a38d99 data/train/loot_table/blocks/jacaranda_sapling.json
+54f97c0be830c19be6a171da7dabce33c830a34a data/train/loot_table/blocks/jacaranda_wood.json
 cee1403f86f22d0d4483121093cb57c0048474ef data/train/loot_table/blocks/rice.json
 9559072017dcfc6b76ee25a73d6bcf74e2c5e074 data/train/loot_table/blocks/ruby_block_button.json
 3a272ded50ea8ffdb601734844336eeb4b0b4c7b data/train/loot_table/blocks/ruby_block_door.json
@@ -11,3 +16,5 @@ d93aacc2ea6f63c19789bb34b8d1b9f781a42e38 data/train/loot_table/blocks/ruby_block
 e9c2991a6f0f909249fad23e86f3ee179417e56c data/train/loot_table/blocks/ruby_block_trapdoor.json
 2caef0fa180a4490d09c3061c772bfda39259e34 data/train/loot_table/blocks/ruby_block_wall.json
 a9ccfeee224b05ad7731f502bfeae9f9087af307 data/train/loot_table/blocks/sapphire_ore.json
+934ddb1a1d520f62a598cd9773df82a89bab4daf data/train/loot_table/blocks/stripped_jacaranda_log.json
+6e14cb3f5c54a560d0f1767199f8042e2281172b data/train/loot_table/blocks/stripped_jacaranda_wood.json

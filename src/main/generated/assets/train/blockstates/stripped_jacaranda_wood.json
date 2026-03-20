@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "train:block/stripped_jacaranda_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "train:block/stripped_jacaranda_wood"
+    },
+    "axis=z": {
+      "model": "train:block/stripped_jacaranda_wood",
+      "x": 90
+    }
+  }
+}

@@ -62,7 +62,6 @@ public class ModModelTagProvider extends FabricModelProvider {
 	);
 
 	blockStateModelGenerator.registerCrop(ModBlocks.RICE, RicesCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
-	blockStateModelGenerator.registerCrop(ModBlocks.RICE, RicesCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 	blockStateModelGenerator.registerTintableCrossBlockStateWithStages(
 		ModBlocks.BLUEBERRY_BUSH,
 		BlockStateModelGenerator.CrossType.NOT_TINTED, BlueberryBushBlock.AGE, 0, 1, 2, 3);
