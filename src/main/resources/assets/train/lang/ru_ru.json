@@ -89,6 +89,8 @@
     "block.train.jacaranda_planks" : "Джакарандовые доски",
     "block.train.jacaranda_sapling" : "Джакарандовый саженец",
     
+    "block.train.blueberry_bush" : "Куст голубики",
+    
     
     "itemGroup.train.ores_items": "Руды & Предметы"
 }

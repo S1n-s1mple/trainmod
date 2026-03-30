@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package net.smakkqq.trainmod.world.gen;
 
-/**
- *
- * @author Coddy
- */
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.world.biome.BiomeKeys;
+import net.minecraft.world.gen.GenerationStep;
+import net.smakkqq.trainmod.world.ModVegetationPlacedFeatures;
+
 public class ModVegetationGeneration {
-    
+    public static void generateVegetation() {
+	BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS, BiomeKeys.FOREST),
+	GenerationStep.Feature.VEGETAL_DECORATION,
+	ModVegetationPlacedFeatures.BLUEBERRY_BUSH);
+    }
 }

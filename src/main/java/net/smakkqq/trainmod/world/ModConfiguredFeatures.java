@@ -13,6 +13,7 @@ public class ModConfiguredFeatures {
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featurRegisterable) {
 	ModOreConfiguredFeatures.bootstrap(featurRegisterable);
 	ModTreeConfiguredFeatures.bootstrap(featurRegisterable);
+	ModVegetationConfiguredFeatures.bootstrap(featurRegisterable);
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> of(String name) {

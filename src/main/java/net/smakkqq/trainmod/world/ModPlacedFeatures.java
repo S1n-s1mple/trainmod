@@ -16,6 +16,7 @@ public class ModPlacedFeatures {
 	var configuredFeature = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 	ModOrePlacedFeatures.bootstrap(featureRegisterable);
 	ModTreePlacedFeatures.bootstrap(featureRegisterable);
+	ModVegetationPlacedFeatures.bootstrap(featureRegisterable);
     }
 
     public static void register(
