@@ -41,7 +41,7 @@ public class CapibaraEntity extends AnimalEntity {
 	this.goalSelector.add(6, new LookAroundGoal(this));
     }
 
-    public static DefaultAttributeContainer.Builder createAtributes(){
+    public static DefaultAttributeContainer.Builder createAtributes() {
 	return MobEntity.createMobAttributes()
 		.add(EntityAttributes.MAX_HEALTH, 24)
 		.add(EntityAttributes.MOVEMENT_SPEED, 0.3)
@@ -49,12 +49,28 @@ public class CapibaraEntity extends AnimalEntity {
 		.add(EntityAttributes.ATTACK_KNOCKBACK, 5)
 		.add(EntityAttributes.FOLLOW_RANGE, 16)
 		.add(EntityAttributes.TEMPT_RANGE, 16);
-	
     }
-    
+
+    private void setupAnimationStates() {
+	if (this.idleAnimationTimeout <= 0) {
+	    this.idleAnimationTimeout = 40;
+	    this.idleAnimationState.start(this.age);
+	} else {
+	    --this.idleAnimationTimeout;
+	}
+    }
+
+    @Override
+    public void tick() {
+	super.tick();
+	if (this.getWorld().isClient()) {
+	    this.setupAnimationStates();
+	}
+    }
+
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-	return false;
+	return stack.isOf(ModItems.RICE);
     }
 
     @Override
