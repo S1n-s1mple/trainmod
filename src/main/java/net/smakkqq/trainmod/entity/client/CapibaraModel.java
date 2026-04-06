@@ -1,16 +1,14 @@
 package net.smakkqq.trainmod.entity.client;
 
-// Made with Blockbench 5.0.7
-
 import net.minecraft.client.model.*;
-import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.model.EntityModel;
-import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
 
-// Exported for Minecraft version 1.17+ for Yarn
-// Paste this class into your mod and generate all required imports
 public class CapibaraModel extends EntityModel<CapibaraRenderState> {
+
+    private final Animation idlingAnimation;
+    private final Animation walkingAnimation;
 
     private final ModelPart Capibara;
     private final ModelPart body;
@@ -35,6 +33,9 @@ public class CapibaraModel extends EntityModel<CapibaraRenderState> {
 	this.legFL = this.body.getChild("legFL");
 	this.tail = this.body.getChild("tail");
 	this.legBR = this.body.getChild("legBR");
+
+	this.idlingAnimation = CapibaraAnimation.ANIM_CAPIBARA_IDLE.createAnimation(root);
+	this.walkingAnimation = CapibaraAnimation.ANIM_CAPIBARA_WALK.createAnimation(root);
     }
 
     public static TexturedModelData getTexturedModelData() {
@@ -67,11 +68,20 @@ public class CapibaraModel extends EntityModel<CapibaraRenderState> {
     }
 
     @Override
-    public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setAngles(CapibaraRenderState state) {
+	super.setAngles(state);
+	this.setHeadAngels(state.relativeHeadYaw, state.pitch);
+
+	this.idlingAnimation.apply(state.idleAnimationState, state.age, 1F);
+	this.walkingAnimation.applyWalking(state.limbSwingAnimationProgress, state.limbSwingAmplitude, 2F, 2.5F);
     }
 
-//    @Override
-//    public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-//	Capibara.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
-//    }
+    private void setHeadAngels(float headYaw, float headPitch) {
+	headYaw = MathHelper.clamp(headYaw, -30.0F, 30.0F);
+	headPitch = MathHelper.clamp(headPitch, -30.0F, 30.0F);
+
+	this.head.yaw = headYaw * 0.017453292F;
+	this.head.pitch = headPitch * 0.017453292F;
+    }
+
 }

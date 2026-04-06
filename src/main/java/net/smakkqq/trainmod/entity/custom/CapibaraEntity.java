@@ -2,6 +2,7 @@ package net.smakkqq.trainmod.entity.custom;
 
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.AnimalMateGoal;
 import net.minecraft.entity.ai.goal.FollowParentGoal;
 import net.minecraft.entity.ai.goal.LookAroundGoal;
@@ -11,6 +12,9 @@ import net.minecraft.entity.ai.goal.TemptGoal;
 import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
@@ -18,13 +22,17 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.Util;
 import net.minecraft.world.World;
+import net.smakkqq.trainmod.entity.ModEntities;
 import net.smakkqq.trainmod.item.ModItems;
 
 public class CapibaraEntity extends AnimalEntity {
 
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+
+    private static final TrackedData<Integer> TYPE_VARIANT = DataTracker.registerData(CapibaraEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     public CapibaraEntity(EntityType<? extends AnimalEntity> entityType, World world) {
 	super(entityType, world);
@@ -75,7 +83,19 @@ public class CapibaraEntity extends AnimalEntity {
 
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-	return null;
+	CapibaraEntity baby = ModEntities.CAPIBARA.create(world, SpawnReason.BREEDING);
+	CapibaraTypes type = Util.getRandom(CapibaraTypes.values(), this.random);
+	if (baby != null) {
+	    baby.setType(type);
+	}
+	return baby;
+    }
+
+    //TYPES
+    @Override
+    protected void initDataTracker(DataTracker.Builder builder) {
+	super.initDataTracker(builder);
+	builder.add(TYPE_VARIANT, 0);
     }
 
 }
