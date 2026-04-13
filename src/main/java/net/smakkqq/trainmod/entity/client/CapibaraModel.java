@@ -3,10 +3,14 @@ package net.smakkqq.trainmod.entity.client;
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.model.EntityModel;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.math.MathHelper;
+import net.smakkqq.trainmod.utill.createIdentifier;
+import static net.smakkqq.trainmod.utill.createIdentifier.createIdentifier;
 
 public class CapibaraModel extends EntityModel<CapibaraRenderState> {
 
+    public static final EntityModelLayer CAPIBARA = new EntityModelLayer(createIdentifier("capibara"), "main");
     private final Animation idlingAnimation;
     private final Animation walkingAnimation;
 

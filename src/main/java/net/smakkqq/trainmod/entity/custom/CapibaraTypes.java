@@ -21,5 +21,6 @@ public enum CapibaraTypes {
     public static CapibaraTypes byId(int id) {
 	return BY_ID[id % BY_ID.length]; // хороший метод
     }
-
+    
+    
 }

@@ -1,10 +1,12 @@
 package net.smakkqq.trainmod.datagen;
 
+import java.util.Optional;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.ItemModels;
+import net.minecraft.client.data.Model;
 import net.minecraft.client.data.Models;
 import net.minecraft.client.data.TextureMap;
 import net.minecraft.client.data.TexturedModel;
@@ -138,5 +140,7 @@ public class ModModelTagProvider extends FabricModelProvider {
 			ItemModels.rangeDispatchEntry(unbakedBow3, 0.65f),
 			ItemModels.rangeDispatchEntry(unbakedBow4, 0.9f)),
 		unbakedBow);
+	
+	itemModelGenerator.register(ModItems.CAPIBARA_SPAWN_EGG, Models.HANDHELD);
     }
 }

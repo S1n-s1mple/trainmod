@@ -21,8 +21,8 @@ public class CapibaraRenderer extends MobEntityRenderer<CapibaraEntity, Capibara
 		map.put(CapibaraTypes.WHITE, createIdentifier("textures/entity/capibara/capibara_white.png"));
 	    });
 
-    public CapibaraRenderer(EntityRendererFactory.Context context, CapibaraModel entityModel, float f) {
-	super(context, entityModel, f);
+    public CapibaraRenderer(EntityRendererFactory.Context context) {
+	super(context, new CapibaraModel(context.getPart(CapibaraModel.CAPIBARA)), 0.28f);
     }
 
     @Override
@@ -46,9 +46,9 @@ public class CapibaraRenderer extends MobEntityRenderer<CapibaraEntity, Capibara
     }
 
     @Override
-    public void updateRenderState(CapibaraEntity livingEntity, CapibaraRenderState livingEntityRenderState, float f){
+    public void updateRenderState(CapibaraEntity livingEntity, CapibaraRenderState livingEntityRenderState, float f) {
 	super.updateRenderState(livingEntity, livingEntityRenderState, f);
 	livingEntityRenderState.idleAnimationState.copyFrom(livingEntity.idleAnimationState);
-	livingEntityRenderState.type = livingEntity.getType();
+	livingEntityRenderState.type = livingEntity.getTypess();
     }
 }

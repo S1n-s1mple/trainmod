@@ -91,6 +91,9 @@
     
     "block.train.blueberry_bush" : "Куст голубики",
     
+    "entity.train.capibara" : "Капибара",
+    "item.train.capibara_spawn_egg" : "Яйцо призыва капибары",
+    
     
     "itemGroup.train.ores_items": "Руды & Предметы"
 }

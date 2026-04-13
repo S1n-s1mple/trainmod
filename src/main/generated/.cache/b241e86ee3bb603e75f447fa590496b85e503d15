@@ -26,6 +26,7 @@ e9e33104dd46fa331705d2fb83f2a7a8a0b0406e assets/train/blockstates/ruby_lamp.json
 a7d46961163866c7c3efb88feaa3715c32ff1d0c assets/train/blockstates/stripped_jacaranda_wood.json
 a2fb944d222fb9e0d835eed2c91e6caf1b9fded1 assets/train/items/blueberry.json
 4fe7930876839e0773f35dc7411c8de09abdbfee assets/train/items/blueberry_bush.json
+82036551a8b226065f9d091f5791f8b3beeca472 assets/train/items/capibara_spawn_egg.json
 cadfa233e6ea2abf442d94688c1d638038a737b3 assets/train/items/deepslate_sapphire_ore.json
 ff6d672bec574f2cd91cf85ec8ffad1d28ad7665 assets/train/items/end_sapphire_ore.json
 ed869ea6e0f7845249d4a8ba88afc765b39955d6 assets/train/items/fire_rod.json
@@ -137,6 +138,7 @@ ab73f5c0676e9695ca1a797e79f0059d08fe0c2a assets/train/models/block/stripped_jaca
 fee12fb81df35ac76a8af0d7af3b88b323d1ce85 assets/train/models/block/stripped_jacaranda_log_horizontal.json
 3a9f23eefa4c77c81d2330784ec61c113572634d assets/train/models/block/stripped_jacaranda_wood.json
 e762e988a9a10821fff1e31fd8b6423e4a0d86b3 assets/train/models/item/blueberry.json
+ea76d72046fffcd12ca2fb434cd152f2b2fd93a0 assets/train/models/item/capibara_spawn_egg.json
 361651550d6eae9057b170cd4b7d3a4a323110af assets/train/models/item/fire_rod.json
 3aad21a4499fdc897ccdc86a4a36133f3acbfc2d assets/train/models/item/fuel.json
 8f7a5715cb4f17dd76c8f566e45f0f8c049f6882 assets/train/models/item/funny_potato.json

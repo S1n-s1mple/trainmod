@@ -2,8 +2,13 @@ package net.smakkqq.trainmod;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.entity.ModEntities;
+import net.smakkqq.trainmod.entity.client.CapibaraModel;
+import net.smakkqq.trainmod.entity.client.CapibaraRenderer;
 import net.smakkqq.trainmod.tooltip.ModToolTips;
 
 public class Client implements ClientModInitializer {
@@ -16,6 +21,9 @@ public class Client implements ClientModInitializer {
 		ModBlocks.BLUEBERRY_BUSH);
 	BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, 
 		ModBlocks.JACARANDA_SAPLING);
+	
+	EntityRendererRegistry.register(ModEntities.CAPIBARA, CapibaraRenderer::new);
+	EntityModelLayerRegistry.registerModelLayer(CapibaraModel.CAPIBARA, CapibaraModel::getTexturedModelData);
     }
 
 }

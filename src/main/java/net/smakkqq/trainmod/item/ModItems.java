@@ -2,6 +2,7 @@ package net.smakkqq.trainmod.item;
 
 import java.util.function.Function;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.BowItem;
@@ -9,6 +10,7 @@ import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ShovelItem;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -18,6 +20,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.entity.ModEntities;
+import net.smakkqq.trainmod.entity.custom.CapibaraEntity;
 import net.smakkqq.trainmod.item.custom.ArrowRod;
 import net.smakkqq.trainmod.item.custom.ChiselItem;
 import net.smakkqq.trainmod.item.custom.FireRod;
@@ -137,6 +141,12 @@ public class ModItems {
     public static final Item SAPPHIRE_CHISEL = registerItem(
 	    "sapphire_chisel",
 	    settings -> new ChiselItem(settings.maxDamage(64)),
+	    new Item.Settings()
+    );
+    
+        public static final Item CAPIBARA_SPAWN_EGG = registerItem(
+	    "capibara_spawn_egg",
+	    settings -> new SpawnEggItem(ModEntities.CAPIBARA, settings),
 	    new Item.Settings()
     );
 

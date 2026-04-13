@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -26,6 +27,8 @@ import net.smakkqq.trainmod.effect.ArmourEffectHendler;
 import net.smakkqq.trainmod.effect.ModEffects;
 import net.smakkqq.trainmod.enchantment.ModEnchantmentEffects;
 import net.smakkqq.trainmod.enchantment.ModEnchantments;
+import net.smakkqq.trainmod.entity.ModEntities;
+import net.smakkqq.trainmod.entity.custom.CapibaraEntity;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.item.ModItems;
 import net.smakkqq.trainmod.potion.ModPotions;
@@ -53,6 +56,9 @@ public class Train implements ModInitializer {
 	ModPotions.registerPotions();
 	ModEnchantmentEffects.registerEffect();
 	ModEnchantments.registerEnchantments();
+	ModEntities.registerModEntities();
+	
+	FabricDefaultAttributeRegistry.register(ModEntities.CAPIBARA, CapibaraEntity.createAtributes());
 
 	FuelRegistryEvents.BUILD.register((builder, context) -> {
 	    builder.add(ModItems.FUEL, 60 * 20);

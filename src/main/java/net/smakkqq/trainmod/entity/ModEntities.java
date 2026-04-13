@@ -15,7 +15,7 @@ public class ModEntities {
     private static final RegistryKey<EntityType<?>> CAPIBARA_KEY = RegistryKey.of(RegistryKeys.ENTITY_TYPE, createIdentifier("capibara"));
 
     public static final EntityType<CapibaraEntity> CAPIBARA = Registry.register(Registries.ENTITY_TYPE, createIdentifier("capibara"),
-	    EntityType.Builder.create(CapibaraEntity::new, SpawnGroup.CREATURE).dimensions(1f, 1f).build(CAPIBARA_KEY));
+	    EntityType.Builder.create(CapibaraEntity::new, SpawnGroup.CREATURE).dimensions(0.5f, 0.6f).build(CAPIBARA_KEY));
 
     
     public static void registerModEntities(){
