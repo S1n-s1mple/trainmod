@@ -22,6 +22,8 @@ public class ModEntitySpawn {
 			BiomeKeys.FOREST,
 			BiomeKeys.FLOWER_FOREST,
 			BiomeKeys.SWAMP,
+			BiomeKeys.SNOWY_TAIGA,
+			BiomeKeys.SNOWY_PLAINS,
 			BiomeKeys.RIVER
 		),
 		SpawnGroup.CREATURE,
