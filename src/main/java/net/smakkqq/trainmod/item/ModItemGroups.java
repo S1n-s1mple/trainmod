@@ -69,6 +69,7 @@ public class ModItemGroups {
 			entries.add(ModItems.ARROW_ROD);
 			entries.add(ModItems.SAPPHIRE);
 			entries.add(ModItems.FIRE_ROD);
+			entries.add(ModItems.TOMAHAWK);
 			entries.add(ModItems.RUBY);
 			entries.add(ModItems.FUEL);
 			

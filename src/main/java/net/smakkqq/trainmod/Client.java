@@ -9,6 +9,8 @@ import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.entity.ModEntities;
 import net.smakkqq.trainmod.entity.client.CapibaraModel;
 import net.smakkqq.trainmod.entity.client.CapibaraRenderer;
+import net.smakkqq.trainmod.entity.client.TomahawkProjectileModel;
+import net.smakkqq.trainmod.entity.client.TomahawkProjectileRenderer;
 import net.smakkqq.trainmod.tooltip.ModToolTips;
 
 public class Client implements ClientModInitializer {
@@ -16,14 +18,18 @@ public class Client implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 	ModToolTips.registerModTooltips();
-	BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, 
+	BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT,
 		ModBlocks.RICE,
 		ModBlocks.BLUEBERRY_BUSH);
-	BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, 
+	BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT,
 		ModBlocks.JACARANDA_SAPLING);
-	
+
 	EntityRendererRegistry.register(ModEntities.CAPIBARA, CapibaraRenderer::new);
 	EntityModelLayerRegistry.registerModelLayer(CapibaraModel.CAPIBARA, CapibaraModel::getTexturedModelData);
+
+	EntityRendererRegistry.register(ModEntities.TOMAHAWK, TomahawkProjectileRenderer::new);
+	EntityModelLayerRegistry.registerModelLayer(TomahawkProjectileModel.TOMAHAWK, TomahawkProjectileModel::createBodyLayer);
+
     }
 
 }

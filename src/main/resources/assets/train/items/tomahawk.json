@@ -1,6 +1,6 @@
 {
     "model": {
         "type":"minecraft:model",
-        "model":"train:item/tomahawkitem"
+        "model":"train:item/tomahawk"
     }
 }

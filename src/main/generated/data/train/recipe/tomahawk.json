@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "minecraft:stick",
+    "S": "train:sapphire"
+  },
+  "pattern": [
+    "SSS",
+    "SPS",
+    " P "
+  ],
+  "result": {
+    "count": 1,
+    "id": "train:tomahawk"
+  }
+}

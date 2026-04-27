@@ -113,6 +113,14 @@ public class ModRecipeTagProvider extends FabricRecipeProvider {
 			.input('P', ModBlocks.RUBY_BLOCK)
 			.input('S', Items.STICK),
 			ModBlocks.RUBY_BLOCK);
+		
+		offerWithCriterion(ShapedRecipeJsonBuilder.create(itemLookup, RecipeCategory.MISC, ModItems.TOMAHAWK)
+			.pattern("SSS")
+			.pattern("SPS")
+			.pattern(" P ")
+			.input('S', ModItems.SAPPHIRE)
+			.input('P', Items.STICK),
+			ModBlocks.RUBY_BLOCK);
 	    }
 
 	    private void offerWithCriterion(CraftingRecipeJsonBuilder recipe, ItemConvertible unlockItem) {

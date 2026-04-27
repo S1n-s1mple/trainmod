@@ -3,8 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "thromahawk",
-		"particle": "thromahawk"
+		"0": "train:item/tomahawk",
+		"particle": "train:item/tomahawk"
 	},
 	"elements": [
 		{

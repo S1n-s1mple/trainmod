@@ -21,12 +21,12 @@ import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.entity.ModEntities;
-import net.smakkqq.trainmod.entity.custom.CapibaraEntity;
 import net.smakkqq.trainmod.item.custom.ArrowRod;
 import net.smakkqq.trainmod.item.custom.ChiselItem;
 import net.smakkqq.trainmod.item.custom.FireRod;
 import net.smakkqq.trainmod.item.custom.HammerItem;
 import net.smakkqq.trainmod.item.custom.LightningRod;
+import net.smakkqq.trainmod.item.custom.TomahawkItem;
 
 public class ModItems {
 
@@ -143,13 +143,19 @@ public class ModItems {
 	    settings -> new ChiselItem(settings.maxDamage(64)),
 	    new Item.Settings()
     );
-    
-        public static final Item CAPIBARA_SPAWN_EGG = registerItem(
+
+    public static final Item CAPIBARA_SPAWN_EGG = registerItem(
 	    "capibara_spawn_egg",
 	    settings -> new SpawnEggItem(ModEntities.CAPIBARA, settings),
 	    new Item.Settings()
     );
-
+    
+    public static final Item TOMAHAWK = registerItem(
+	    "tomahawk",
+	    settings -> new TomahawkItem(settings),
+	    new Item.Settings()
+    );
+    
 //@@@@@@@@@@@@@@@@@     БРОНЯ     @@@@@@@@@@@@@@@@@@@@@@@@
     public static final Item SAPPHIRE_HELMET = registerItem(
 	    "sapphire_helmet",

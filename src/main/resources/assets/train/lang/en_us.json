@@ -102,6 +102,8 @@
     "block.train.blueberry_bush" : "Blueberry bush",
     
     "entity.train.capibara" : "Capibara",
+    "entity.train.tomahawk" : "Tomahawk",
+    "item.train.tomahawk" : "Tomahawk",
     "item.train.capibara_spawn_egg" : "Capibara spawn egg",
     
     "itemGroup.train.ores_items": "Ores & Items"

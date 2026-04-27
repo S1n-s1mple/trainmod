@@ -92,6 +92,8 @@
     "block.train.blueberry_bush" : "Куст голубики",
     
     "entity.train.capibara" : "Капибара",
+    "entity.train.tomahawk" : "Тамогавк",
+    "item.train.tomahawk" : "Тамогавк",
     "item.train.capibara_spawn_egg" : "Яйцо призыва капибары",
     
     

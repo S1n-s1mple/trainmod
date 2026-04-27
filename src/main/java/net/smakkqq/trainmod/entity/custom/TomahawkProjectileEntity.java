@@ -2,6 +2,7 @@ package net.smakkqq.trainmod.entity.custom;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
@@ -10,6 +11,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
+import net.smakkqq.trainmod.entity.ModEntities;
 import net.smakkqq.trainmod.item.ModItems;
 
 public class TomahawkProjectileEntity extends PersistentProjectileEntity {
@@ -18,8 +20,12 @@ public class TomahawkProjectileEntity extends PersistentProjectileEntity {
 	super(entityType, world);
     }
 
+    public TomahawkProjectileEntity(PlayerEntity user, World world) {
+	super(ModEntities.TOMAHAWK, user, world, new ItemStack(ModItems.TOMAHAWK), null);
+    }
+
     @Override
-    protected ItemStackgetDefaultItemStack() {
+    protected ItemStack getDefaultItemStack() {
 	return new ItemStack(ModItems.TOMAHAWK);
     }
 
