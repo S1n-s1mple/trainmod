@@ -1,7 +1,6 @@
 package net.smakkqq.trainmod.entity.client;
 
 import net.minecraft.client.render.OverlayTexture;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRenderer;
@@ -9,11 +8,11 @@ import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.state.EntityRenderState;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.math.RotationAxis;
 import net.smakkqq.trainmod.entity.custom.TomahawkProjectileEntity;
-import net.smakkqq.trainmod.utill.createIdentifier;
 import static net.smakkqq.trainmod.utill.createIdentifier.createIdentifier;
 
-public class TomahawkProjectileRenderer extends EntityRenderer<TomahawkProjectileEntity, EntityRenderState> {
+public class TomahawkProjectileRenderer extends EntityRenderer<TomahawkProjectileEntity, TomahawkProjectileRendererState> {
 
     protected TomahawkProjectileModel model;
 
@@ -23,8 +22,13 @@ public class TomahawkProjectileRenderer extends EntityRenderer<TomahawkProjectil
     }
 
     @Override
-    public void render(EntityRenderState state, MatrixStack matrixStack, VertexConsumerProvider vertex, int light) {
+    public void render(TomahawkProjectileRendererState state, MatrixStack matrixStack, VertexConsumerProvider vertex, int light) {
 	matrixStack.push();
+
+//	if (!state.inGround) {
+//	matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(state.age * 25f));
+//	matrixStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(state.age * 25f));
+//	}
 
 	VertexConsumer vertexConsumer = ItemRenderer.getItemGlintConsumer(
 		vertex, this.model.getLayer(createIdentifier("textures/entity/tomahawk/tomahawk.png")), false, false);
@@ -35,7 +39,16 @@ public class TomahawkProjectileRenderer extends EntityRenderer<TomahawkProjectil
     }
 
     @Override
-    public EntityRenderState createRenderState() {
-	return new EntityRenderState();
+    public TomahawkProjectileRendererState createRenderState() {
+	return new TomahawkProjectileRendererState();
+    }
+    
+    @Override
+    public void updateRenderState(TomahawkProjectileEntity entity, TomahawkProjectileRendererState state, float tickDelta){
+	
+	super.updateRenderState(entity, state, tickDelta);
+	
+	state.inGround = entity.isTomahawkInGround();
+	state.age = entity.age + tickDelta;
     }
 }

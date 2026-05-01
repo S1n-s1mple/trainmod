@@ -47,4 +47,8 @@ public class TomahawkProjectileEntity extends PersistentProjectileEntity {
     protected void onBlockHit(BlockHitResult blockHitResult) {
 	super.onBlockHit(blockHitResult);
     }
+    
+    public boolean  isTomahawkInGround(){
+	return this.isInGround();
+    }
 }

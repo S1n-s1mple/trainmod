@@ -92,7 +92,7 @@ public class CapibaraEntity extends AnimalEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-	return stack.isOf(ModItems.RICE);
+	return stack.isOf(ModItems.BLUEBERRY);
     }
 
     @Override
