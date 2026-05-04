@@ -95,6 +95,8 @@
     "entity.train.tomahawk" : "Тамогавк",
     "item.train.tomahawk" : "Тамогавк",
     "item.train.capibara_spawn_egg" : "Яйцо призыва капибары",
+    "item.train.mangrove_chair" : "Мангровый стул",
+    "block.train.mangrove_chair" : "Мангровый стул",
     
     
     "itemGroup.train.ores_items": "Руды & Предметы"
