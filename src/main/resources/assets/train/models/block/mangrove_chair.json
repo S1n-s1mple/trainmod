@@ -2,7 +2,8 @@
 	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "mangrove_chair"
+		"0": "train:block/mangrove_chair",
+                                   "particle": "train:block/mangrove_chair"
 	},
 	"elements": [
 		{

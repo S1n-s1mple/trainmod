@@ -47,6 +47,7 @@ public class ModItemGroups {
 			entries.add(ModBlocks.JACARANDA_PLANKS);
 			entries.add(ModBlocks.JACARANDA_LEAVES);
 			entries.add(ModBlocks.JACARANDA_SAPLING);
+			entries.add(ModBlocks.MANGROVE_CHAIR);
 			
 			
 			entries.add(ModItems.SAPPHIRE_PICKAXE);
