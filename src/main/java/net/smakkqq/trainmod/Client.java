@@ -9,6 +9,7 @@ import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.entity.ModEntities;
 import net.smakkqq.trainmod.entity.client.CapibaraModel;
 import net.smakkqq.trainmod.entity.client.CapibaraRenderer;
+import net.smakkqq.trainmod.entity.client.ChairRenderer;
 import net.smakkqq.trainmod.entity.client.TomahawkProjectileModel;
 import net.smakkqq.trainmod.entity.client.TomahawkProjectileRenderer;
 import net.smakkqq.trainmod.tooltip.ModToolTips;
@@ -29,6 +30,8 @@ public class Client implements ClientModInitializer {
 
 	EntityRendererRegistry.register(ModEntities.TOMAHAWK, TomahawkProjectileRenderer::new);
 	EntityModelLayerRegistry.registerModelLayer(TomahawkProjectileModel.TOMAHAWK, TomahawkProjectileModel::createBodyLayer);
+	
+	EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
 
     }
 
