@@ -26,6 +26,7 @@ import net.smakkqq.trainmod.item.custom.ChiselItem;
 import net.smakkqq.trainmod.item.custom.FireRod;
 import net.smakkqq.trainmod.item.custom.HammerItem;
 import net.smakkqq.trainmod.item.custom.LightningRod;
+import net.smakkqq.trainmod.item.custom.SapphireMountItem;
 import net.smakkqq.trainmod.item.custom.TomahawkItem;
 
 public class ModItems {
@@ -38,7 +39,7 @@ public class ModItems {
 
     public static final Item SAPPHIRE = registerItem(
 	    "sapphire",
-	    Item::new,
+	    SapphireMountItem::new,
 	    new Item.Settings()
     );
 
@@ -149,13 +150,13 @@ public class ModItems {
 	    settings -> new SpawnEggItem(ModEntities.CAPIBARA, settings),
 	    new Item.Settings()
     );
-    
+
     public static final Item TOMAHAWK = registerItem(
 	    "tomahawk",
 	    settings -> new TomahawkItem(settings),
 	    new Item.Settings()
     );
-    
+
 //@@@@@@@@@@@@@@@@@     БРОНЯ     @@@@@@@@@@@@@@@@@@@@@@@@
     public static final Item SAPPHIRE_HELMET = registerItem(
 	    "sapphire_helmet",
