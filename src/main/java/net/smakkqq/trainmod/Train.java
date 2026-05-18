@@ -34,6 +34,7 @@ import net.smakkqq.trainmod.item.ModItems;
 import net.smakkqq.trainmod.potion.ModPotions;
 import net.smakkqq.trainmod.sound.ModSound;
 import net.smakkqq.trainmod.utill.HammerUsageEvent;
+import net.smakkqq.trainmod.villager.ModVillagers;
 import net.smakkqq.trainmod.world.gen.ModWorldGeneration;
 
 import org.slf4j.Logger;
@@ -57,6 +58,7 @@ public class Train implements ModInitializer {
 	ModEnchantmentEffects.registerEffect();
 	ModEnchantments.registerEnchantments();
 	ModEntities.registerModEntities();
+	ModVillagers.registerVillagers();
 	
 	FabricDefaultAttributeRegistry.register(ModEntities.CAPIBARA, CapibaraEntity.createAtributes());
 
