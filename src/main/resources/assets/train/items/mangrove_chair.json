@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "train:item/defnotchair"
+    "model": "train:item/item_mangrove_chair"
   }
 }

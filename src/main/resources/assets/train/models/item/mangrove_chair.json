@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-        "layer0": "train:item/mangrove_chair"
+        "layer0": "train:item/item_mangrove_chair"
     }
 }

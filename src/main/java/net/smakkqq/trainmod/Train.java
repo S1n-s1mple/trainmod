@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -14,12 +15,15 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.SkeletonEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradedItem;
 import net.minecraft.world.GameMode;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.component.ModDataComponentTypes;
@@ -59,27 +63,41 @@ public class Train implements ModInitializer {
 	ModEnchantments.registerEnchantments();
 	ModEntities.registerModEntities();
 	ModVillagers.registerVillagers();
-	
+
+	TradeOfferHelper.registerVillagerOffers(ModVillagers.CARPENTER_KEY, 1, factories -> {
+	    factories.add((entity, random) -> new TradeOffer(
+		    new TradedItem(Items.EMERALD, 20),
+		    new ItemStack(ModItems.FIRE_ROD, 1), 4, 7, 0.04f));
+
+	    factories.add((entity, random) -> new TradeOffer(
+		    new TradedItem(Items.EMERALD, 10),
+		    new ItemStack(ModItems.SAPPHIRE_CHISEL, 1), 4, 7, 0.04f));
+
+	    factories.add((entity, random) -> new TradeOffer(
+		    new TradedItem(Items.EMERALD, 20),
+		    new ItemStack(ModItems.LIGHTNING_ROD, 1), 4, 7, 0.04f));
+	});
+
 	FabricDefaultAttributeRegistry.register(ModEntities.CAPIBARA, CapibaraEntity.createAtributes());
 
 	FuelRegistryEvents.BUILD.register((builder, context) -> {
 	    builder.add(ModItems.FUEL, 60 * 20);
 	});
-	
+
 	CompostingChanceRegistry.INSTANCE.add(ModItems.RICE, 0.2f);
 	CompostingChanceRegistry.INSTANCE.add(ModItems.BLUEBERRY, 0.1f);
 	CompostingChanceRegistry.INSTANCE.add(ModBlocks.JACARANDA_SAPLING.asItem(), 0.1f);
-	
+
 	StrippableBlockRegistry.register(ModBlocks.JACARANDA_LOG, ModBlocks.STRIPPED_JACARANDA_LOG);
 	StrippableBlockRegistry.register(ModBlocks.JACARANDA_WOOD, ModBlocks.STRIPPED_JACARANDA_WOOD);
-	
+
 	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JACARANDA_LOG, 5, 5);
 	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JACARANDA_WOOD, 5, 5);
-	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JACARANDA_LOG, 5, 5);    
+	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JACARANDA_LOG, 5, 5);
 	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_JACARANDA_WOOD, 5, 5);
 	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JACARANDA_LEAVES, 5, 20);
 	FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.JACARANDA_PLANKS, 60, 30);
-	
+
 	PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 	ServerTickEvents.END_SERVER_TICK.register(new ArmourEffectHendler());
