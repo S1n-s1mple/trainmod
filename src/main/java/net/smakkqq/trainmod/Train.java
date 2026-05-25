@@ -22,8 +22,10 @@ import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradedItem;
+import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.GameMode;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.component.ModDataComponentTypes;
@@ -38,6 +40,7 @@ import net.smakkqq.trainmod.item.ModItems;
 import net.smakkqq.trainmod.potion.ModPotions;
 import net.smakkqq.trainmod.sound.ModSound;
 import net.smakkqq.trainmod.utill.HammerUsageEvent;
+import net.smakkqq.trainmod.utill.ModLootTableModifiers;
 import net.smakkqq.trainmod.villager.ModVillagers;
 import net.smakkqq.trainmod.world.gen.ModWorldGeneration;
 
@@ -63,17 +66,29 @@ public class Train implements ModInitializer {
 	ModEnchantments.registerEnchantments();
 	ModEntities.registerModEntities();
 	ModVillagers.registerVillagers();
+	ModLootTableModifiers.modifyLootTables();
 
 	TradeOfferHelper.registerVillagerOffers(ModVillagers.CARPENTER_KEY, 1, factories -> {
-	    factories.add((entity, random) -> new TradeOffer(
-		    new TradedItem(Items.EMERALD, 20),
-		    new ItemStack(ModItems.FIRE_ROD, 1), 4, 7, 0.04f));
-
+	    
 	    factories.add((entity, random) -> new TradeOffer(
 		    new TradedItem(Items.EMERALD, 10),
 		    new ItemStack(ModItems.SAPPHIRE_CHISEL, 1), 4, 7, 0.04f));
+	});
+
+	TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
 
 	    factories.add((entity, random) -> new TradeOffer(
+		    new TradedItem(Items.EMERALD, 5),
+		    new ItemStack(ModItems.BLUEBERRY, 1), 4, 7, 0.04f));
+
+	});
+
+	TradeOfferHelper.registerWanderingTraderOffers(factories -> {
+	    factories.addAll(Identifier.of(Train.MOD_ID, "emerald_for_lightning_rod"), (entity, random) -> new TradeOffer(
+		    new TradedItem(Items.EMERALD, 20),
+		    new ItemStack(ModItems.LIGHTNING_ROD, 1), 4, 7, 0.04f));
+
+	    factories.addAll(Identifier.of(Train.MOD_ID, "emerald_for_fire_rod"), (entity, random) -> new TradeOffer(
 		    new TradedItem(Items.EMERALD, 20),
 		    new ItemStack(ModItems.LIGHTNING_ROD, 1), 4, 7, 0.04f));
 	});

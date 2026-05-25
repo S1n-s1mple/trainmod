@@ -56,7 +56,7 @@ public class CapibaraEntity extends AnimalEntity {
 	this.goalSelector.add(0, new SwimGoal(this));
 	this.goalSelector.add(0, new EscapeDangerGoal(this, 2.0));
 	this.goalSelector.add(1, new AnimalMateGoal(this, 1.15D));
-	this.goalSelector.add(2, new TemptGoal(this, 0.75D, Ingredient.ofItem(ModItems.RICE), false));
+	this.goalSelector.add(2, new TemptGoal(this, 0.75D, Ingredient.ofItem(ModItems.BLUEBERRY), false));
 	this.goalSelector.add(3, new FollowParentGoal(this, 1.1D));
 	this.goalSelector.add(4, new WanderAroundFarGoal(this, 1.0D));
 	this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4.0F));
@@ -147,20 +147,20 @@ public class CapibaraEntity extends AnimalEntity {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-	return SoundEvents.ENTITY_SNIFFER_HAPPY;
+	return SoundEvents.ENTITY_FOX_AMBIENT;
 
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource damage) {
-	return SoundEvents.ENTITY_SNIFFER_HURT;
+	return SoundEvents.ENTITY_FOX_HURT;
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-	return SoundEvents.ENTITY_SNIFFER_DEATH;
+	return SoundEvents.ENTITY_FOX_DEATH;
 
     }
 }
