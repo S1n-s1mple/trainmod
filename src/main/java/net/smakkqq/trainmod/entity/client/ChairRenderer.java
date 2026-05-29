@@ -21,5 +21,5 @@ public class ChairRenderer extends EntityRenderer<ChairEntity, EntityRenderState
     public EntityRenderState createRenderState() {
 	return new EntityRenderState();
     }
-
+    
 }

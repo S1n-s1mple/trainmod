@@ -1,10 +1,14 @@
 package net.smakkqq.trainmod;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.BlockRenderLayer;
+import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.util.InputUtil;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.entity.ModEntities;
 import net.smakkqq.trainmod.entity.client.CapibaraModel;
@@ -12,9 +16,13 @@ import net.smakkqq.trainmod.entity.client.CapibaraRenderer;
 import net.smakkqq.trainmod.entity.client.ChairRenderer;
 import net.smakkqq.trainmod.entity.client.TomahawkProjectileModel;
 import net.smakkqq.trainmod.entity.client.TomahawkProjectileRenderer;
+import net.smakkqq.trainmod.interfaceMod.SimpleScreen;
 import net.smakkqq.trainmod.tooltip.ModToolTips;
+import org.lwjgl.glfw.GLFW;
 
 public class Client implements ClientModInitializer {
+
+    private static KeyBinding openKeyBinding;
 
     @Override
     public void onInitializeClient() {
@@ -30,8 +38,24 @@ public class Client implements ClientModInitializer {
 
 	EntityRendererRegistry.register(ModEntities.TOMAHAWK, TomahawkProjectileRenderer::new);
 	EntityModelLayerRegistry.registerModelLayer(TomahawkProjectileModel.TOMAHAWK, TomahawkProjectileModel::createBodyLayer);
-	
+
 	EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
+
+	openKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+		"key.g_interface_mod.open",
+		InputUtil.Type.KEYSYM,
+		GLFW.GLFW_KEY_G,
+		"category.g_interface_mod.general"
+	));
+
+	ClientTickEvents.END_CLIENT_TICK.register(client
+		-> {
+	    while (openKeyBinding.wasPressed()) {
+		if (client.player != null && client.currentScreen == null) {
+		    client.setScreen(new SimpleScreen());
+		}
+	    }
+	});
 
     }
 
