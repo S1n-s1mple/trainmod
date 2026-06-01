@@ -25,7 +25,7 @@ import net.smakkqq.trainmod.entity.custom.ChairEntity;
 public class ChairBlock extends HorizontalFacingBlock {
 
     public static final MapCodec<ChairBlock> CODEC = createCodec(ChairBlock::new);
-    private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 10.0, 14.0);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 13.0, 14.0);
 
     public ChairBlock(Settings settings) {
 	super(settings);
