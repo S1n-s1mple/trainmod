@@ -14,4 +14,8 @@ public class ModBlockEntities {
 	    Registries.BLOCK_ENTITY_TYPE,
 	    Identifier.of(Train.MOD_ID, "pedestal_be"),
 	    FabricBlockEntityTypeBuilder.create(PedestalBlockEntity::new, ModBlocks.PEDESTAL).build(null));
+    
+    public static void registerBlockEntities(){
+	Train.LOGGER.info("Registering mod block entities for: " + Train.MOD_ID);
+    }
 }

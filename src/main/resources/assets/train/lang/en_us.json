@@ -107,6 +107,7 @@
     "item.train.capibara_spawn_egg" : "Capibara spawn egg",
     "item.train.mangrove_chair" : "Mangrove chair",
     "block.train.mangrove_chair" : "Mangrove chair",
+    "block.train.pedestal" : "Pedestal",
     
     "itemGroup.train.ores_items": "Ores & Items"
 

@@ -8,12 +8,15 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.util.InputUtil;
 import net.smakkqq.trainmod.block.ModBlocks;
+import net.smakkqq.trainmod.entity.ModBlockEntities;
 import net.smakkqq.trainmod.entity.ModEntities;
 import net.smakkqq.trainmod.entity.client.CapibaraModel;
 import net.smakkqq.trainmod.entity.client.CapibaraRenderer;
 import net.smakkqq.trainmod.entity.client.ChairRenderer;
+import net.smakkqq.trainmod.entity.client.PedestalBlockEntityRenderer;
 import net.smakkqq.trainmod.entity.client.TomahawkProjectileModel;
 import net.smakkqq.trainmod.entity.client.TomahawkProjectileRenderer;
 import net.smakkqq.trainmod.interfaceMod.SimpleScreen;
@@ -40,6 +43,8 @@ public class Client implements ClientModInitializer {
 	EntityModelLayerRegistry.registerModelLayer(TomahawkProjectileModel.TOMAHAWK, TomahawkProjectileModel::createBodyLayer);
 
 	EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
+
+	BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE, PedestalBlockEntityRenderer::new);
 
 	openKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 		"key.g_interface_mod.open",

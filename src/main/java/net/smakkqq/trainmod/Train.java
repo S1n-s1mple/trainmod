@@ -1,5 +1,6 @@
 package net.smakkqq.trainmod;
 
+import net.smakkqq.trainmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -33,10 +34,10 @@ import net.smakkqq.trainmod.effect.ArmourEffectHendler;
 import net.smakkqq.trainmod.effect.ModEffects;
 import net.smakkqq.trainmod.enchantment.ModEnchantmentEffects;
 import net.smakkqq.trainmod.enchantment.ModEnchantments;
+import net.smakkqq.trainmod.entity.ModBlockEntities;
 import net.smakkqq.trainmod.entity.ModEntities;
 import net.smakkqq.trainmod.entity.custom.CapibaraEntity;
 import net.smakkqq.trainmod.item.ModItemGroups;
-import net.smakkqq.trainmod.item.ModItems;
 import net.smakkqq.trainmod.potion.ModPotions;
 import net.smakkqq.trainmod.sound.ModSound;
 import net.smakkqq.trainmod.utill.HammerUsageEvent;
@@ -67,6 +68,7 @@ public class Train implements ModInitializer {
 	ModEntities.registerModEntities();
 	ModVillagers.registerVillagers();
 	ModLootTableModifiers.modifyLootTables();
+	ModBlockEntities.registerBlockEntities();
 
 	TradeOfferHelper.registerVillagerOffers(ModVillagers.CARPENTER_KEY, 1, factories -> {
 	    

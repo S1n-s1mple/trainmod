@@ -36,6 +36,7 @@ import net.minecraft.util.math.Direction;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.custom.BlueberryBushBlock;
 import net.smakkqq.trainmod.block.custom.ChairBlock;
+import net.smakkqq.trainmod.block.custom.PedestalBlock;
 import net.smakkqq.trainmod.block.custom.RicesCropBlock;
 import net.smakkqq.trainmod.block.custom.RubyLampBlock;
 import net.smakkqq.trainmod.world.tree.ModSaplingGenerators;
@@ -306,6 +307,13 @@ public class ModBlocks {
     public static final Block MANGROVE_CHAIR = registerBlockItem(
 	    "mangrove_chair",
 	    settings -> new ChairBlock(settings),
+	    AbstractBlock.Settings.create().nonOpaque(),
+	    true
+    );
+    
+    public static final Block PEDESTAL = registerBlockItem(
+	    "pedestal",
+	    settings -> new PedestalBlock(settings),
 	    AbstractBlock.Settings.create().nonOpaque(),
 	    true
     );
