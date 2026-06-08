@@ -72,7 +72,7 @@ public class SimpleScreen extends Screen {
 	this.addDrawableChild(ButtonWidget.builder(Text.literal("E"), button -> {
 	    if (this.client != null && this.client.player != null) {
 		this.client.player.networkHandler.sendChatCommand("execute in minecraft:the_end run tp @s 0 50 0");
-		this.client.player.sendMessage(Text.literal("Телепортирован в Энд на платформу (0, 50, 0)"), false);
+		this.client.player.sendMessage(Text.literal("Телепортирован в Энд на платформу (0, 70, 0)"), false);
 		this.close();
 	    }
 	}).dimensions(dimStartX + (buttonWidth + 4) * 2, bottomRowY, buttonWidth, buttonHeight).build());

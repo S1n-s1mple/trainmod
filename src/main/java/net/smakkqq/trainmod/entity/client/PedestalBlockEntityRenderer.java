@@ -28,7 +28,7 @@ public class PedestalBlockEntityRenderer implements BlockEntityRenderer<Pedestal
 	ItemStack stack = entity.getStack(0);
 
 	matrixStack.push();
-	matrixStack.translate(0.5f, 1.15f, 0.5);
+	matrixStack.translate(0.5f, 1.25f, 0.5);
 	matrixStack.scale(0.5f, 0.5f, 0.5f);
 	matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(entity.getRenderRotation()));
 
