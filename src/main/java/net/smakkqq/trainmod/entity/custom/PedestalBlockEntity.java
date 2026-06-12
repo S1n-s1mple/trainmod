@@ -17,7 +17,7 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.smakkqq.trainmod.entity.ImplementedInventory;
 import net.smakkqq.trainmod.entity.ModBlockEntities;
-import org.jetbrains.annotations.Nullable;
+import net.smakkqq.trainmod.interfaceMod.PedestalScreenHandler;
 
 public class PedestalBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory <BlockPos>{
 
@@ -52,7 +52,7 @@ public class PedestalBlockEntity extends BlockEntity implements ImplementedInven
 	Inventories.readData(view, inventory);
     }
     @Override
-    public void OnBlockReplaced(BlockPos pos, BlockState state){
+    public void onBlockReplaced(BlockPos pos, BlockState state){
 	ItemScatterer.spawn(world, pos, (this));
 	super.onBlockReplaced(pos, state);
     }
@@ -67,11 +67,10 @@ public class PedestalBlockEntity extends BlockEntity implements ImplementedInven
     public Text getDisplayName() {
 	return Text.literal("Pedestal");
     }
-
-    @Nullable  
+    
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-	return new PedestalScreenHandler(syncId, playerInventory, player);
+	return new PedestalScreenHandler(syncId, playerInventory, this.pos);
     }
     
     

@@ -8,17 +8,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
-import net.smakkqq.trainmod.interfaceMod.ModScreenHandlers;
 
 public class PedestalScreenHandler extends ScreenHandler {
 
     private final Inventory inventory;
 
-    public PedestalScreenHandler(int syncId, PlayerInventory playerInventory, PlayerEntity player, BlockPos pos) {
-	super(syncId, playerInventory, playerInventory.player.getInventory().getBlockEntity(pos));
+    public PedestalScreenHandler(int syncId, PlayerInventory playerInventory, BlockPos pos) {
+	this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(pos));
     }
 
-    public PedestalScreenHandler(int syncId, PlayerInventory playerInventory, PlayerEntity player, BlockEntity blockEntity) {
+    public PedestalScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity) {
 	super(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, syncId);
 	this.inventory = ((Inventory) blockEntity);
 
@@ -35,7 +34,26 @@ public class PedestalScreenHandler extends ScreenHandler {
     }
 
     @Override
-    public ItemStack quickMove(PlayerEntity player, int slot) {
+    public ItemStack quickMove(PlayerEntity player, int invSlot) {
+	ItemStack newStack = ItemStack.EMPTY;
+	Slot slot = this.slots.get(invSlot);
+	if (slot != null && slot.hasStack()) {
+	    ItemStack originalStack = slot.getStack();
+	    newStack = originalStack.copy();
+	    if (invSlot < this.inventory.size()) {
+		if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
+		    return ItemStack.EMPTY;
+		} else if (!this.insertItem(originalStack, 0, this.slots.size(), false)) {
+		    return ItemStack.EMPTY;
+		}
+		if (originalStack.isEmpty()) {
+		    slot.setStack(ItemStack.EMPTY);
+		} else {
+		    slot.markDirty();
+		}
+	    }
+	}
+	return newStack;
     }
 
     @Override
@@ -46,7 +64,7 @@ public class PedestalScreenHandler extends ScreenHandler {
     private void addPlayerInventory(PlayerInventory playerInventory) {
 	for (int i = 0; i < 3; i++) {
 	    for (int j = 0; j < 9; j++) {
-		this.addSlot(new Slot(playerInventory, i + j*9 + 9, 8 + j * 18, 84 + i * 18));
+		this.addSlot(new Slot(playerInventory, i + j * 9 + 9, 8 + j * 18, 84 + i * 18));
 	    }
 	}
     }

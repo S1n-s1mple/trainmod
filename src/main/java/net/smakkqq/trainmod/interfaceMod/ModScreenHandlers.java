@@ -7,6 +7,7 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.minecraft.util.math.BlockPos;
+import net.smakkqq.trainmod.interfaceMod.PedestalScreenHandler;
 
 public class ModScreenHandlers {
 
