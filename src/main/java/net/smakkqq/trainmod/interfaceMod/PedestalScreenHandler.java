@@ -43,7 +43,7 @@ public class PedestalScreenHandler extends ScreenHandler {
 	    if (invSlot < this.inventory.size()) {
 		if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
 		    return ItemStack.EMPTY;
-		} else if (!this.insertItem(originalStack, 0, this.slots.size(), false)) {
+		} else if (!this.insertItem(originalStack, 0, this.inventory.size(), false)) {
 		    return ItemStack.EMPTY;
 		}
 		if (originalStack.isEmpty()) {

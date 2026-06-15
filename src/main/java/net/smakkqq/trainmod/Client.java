@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -19,7 +20,9 @@ import net.smakkqq.trainmod.entity.client.ChairRenderer;
 import net.smakkqq.trainmod.entity.client.PedestalBlockEntityRenderer;
 import net.smakkqq.trainmod.entity.client.TomahawkProjectileModel;
 import net.smakkqq.trainmod.entity.client.TomahawkProjectileRenderer;
+import net.smakkqq.trainmod.interfaceMod.ModScreenHandlers;
 import net.smakkqq.trainmod.interfaceMod.SimpleScreen;
+import net.smakkqq.trainmod.interfaceMod.custom.PedestalScreen;
 import net.smakkqq.trainmod.tooltip.ModToolTips;
 import org.lwjgl.glfw.GLFW;
 
@@ -35,6 +38,8 @@ public class Client implements ClientModInitializer {
 		ModBlocks.BLUEBERRY_BUSH);
 	BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT,
 		ModBlocks.JACARANDA_SAPLING);
+	
+	HandledScreens.register(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, PedestalScreen::new);
 
 	EntityRendererRegistry.register(ModEntities.CAPIBARA, CapibaraRenderer::new);
 	EntityModelLayerRegistry.registerModelLayer(CapibaraModel.CAPIBARA, CapibaraModel::getTexturedModelData);
@@ -49,7 +54,7 @@ public class Client implements ClientModInitializer {
 	openKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 		"key.g_interface_mod.open",
 		InputUtil.Type.KEYSYM,
-		GLFW.GLFW_KEY_G,
+		GLFW.GLFW_KEY_GRAVE_ACCENT,
 		"category.g_interface_mod.general"
 	));
 

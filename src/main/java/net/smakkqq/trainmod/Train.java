@@ -37,6 +37,8 @@ import net.smakkqq.trainmod.enchantment.ModEnchantments;
 import net.smakkqq.trainmod.entity.ModBlockEntities;
 import net.smakkqq.trainmod.entity.ModEntities;
 import net.smakkqq.trainmod.entity.custom.CapibaraEntity;
+import net.smakkqq.trainmod.interfaceMod.ModScreenHandlers;
+import net.smakkqq.trainmod.interfaceMod.custom.PedestalScreen;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.potion.ModPotions;
 import net.smakkqq.trainmod.sound.ModSound;
@@ -69,6 +71,7 @@ public class Train implements ModInitializer {
 	ModVillagers.registerVillagers();
 	ModLootTableModifiers.modifyLootTables();
 	ModBlockEntities.registerBlockEntities();
+	ModScreenHandlers.registerScreenHandlers();
 
 	TradeOfferHelper.registerVillagerOffers(ModVillagers.CARPENTER_KEY, 1, factories -> {
 	    
