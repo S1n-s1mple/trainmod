@@ -8,14 +8,21 @@ import net.minecraft.util.Identifier;
 import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.entity.custom.PedestalBlockEntity;
+import net.smakkqq.trainmod.entity.custom.SapphinizerBlockEntity;
 
 public class ModBlockEntities {
+
     public static final BlockEntityType<PedestalBlockEntity> PEDESTAL_BE = Registry.register(
 	    Registries.BLOCK_ENTITY_TYPE,
 	    Identifier.of(Train.MOD_ID, "pedestal_be"),
 	    FabricBlockEntityTypeBuilder.create(PedestalBlockEntity::new, ModBlocks.PEDESTAL).build(null));
-    
-    public static void registerBlockEntities(){
+
+    public static final BlockEntityType<SapphinizerBlockEntity> SAPPHINIZER_BE = Registry.register(
+	    Registries.BLOCK_ENTITY_TYPE,
+	    Identifier.of(Train.MOD_ID, "sapphinizer_be"),
+	    FabricBlockEntityTypeBuilder.create(SapphinizerBlockEntity::new, ModBlocks.SAPPHINIZER).build(null));
+
+    public static void registerBlockEntities() {
 	Train.LOGGER.info("Registering mod block entities for: " + Train.MOD_ID);
     }
 }
