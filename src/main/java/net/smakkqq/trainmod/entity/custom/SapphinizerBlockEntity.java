@@ -1,5 +1,6 @@
 package net.smakkqq.trainmod.entity.custom;
 
+import java.util.Optional;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -8,9 +9,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
+import net.minecraft.recipe.RecipeEntry;
+import net.minecraft.recipe.RecipeType;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.storage.ReadView;
 import net.minecraft.storage.WriteView;
 import net.minecraft.text.Text;
@@ -20,6 +24,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.smakkqq.trainmod.entity.ImplementedInventory;
 import net.smakkqq.trainmod.entity.ModBlockEntities;
+import net.smakkqq.trainmod.recipe.ModRecipes;
+import net.smakkqq.trainmod.recipe.SapphinizerRecipe;
+import net.smakkqq.trainmod.recipe.SapphinizerRecipeInput;
 
 public class SapphinizerBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory<BlockPos> {
 
@@ -109,7 +116,7 @@ public class SapphinizerBlockEntity extends BlockEntity implements ImplementedIn
 
     public void tick(World world, BlockPos pos, BlockState state) {
 	if (hasRecipe()) {
-	    increaseCraftingProfress();
+	    increaseCraftingProgress();
 	    markDirty(world, pos, state);
 	    if (hasCraftingFinished()) {
 		craftItem();
@@ -118,6 +125,55 @@ public class SapphinizerBlockEntity extends BlockEntity implements ImplementedIn
 		resetProgress();
 	    }
 	}
+
+    }
+
+    private void resetProgress() {
+	this.progress = 0;
+	this.maxProgress = 72;
+    }
+
+    private void craftItem() {
+	Optional<RecipeEntry<SapphinizerRecipe>> recipe = getCurrentRecipe();
+
+	ItemStack output = recipe.get().value().output();
+	this.removeStack(INPUT_SLOT, 1);
+	this.setStack(OUTPUT_SLOT, new ItemStack(output.getItem(), this.getStack(OUTPUT_SLOT).getCount() + output.getCount()));
+    }
+
+    private boolean hasCraftingFinished() {
+	return this.progress >= this.maxProgress;
+    }
+
+    private void increaseCraftingProgress() {
+	this.progress++;
+    }
+
+    private boolean hasRecipe() {
+	Optional<RecipeEntry<SapphinizerRecipe>> recipe = getCurrentRecipe();
+
+	if (recipe.isEmpty()) {
+	    return false;
+	}
+
+	ItemStack output = recipe.get().value().output();
+	return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
+
+    private Optional<RecipeEntry<SapphinizerRecipe>> getCurrentRecipe() {
+	return ((ServerWorld) this.getWorld()).getRecipeManager()
+		.getFirstMatch(ModRecipes.SAPPHINIZER_TYPE, SapphinizerRecipeInput(inventory.get(INPUT_SLOT)), this.getWorld());
+    }
+
+    private boolean canInsertItemIntoOutputSlot(ItemStack output) {
+	return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getItem() == output.getItem();
+    }
+
+    private boolean canInsertAmountIntoOutputSlot(int count) {
+	int maxCount = this.getStack(OUTPUT_SLOT).isEmpty() ? 64 : this.getStack(OUTPUT_SLOT).getMaxCount();
+	int currentCount = this.getStack(OUTPUT_SLOT).getCount();
+
+	return maxCount >= currentCount + count;
     }
 
 }
