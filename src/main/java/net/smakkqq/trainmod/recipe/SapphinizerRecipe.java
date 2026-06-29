@@ -1,14 +1,17 @@
 package net.smakkqq.trainmod.recipe;
 
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import static java.lang.Character.getType;
 import static net.fabricmc.fabric.impl.recipe.ingredient.CustomIngredientImpl.getSerializer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.RegistryByteBuf;
+import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.IngredientPlacement;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
-import static net.minecraft.recipe.SmithingTrimRecipe.craft;
 import net.minecraft.recipe.book.RecipeBookCategories;
 import net.minecraft.recipe.book.RecipeBookCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -56,4 +59,27 @@ public record SapphinizerRecipe(Ingredient inputItem, ItemStack output) implemen
 	return RecipeBookCategories.CRAFTING_MISC;
     }
 
+    public static class Serializer implements RecipeSerializer<SapphinizerRecipe> {
+
+	public static final MapCodec<SapphinizerRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
+		Ingredient.CODEC.fieldOf("ingredient").forGetter(SapphinizerRecipe::inputItem),
+		ItemStack.CODEC.fieldOf("result").forGetter(SapphinizerRecipe::output)
+	).apply(inst, SapphinizerRecipe::new));
+
+	public static final PacketCodec<RegistryByteBuf, SapphinizerRecipe> STREAM_CODEC = PacketCodec.tuple(
+		Ingredient.PACKET_CODEC, SapphinizerRecipe::inputItem,
+		ItemStack.PACKET_CODEC, SapphinizerRecipe::output,
+		SapphinizerRecipe::new);
+
+	@Override
+	public MapCodec<SapphinizerRecipe> codec() {
+	    return CODEC;
+	}
+
+	@Override
+	public PacketCodec<RegistryByteBuf, SapphinizerRecipe> packetCodec() {
+	    return STREAM_CODEC;
+	}
+
+    }
 }
