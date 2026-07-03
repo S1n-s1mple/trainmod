@@ -39,6 +39,7 @@ public class ModItemGroups {
 			entries.add(ModBlocks.RUBY_BLOCK);
 			entries.add(ModBlocks.RUBY_LAMP);
 			entries.add(ModBlocks.PEDESTAL);
+			entries.add(ModBlocks.SAPPHINIZER);
 			
 			
 			entries.add(ModBlocks.STRIPPED_JACARANDA_LOG);
