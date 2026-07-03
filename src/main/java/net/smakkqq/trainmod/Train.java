@@ -41,6 +41,7 @@ import net.smakkqq.trainmod.interfaceMod.ModScreenHandlers;
 import net.smakkqq.trainmod.interfaceMod.custom.PedestalScreen;
 import net.smakkqq.trainmod.item.ModItemGroups;
 import net.smakkqq.trainmod.potion.ModPotions;
+import net.smakkqq.trainmod.recipe.ModRecipes;
 import net.smakkqq.trainmod.sound.ModSound;
 import net.smakkqq.trainmod.utill.HammerUsageEvent;
 import net.smakkqq.trainmod.utill.ModLootTableModifiers;
@@ -72,6 +73,7 @@ public class Train implements ModInitializer {
 	ModLootTableModifiers.modifyLootTables();
 	ModBlockEntities.registerBlockEntities();
 	ModScreenHandlers.registerScreenHandlers();
+	ModRecipes.registerRecipes();
 
 	TradeOfferHelper.registerVillagerOffers(ModVillagers.CARPENTER_KEY, 1, factories -> {
 	    

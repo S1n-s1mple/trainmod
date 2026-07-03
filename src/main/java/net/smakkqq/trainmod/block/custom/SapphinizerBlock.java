@@ -45,7 +45,7 @@ public class SapphinizerBlock extends BlockWithEntity implements BlockEntityProv
 
     @Override
     public ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-	if (!world.isClient) {
+	if (!world.isClient()) {
 	    NamedScreenHandlerFactory screenHandlerFactory = ((SapphinizerBlockEntity) world.getBlockEntity(pos));
 
 	    if (screenHandlerFactory != null) {

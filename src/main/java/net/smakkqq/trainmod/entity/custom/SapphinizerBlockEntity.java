@@ -23,9 +23,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.smakkqq.trainmod.entity.ImplementedInventory;
 import net.smakkqq.trainmod.entity.ModBlockEntities;
+import net.smakkqq.trainmod.interfaceMod.SapphinizerScreenHandler;
 import net.smakkqq.trainmod.recipe.ModRecipes;
 import net.smakkqq.trainmod.recipe.SapphinizerRecipe;
 import net.smakkqq.trainmod.recipe.SapphinizerRecipeInput;
+import org.jetbrains.annotations.Nullable;
 
 public class SapphinizerBlockEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory<BlockPos> {
 
@@ -34,11 +36,11 @@ public class SapphinizerBlockEntity extends BlockEntity implements ImplementedIn
     private static final int INPUT_SLOT = 0;
     private static final int OUTPUT_SLOT = 1;
 
-    protected final ModBlockEntities propertyDelegate;
+    protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 72;
 
-    public SapphinizerBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+    public SapphinizerBlockEntity(BlockPos pos, BlockState state) {
 	super(ModBlockEntities.SAPPHINIZER_BE, pos, state);
 	this.propertyDelegate = new PropertyDelegate() {
 	    @Override
@@ -86,6 +88,7 @@ public class SapphinizerBlockEntity extends BlockEntity implements ImplementedIn
 	return Text.translatable("block.train.sapphinizer");
     }
 
+    @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
 	return new SapphinizerScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
@@ -161,7 +164,7 @@ public class SapphinizerBlockEntity extends BlockEntity implements ImplementedIn
 
     private Optional<RecipeEntry<SapphinizerRecipe>> getCurrentRecipe() {
 	return ((ServerWorld) this.getWorld()).getRecipeManager()
-		.getFirstMatch(ModRecipes.SAPPHINIZER_TYPE, SapphinizerRecipeInput(inventory.get(INPUT_SLOT)), this.getWorld());
+		.getFirstMatch(ModRecipes.SAPPHINIZER_TYPE, new SapphinizerRecipeInput(inventory.get(INPUT_SLOT)), this.getWorld());
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {

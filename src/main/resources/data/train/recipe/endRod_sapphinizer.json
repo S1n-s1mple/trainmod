@@ -1,0 +1,7 @@
+{
+    "type": "train:sapphinizer",
+    "ingredient": "minecraft:stick",
+    "result":{
+        "id": "minecraft:end_rod"
+    }
+}

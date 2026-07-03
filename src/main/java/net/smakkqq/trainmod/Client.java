@@ -23,6 +23,7 @@ import net.smakkqq.trainmod.entity.client.TomahawkProjectileRenderer;
 import net.smakkqq.trainmod.interfaceMod.ModScreenHandlers;
 import net.smakkqq.trainmod.interfaceMod.SimpleScreen;
 import net.smakkqq.trainmod.interfaceMod.custom.PedestalScreen;
+import net.smakkqq.trainmod.interfaceMod.custom.SapphinizerScreen;
 import net.smakkqq.trainmod.tooltip.ModToolTips;
 import org.lwjgl.glfw.GLFW;
 
@@ -39,7 +40,7 @@ public class Client implements ClientModInitializer {
 	BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT,
 		ModBlocks.JACARANDA_SAPLING);
 	
-	HandledScreens.register(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, PedestalScreen::new);
+
 
 	EntityRendererRegistry.register(ModEntities.CAPIBARA, CapibaraRenderer::new);
 	EntityModelLayerRegistry.registerModelLayer(CapibaraModel.CAPIBARA, CapibaraModel::getTexturedModelData);
@@ -50,6 +51,9 @@ public class Client implements ClientModInitializer {
 	EntityRendererRegistry.register(ModEntities.CHAIR, ChairRenderer::new);
 
 	BlockEntityRendererFactories.register(ModBlockEntities.PEDESTAL_BE, PedestalBlockEntityRenderer::new);
+		HandledScreens.register(ModScreenHandlers.PEDESTAL_SCREEN_HANDLER, PedestalScreen::new);
+		
+	HandledScreens.register(ModScreenHandlers.SAPPHINIZER_SCREEN_HANDLER, SapphinizerScreen::new);
 
 	openKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 		"key.g_interface_mod.open",

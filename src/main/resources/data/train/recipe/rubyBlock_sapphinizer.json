@@ -1,0 +1,7 @@
+{
+    "type": "train:sapphinizer",
+    "ingredient": "minecraft:ruby",
+    "result":{
+        "id": "minecraft:ruby_block"
+    }
+}

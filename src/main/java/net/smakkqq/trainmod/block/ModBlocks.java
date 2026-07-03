@@ -39,9 +39,20 @@ import net.smakkqq.trainmod.block.custom.ChairBlock;
 import net.smakkqq.trainmod.block.custom.PedestalBlock;
 import net.smakkqq.trainmod.block.custom.RicesCropBlock;
 import net.smakkqq.trainmod.block.custom.RubyLampBlock;
+import net.smakkqq.trainmod.block.custom.SapphinizerBlock;
 import net.smakkqq.trainmod.world.tree.ModSaplingGenerators;
 
 public class ModBlocks {
+    
+    public static final Block SAPPHINIZER = registerBlockItem(
+	    "sapphinizer",
+	    SapphinizerBlock::new,
+	    AbstractBlock.Settings.create()
+		    .requiresTool()
+		    .strength(5.0F, 6.0F)
+		    .sounds(BlockSoundGroup.AMETHYST_BLOCK),
+	    true
+    );
 
     public static final Block RUBY_BLOCK = registerBlockItem(
 	    "ruby_block",

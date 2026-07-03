@@ -1,12 +1,10 @@
 package net.smakkqq.trainmod.datagen;
 
-import java.util.Optional;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.ItemModels;
-import net.minecraft.client.data.Model;
 import net.minecraft.client.data.Models;
 import net.minecraft.client.data.TextureMap;
 import net.minecraft.client.data.TexturedModel;
@@ -21,7 +19,6 @@ import net.smakkqq.trainmod.Train;
 import net.smakkqq.trainmod.block.ModBlocks;
 import net.smakkqq.trainmod.block.custom.BlueberryBushBlock;
 import net.smakkqq.trainmod.block.custom.RicesCropBlock;
-import static net.smakkqq.trainmod.block.custom.RicesCropBlock.AGE;
 import net.smakkqq.trainmod.block.custom.RubyLampBlock;
 import net.smakkqq.trainmod.item.ModItems;
 
