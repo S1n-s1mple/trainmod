@@ -11,8 +11,8 @@ import net.smakkqq.trainmod.interfaceMod.SapphinizerScreenHandler;
 
 public class SapphinizerScreen extends HandledScreen<SapphinizerScreenHandler> {
 
-    public static final Identifier GUI_TEXTURE = Identifier.of(Train.MOD_ID, "textures/gui/pedestal/sapphinizer_gui.png");
-    public static final Identifier ARROW_TEXTURE = Identifier.of(Train.MOD_ID, "textures/gui/pedestal/arrow_progress.png");
+    public static final Identifier GUI_TEXTURE = Identifier.of(Train.MOD_ID, "textures/gui/sapphinizer/sapphinizer_gui.png");
+    public static final Identifier ARROW_TEXTURE = Identifier.of(Train.MOD_ID, "textures/gui/sapphinizer/arrow_progress.png");
 
     public SapphinizerScreen(SapphinizerScreenHandler handler, PlayerInventory inventory, Text title) {
 	super(handler, inventory, title);
@@ -23,14 +23,16 @@ public class SapphinizerScreen extends HandledScreen<SapphinizerScreenHandler> {
 	int x = (width - backgroundWidth) / 2;
 	int y = (height - backgroundHeight) / 2;
 
-	context.drawTexture(RenderPipelines.GUI_TEXTURED, GUI_TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight, 256, 242);
+	context.drawTexture(RenderPipelines.GUI_TEXTURED, GUI_TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight, 176, 166);
 	
 	renderProgressArrow(context, x, y);
     }
     
-    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    
     private void renderProgressArrow(DrawContext context, int x, int y){
-	
+	if(handler.isCrafting()){
+	    context.drawTexture(RenderPipelines.GUI_TEXTURED,ARROW_TEXTURE, x+73, y+35, 0, 0, handler.getScaledArrowProgress(), 26, 28, 26);
+	}
     }
 
     @Override

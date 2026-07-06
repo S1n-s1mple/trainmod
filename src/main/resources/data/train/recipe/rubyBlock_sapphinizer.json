@@ -1,7 +1,7 @@
 {
     "type": "train:sapphinizer",
-    "ingredient": "minecraft:ruby",
+    "ingredient": "train:ruby",
     "result":{
-        "id": "minecraft:ruby_block"
+        "id": "train:ruby_block"
     }
 }

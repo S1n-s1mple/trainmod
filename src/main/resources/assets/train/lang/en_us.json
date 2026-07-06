@@ -108,6 +108,7 @@
     "item.train.mangrove_chair" : "Mangrove chair",
     "block.train.mangrove_chair" : "Mangrove chair",
     "block.train.pedestal" : "Pedestal",
+    "block.train.sapphinizer" : "Sapphinizer",
     
     "itemGroup.train.ores_items": "Ores & Items"
 

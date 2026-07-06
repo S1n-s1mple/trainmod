@@ -112,7 +112,7 @@ public class SapphinizerBlockEntity extends BlockEntity implements ImplementedIn
     protected void readData(ReadView view) {
 	Inventories.readData(view, inventory);
 	progress = view.getInt("sapphinizer.progress", 0);
-	progress = view.getInt("sapphinizer.maxProgress", 0);
+	maxProgress = view.getInt("sapphinizer.maxProgress", 0);
 	super.readData(view);
     }
 

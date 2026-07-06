@@ -1,19 +1,7 @@
 {
     "variants":{
-        "facing=east":{
-            "model": "train:block/sapphinizer",
-            "y":90
-        },
-        "facing=north":{
+        "":{
             "model": "train:block/sapphinizer"
-        },
-        "facing=south":{
-            "model": "train:block/sapphinizer",
-            "y":180
-        },
-        "facing=west":{
-            "model": "train:block/sapphinizer",
-            "y":270
         }
     }
 }
