@@ -1,8 +1,0 @@
-{
-    "type": "train:sapphinizer",
-    "ingredient": "minecraft:diamond_chestplate",
-    "result":{
-        "id": "train:sapphire_chestplate"
-    }
-}
-

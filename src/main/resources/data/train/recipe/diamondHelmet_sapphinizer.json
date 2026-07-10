@@ -1,8 +1,0 @@
-{
-    "type": "train:sapphinizer",
-    "ingredient": "minecraft:diamond_helmet",
-    "result":{
-        "id": "train:sapphire_helmet"
-    }
-}
-

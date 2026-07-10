@@ -4,7 +4,6 @@ import java.util.Optional;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -123,11 +122,10 @@ public class SapphinizerBlockEntity extends BlockEntity implements ImplementedIn
 	    if (hasCraftingFinished()) {
 		craftItem();
 		resetProgress();
-	    } else {
-		resetProgress();
 	    }
+	} else {
+	    resetProgress();
 	}
-
     }
 
     private void resetProgress() {

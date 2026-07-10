@@ -43,7 +43,7 @@ public class SapphinizerScreenHandler extends ScreenHandler {
 
     public int getScaledArrowProgress() {
 	int progress = this.propertyDelegate.get(0);
-	int maxProgress = this.propertyDelegate.get(0);
+	int maxProgress = this.propertyDelegate.get(1);
 	int arrowPixelSize = 24;
 
 	return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
@@ -57,11 +57,11 @@ public class SapphinizerScreenHandler extends ScreenHandler {
 	    ItemStack originalStack = slot.getStack();
 	    newStack = originalStack.copy();
 	    if (invSlot < this.inventory.size()) {
-		if (this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
+		if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
 		    return ItemStack.EMPTY;
 		}
 	    } else {
-		if (this.insertItem(originalStack, 0, this.inventory.size(), false)) {
+		if (!this.insertItem(originalStack, 0, this.inventory.size(), false)) {
 		    return ItemStack.EMPTY;
 		}
 	    }
@@ -80,8 +80,8 @@ public class SapphinizerScreenHandler extends ScreenHandler {
     }
 
     private void addPlayerInventory(PlayerInventory playerInventory) {
-	for (int i = 0; i < 3; i++) {
-	    for (int j = 0; j < 9; j++) {
+	for (int i = 0; i < 3; ++i) {
+	    for (int j = 0; j < 9; ++j) {
 		this.addSlot(new Slot(playerInventory, i + j * 9 + 9, 8 + j * 18, 84 + i * 18));
 	    }
 	}

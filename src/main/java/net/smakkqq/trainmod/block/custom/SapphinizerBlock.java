@@ -33,18 +33,19 @@ public class SapphinizerBlock extends BlockWithEntity implements BlockEntityProv
 	return CODEC;
     }
 
+    @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
 	return new SapphinizerBlockEntity(pos, state);
     }
 
     @Override
-    public BlockRenderType getRenderType(BlockState state) {
+    protected BlockRenderType getRenderType(BlockState state) {
 	return BlockRenderType.MODEL;
     }
 
     @Override
-    public ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 	if (!world.isClient()) {
 	    NamedScreenHandlerFactory screenHandlerFactory = ((SapphinizerBlockEntity) world.getBlockEntity(pos));
 

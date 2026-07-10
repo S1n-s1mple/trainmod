@@ -1,0 +1,7 @@
+{
+    "type": "train:sapphinizer",
+    "ingredient": "minecraft:diamond",
+    "result": {
+        "id": "train:rice_seeds"
+    }
+}

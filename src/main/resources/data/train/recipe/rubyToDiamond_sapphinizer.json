@@ -1,8 +1,7 @@
 {
     "type": "train:sapphinizer",
-    "ingredient": "minecraft:coal",
-    "result":{
+    "ingredient": "train:ruby",
+    "result": {
         "id": "minecraft:diamond"
     }
 }
-
