@@ -23,6 +23,9 @@
 		],
                                     "client":[
                                                         "net.smakkqq.trainmod.Client"
+                                    ],
+                                     "rei_client":[
+                                                        "net.smakkqq.trainmod.compat.TrainREIClient"
                                     ]
 	},
 	"mixins": [

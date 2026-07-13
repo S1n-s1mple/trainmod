@@ -1,7 +1,0 @@
-{
-    "type": "train:sapphinizer",
-    "ingredient": "train:ruby",
-    "result": {
-        "id": "minecraft:diamond"
-    }
-}
