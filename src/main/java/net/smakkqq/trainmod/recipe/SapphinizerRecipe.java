@@ -81,5 +81,10 @@ public record SapphinizerRecipe(Ingredient inputItem, ItemStack output) implemen
 	    return STREAM_CODEC;
 	}
 
+	@Override
+	public ItemStack getResult(RegistryWrapper.WrapperLookup registriesLookup) {
+	    return output;
+	}
+
     }
 }
